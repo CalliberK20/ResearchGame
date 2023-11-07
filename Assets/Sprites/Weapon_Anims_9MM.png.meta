@@ -1,0 +1,1337 @@
+fileFormatVersion: 2
+guid: b1c133cfa68c22d4b9c4612493b8201b
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 25
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Weapon_Anims_9MM_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 144
+        width: 45.037037
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3bbc5a5a55a43c4097627591d8fc8bc
+      internalID: -1858880404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapon_Anims_9MM_1
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 144
+        width: 45.037037
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2997118eaeb1fe04195f77058b707999
+      internalID: 98448101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapon_Anims_9MM_2
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 144
+        width: 45.037037
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2853215370e13fb498368dcbfde21383
+      internalID: 1515005679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapon_Anims_9MM_3
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 144
+        width: 45.037037
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c9b038925565b047949d9287312764f
+      internalID: 1787223171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapon_Anims_9MM_4
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 144
+        width: 45.037037
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f91aacaf6eb97948b2f941115f27c67
+      internalID: 1106949681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapon_Anims_9MM_5
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 144
+        width: 45.037037
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35aa5cd5aaeff7946acebc4ed605bbe7
+      internalID: 754247486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapon_Anims_9MM_6
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 144
+        width: 45.037037
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20ce1f6e9ba112447be30bbddc6f5ffd
+      internalID: 1567097469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapon_Anims_9MM_7
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 144
+        width: 45.037037
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8243efe54eddc44b9b0734e0be7f722
+      internalID: 1088952417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapon_Anims_9MM_8
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 144
+        width: 45.037037
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13aa1c65e22bed240a247c258d736a8b
+      internalID: -2109024781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapon_Anims_9MM_9
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 144
+        width: 45.037037
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8017a7e47d8ae24f9107790851f9f2c
+      internalID: -1483187403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapon_Anims_9MM_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 45.037037
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69ea0b27e4420d14f94bdad84a95fba1
+      internalID: -2099745049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapon_Anims_9MM_11
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 96
+        width: 45.037037
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62aedecfd9813924a89d28b61f86af38
+      internalID: 2108711240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapon_Anims_9MM_12
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 96
+        width: 45.037037
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e107dd289bafa448a7c2cfe18477178
+      internalID: -707512414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapon_Anims_9MM_13
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 96
+        width: 45.037037
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93b975b5d28933e4bafa6be5d1c85832
+      internalID: -1190735430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapon_Anims_9MM_14
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 96
+        width: 45.037037
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61abcf73d193d4d4da736ef1cf9e48c8
+      internalID: 1922345086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapon_Anims_9MM_15
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 96
+        width: 45.037037
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d05b8a3af1556bf4ea9f14ca15033302
+      internalID: 1696897665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapon_Anims_9MM_16
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 96
+        width: 45.037037
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5cd8085530d504469f1a5c81abf2b06
+      internalID: -1364354823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapon_Anims_9MM_17
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 96
+        width: 45.037037
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24fbf674dd0ddd848a6ac69e15dde28c
+      internalID: -1989458554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapon_Anims_9MM_18
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 96
+        width: 45.037037
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cde465e110746d4396ee1aced5335b9
+      internalID: -832974845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapon_Anims_9MM_19
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 96
+        width: 45.037037
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cdce161b6c4c6f478b2b5c00363447a
+      internalID: -926952987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapon_Anims_9MM_20
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 96
+        width: 45.037037
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66cf39185d4105e42808a51a9a715535
+      internalID: -2018376784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapon_Anims_9MM_21
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 96
+        width: 45.037037
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a18f20bf3cadfe4ca2302ed80fdc229
+      internalID: 453661685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapon_Anims_9MM_22
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 96
+        width: 45.037037
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a670802c040120644a19901e8b03f7f4
+      internalID: -34862018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapon_Anims_9MM_23
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 96
+        width: 45.037037
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48e0c21acc41f114388dd05e2a83dda6
+      internalID: 1472678141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapon_Anims_9MM_24
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 96
+        width: 45.037037
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc5b4141a52823742ba33692f62080b6
+      internalID: -421959154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapon_Anims_9MM_25
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 96
+        width: 45.037037
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a45854cd71df174fa4f3ee718e347d4
+      internalID: -872713492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapon_Anims_9MM_26
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 96
+        width: 45.037037
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54466ee2556808440ae5fc9262ecb22a
+      internalID: 1630554290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapon_Anims_9MM_27
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 96
+        width: 45.037037
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f4c075edc6e84d48af92f1331c262ff
+      internalID: 390050035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapon_Anims_9MM_28
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 96
+        width: 45.037037
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec31aea5fe3614c479681df5abe492eb
+      internalID: 2063258384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapon_Anims_9MM_29
+      rect:
+        serializedVersion: 2
+        x: 855
+        y: 96
+        width: 45.037037
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffd8f37369650964fb0d87464ab483f1
+      internalID: -1750608478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapon_Anims_9MM_30
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 96
+        width: 45.037037
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d36e404c4b13da74f9439f55f89ad4b2
+      internalID: 1172819665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapon_Anims_9MM_31
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 96
+        width: 45.037037
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7ac90620a20c2046ae5362d464853c0
+      internalID: 1245221100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapon_Anims_9MM_32
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 96
+        width: 45.037037
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef0c57aedf3e72343bfa6e647474eea9
+      internalID: -1793721285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapon_Anims_9MM_33
+      rect:
+        serializedVersion: 2
+        x: 1035
+        y: 96
+        width: 45.037037
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3fd67876d046bf419093f644fe26e77
+      internalID: -1016711591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapon_Anims_9MM_34
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 96
+        width: 45.037037
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed01f9d4bd497514d93f606312e5ba8f
+      internalID: -1212079179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapon_Anims_9MM_35
+      rect:
+        serializedVersion: 2
+        x: 1125
+        y: 96
+        width: 45.037037
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fd1ea17f989f354fae615ef503d1ebe
+      internalID: -886877344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapon_Anims_9MM_36
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 96
+        width: 45.037037
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e147abdee81b8c24cbd355eef477b24d
+      internalID: -408540789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapon_Anims_9MM_37
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 48
+        width: 45.037037
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2240c6e569baec4b86d2e5738272a8f
+      internalID: -1644601034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapon_Anims_9MM_38
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 48
+        width: 45.037037
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b7366f36162c7640be47b78a0a2ded0
+      internalID: -2025021607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapon_Anims_9MM_39
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 48
+        width: 45.037037
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 151208213bd398e43a438063fc23b0c7
+      internalID: 993606462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapon_Anims_9MM_40
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 48
+        width: 45.037037
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb2b4bad673b0ed4588002f51d172dd8
+      internalID: -312144539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapon_Anims_9MM_41
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 48
+        width: 45.037037
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48eb8513fcf79ef4383c6e12bd593d91
+      internalID: -95443753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapon_Anims_9MM_42
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 48
+        width: 45.037037
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69367100366a7814b8f3864ed742ded0
+      internalID: 1613659095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapon_Anims_9MM_43
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 48
+        width: 45.037037
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7778761410bfd74396882ba15d93743
+      internalID: -1685119645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapon_Anims_9MM_44
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 48
+        width: 45.037037
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d5e52e540bdd204c86553c8cf9f9a39
+      internalID: -1887443041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapon_Anims_9MM_45
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 48
+        width: 45.037037
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ac75f6eeb675a54cbd5721de083450d
+      internalID: -1947247623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapon_Anims_9MM_46
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 48
+        width: 45.037037
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd5d1635a5416114282788244e375ff4
+      internalID: 1133889603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapon_Anims_9MM_47
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 45.037037
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3a708af5fd12e9438f4547d5605cad2
+      internalID: 1601738763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapon_Anims_9MM_48
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 0
+        width: 45.037037
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8290371eaae505046a0aa612a89b6f69
+      internalID: -779420570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapon_Anims_9MM_49
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 0
+        width: 45.037037
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53a6760fefd81be4d92530594df00901
+      internalID: 845633234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapon_Anims_9MM_50
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 0
+        width: 45.037037
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9058a0dc1f811c04f9aa89fedbfeae0a
+      internalID: -1189572462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapon_Anims_9MM_51
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 0
+        width: 45.037037
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1482ea4abb3e4a4a8a03dc96a97d618
+      internalID: -1887110391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapon_Anims_9MM_52
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 0
+        width: 45.037037
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: facfb903d2336f74ca572cf1bea6da95
+      internalID: 1990841977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapon_Anims_9MM_53
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 0
+        width: 45.037037
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97dfebb0b28b4e74e8e4fd639670f52a
+      internalID: 1616051249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapon_Anims_9MM_54
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 0
+        width: 45.037037
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36429ddd149dd5e44a557633ee6d0556
+      internalID: -1052248244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Weapon_Anims_9MM_0: -1858880404
+      Weapon_Anims_9MM_1: 98448101
+      Weapon_Anims_9MM_10: -2099745049
+      Weapon_Anims_9MM_11: 2108711240
+      Weapon_Anims_9MM_12: -707512414
+      Weapon_Anims_9MM_13: -1190735430
+      Weapon_Anims_9MM_14: 1922345086
+      Weapon_Anims_9MM_15: 1696897665
+      Weapon_Anims_9MM_16: -1364354823
+      Weapon_Anims_9MM_17: -1989458554
+      Weapon_Anims_9MM_18: -832974845
+      Weapon_Anims_9MM_19: -926952987
+      Weapon_Anims_9MM_2: 1515005679
+      Weapon_Anims_9MM_20: -2018376784
+      Weapon_Anims_9MM_21: 453661685
+      Weapon_Anims_9MM_22: -34862018
+      Weapon_Anims_9MM_23: 1472678141
+      Weapon_Anims_9MM_24: -421959154
+      Weapon_Anims_9MM_25: -872713492
+      Weapon_Anims_9MM_26: 1630554290
+      Weapon_Anims_9MM_27: 390050035
+      Weapon_Anims_9MM_28: 2063258384
+      Weapon_Anims_9MM_29: -1750608478
+      Weapon_Anims_9MM_3: 1787223171
+      Weapon_Anims_9MM_30: 1172819665
+      Weapon_Anims_9MM_31: 1245221100
+      Weapon_Anims_9MM_32: -1793721285
+      Weapon_Anims_9MM_33: -1016711591
+      Weapon_Anims_9MM_34: -1212079179
+      Weapon_Anims_9MM_35: -886877344
+      Weapon_Anims_9MM_36: -408540789
+      Weapon_Anims_9MM_37: -1644601034
+      Weapon_Anims_9MM_38: -2025021607
+      Weapon_Anims_9MM_39: 993606462
+      Weapon_Anims_9MM_4: 1106949681
+      Weapon_Anims_9MM_40: -312144539
+      Weapon_Anims_9MM_41: -95443753
+      Weapon_Anims_9MM_42: 1613659095
+      Weapon_Anims_9MM_43: -1685119645
+      Weapon_Anims_9MM_44: -1887443041
+      Weapon_Anims_9MM_45: -1947247623
+      Weapon_Anims_9MM_46: 1133889603
+      Weapon_Anims_9MM_47: 1601738763
+      Weapon_Anims_9MM_48: -779420570
+      Weapon_Anims_9MM_49: 845633234
+      Weapon_Anims_9MM_5: 754247486
+      Weapon_Anims_9MM_50: -1189572462
+      Weapon_Anims_9MM_51: -1887110391
+      Weapon_Anims_9MM_52: 1990841977
+      Weapon_Anims_9MM_53: 1616051249
+      Weapon_Anims_9MM_54: -1052248244
+      Weapon_Anims_9MM_6: 1567097469
+      Weapon_Anims_9MM_7: 1088952417
+      Weapon_Anims_9MM_8: -2109024781
+      Weapon_Anims_9MM_9: -1483187403
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -13,6 +13,9 @@ public class EnemyMovement : MonoBehaviour
 
     private void Start()
     {
+        if (target == null)
+            target = GameObject.FindGameObjectWithTag("Player").transform;
+
         gridCreate = FindObjectOfType<GridCreateManager>();
         gridCreate.FindTarget(transform.position, target.position, this);
 
@@ -21,10 +24,9 @@ public class EnemyMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        NodeGrid pathGrid = path[0];
-
-        if (path.Count > 1)
+        if (path.Count > 0)
         {
+            NodeGrid pathGrid = path[0];
             if (transform.position.x == pathGrid.GridX + 0.5f && transform.position.y == pathGrid.GridY + 0.5f)
             {
                 gridCreate.FindTarget(transform.position, target.position, this);

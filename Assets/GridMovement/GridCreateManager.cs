@@ -43,7 +43,6 @@ public class GridCreateManager : MonoBehaviour
 
         NodeGrid seekerPoint = ContainNode(new Vector3((int)seekPoint.x, (int)seekPoint.y));
         NodeGrid targetPoint = ContainNode(new Vector3((int)tarPoint.x, (int)tarPoint.y));
-        //Debug.Log(targetPoint.GridX + ", " + targetPoint.GridY);
 
         seekerPoint.GCost = 0;
         seekerPoint.HCost = GetDistance(seekerPoint, targetPoint);

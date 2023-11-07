@@ -21,17 +21,17 @@ public class Movement : MonoBehaviour
     {
         Vector2 move = new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
 
-        if (move.magnitude > 0.1f)
-            Flip(move.x);
+        /*if (move.magnitude > 0.1f)
+            Flip(move.x);*/
 
         rigid.position += move * speed * Time.fixedDeltaTime;
     }
-
+/*
     void Flip(float flipMove)
     {
         if (flipMove < 0)
             spriteRenderer.flipX = true;
         else
             spriteRenderer.flipX = false;
-    }
+    }*/
 }

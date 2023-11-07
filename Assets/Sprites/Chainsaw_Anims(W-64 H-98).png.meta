@@ -1,0 +1,1689 @@
+fileFormatVersion: 2
+guid: 0b4a064d5b5068144934b234d9cdb0a6
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 50
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Chainsaw_Anims(W-64 H-98)_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 44.13793
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47ffb84486fd2f24aa34e220b48bb906
+      internalID: -2033153163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chainsaw_Anims(W-64 H-98)_1
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 192
+        width: 44.13793
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea76926f0af50904b95fbeda9753ea8e
+      internalID: 1745982936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chainsaw_Anims(W-64 H-98)_2
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 192
+        width: 44.13793
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68b2cec107cb9c1498722f95132d3bc7
+      internalID: 984682962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chainsaw_Anims(W-64 H-98)_3
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 192
+        width: 44.13793
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b8c66b24e42a7e4d8cf8f074e559c56
+      internalID: -620917020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chainsaw_Anims(W-64 H-98)_4
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 192
+        width: 44.13793
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 315c6de3c02fdd04a9913c25377914dc
+      internalID: -380496110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chainsaw_Anims(W-64 H-98)_5
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 192
+        width: 44.13793
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92dcf7b14cf1aa04cb6c061eaaed608a
+      internalID: -790677625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chainsaw_Anims(W-64 H-98)_6
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 192
+        width: 44.13793
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c15ca85458889d4a967e157ff0dc7cf
+      internalID: 2073464250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chainsaw_Anims(W-64 H-98)_7
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 192
+        width: 44.13793
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf08a181c448f614c88626bcfdbe1b18
+      internalID: -2103406269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chainsaw_Anims(W-64 H-98)_8
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 192
+        width: 44.13793
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d93102e217ce2f428a4a54278baa73d
+      internalID: 1765133770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chainsaw_Anims(W-64 H-98)_9
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 192
+        width: 44.13793
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 898ee3ec07c22374391bef144b8b416b
+      internalID: 1166049611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chainsaw_Anims(W-64 H-98)_10
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 192
+        width: 44.13793
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ad56c8850c5b2a45ab41a9cb2181662
+      internalID: -1564744734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chainsaw_Anims(W-64 H-98)_11
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 192
+        width: 44.13793
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7547bdd3eea1aa54f8c3b1601d2f88db
+      internalID: 1761998119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chainsaw_Anims(W-64 H-98)_12
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 192
+        width: 44.13793
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a34951091f01b54a86d431fea8dabf6
+      internalID: 695030136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chainsaw_Anims(W-64 H-98)_13
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 192
+        width: 44.13793
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2212a7e831412354da50053f265f5f3e
+      internalID: -677703110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chainsaw_Anims(W-64 H-98)_14
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 192
+        width: 44.13793
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9c53145f991c3745a3b93d6b9de7b87
+      internalID: 449704852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chainsaw_Anims(W-64 H-98)_15
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 192
+        width: 44.13793
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ba64b3ca039b7840a733763ca74a371
+      internalID: 894242059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chainsaw_Anims(W-64 H-98)_16
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 192
+        width: 44.13793
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc446a3f066802c45ac3442109b338e1
+      internalID: 1011268229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chainsaw_Anims(W-64 H-98)_17
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 192
+        width: 44.13793
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd0275f5afc8490408635d186f8120d8
+      internalID: -146737561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chainsaw_Anims(W-64 H-98)_18
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 192
+        width: 44.13793
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48abe7cb02c5f4b4095fd6a0bb012c81
+      internalID: 122180031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chainsaw_Anims(W-64 H-98)_19
+      rect:
+        serializedVersion: 2
+        x: 836
+        y: 192
+        width: 44.13793
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51cc541d2330f5b4e9b16b73e4489de0
+      internalID: 515271243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chainsaw_Anims(W-64 H-98)_20
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 192
+        width: 44.13793
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16ece90007fb6ca44bd20a445f1996aa
+      internalID: 1422597276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chainsaw_Anims(W-64 H-98)_21
+      rect:
+        serializedVersion: 2
+        x: 924
+        y: 192
+        width: 44.13793
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a817945eb8655f84fba289d21c83bb2e
+      internalID: -1360489341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chainsaw_Anims(W-64 H-98)_22
+      rect:
+        serializedVersion: 2
+        x: 968
+        y: 192
+        width: 44.13793
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71c8c4ea967e79246a43ec8b82ea6514
+      internalID: 895172196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chainsaw_Anims(W-64 H-98)_23
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 44.13793
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f613472a0fa45e488d5267f23ec0d8c
+      internalID: 961668942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chainsaw_Anims(W-64 H-98)_24
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 96
+        width: 44.13793
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0bf3367da1463341b29d00919569214
+      internalID: 1986142651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chainsaw_Anims(W-64 H-98)_25
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 96
+        width: 44.13793
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb28a07690d82a04b9fccb8aba5a0407
+      internalID: -1139098498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chainsaw_Anims(W-64 H-98)_26
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 96
+        width: 44.13793
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73727efdcad0f19418b9a6e996758f0d
+      internalID: 1190626075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chainsaw_Anims(W-64 H-98)_27
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 96
+        width: 44.13793
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdbb0f097721dc944b9f1426432cacc7
+      internalID: -427080584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chainsaw_Anims(W-64 H-98)_28
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 96
+        width: 44.13793
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96de16929c0d72f498a7b7d30d8dc481
+      internalID: 1790634993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chainsaw_Anims(W-64 H-98)_29
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 96
+        width: 44.13793
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30973c7d5cf297c459b707e61a45e2db
+      internalID: 183264898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chainsaw_Anims(W-64 H-98)_30
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 96
+        width: 44.13793
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9392b9c6b6101d843a590a5215254069
+      internalID: 1986889408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chainsaw_Anims(W-64 H-98)_31
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 96
+        width: 44.13793
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aafb8bda23741f346bae25f8f8cdcefc
+      internalID: -1798548959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chainsaw_Anims(W-64 H-98)_32
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 96
+        width: 44.13793
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d82613720df0a0479c5cd8ec0a90c0b
+      internalID: -719505677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chainsaw_Anims(W-64 H-98)_33
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 96
+        width: 44.13793
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6410da538afa0943a6c02412d5410d0
+      internalID: 1622351170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chainsaw_Anims(W-64 H-98)_34
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 96
+        width: 44.13793
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c9f3b2abab71084db8d1119945c029a
+      internalID: -686387804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chainsaw_Anims(W-64 H-98)_35
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 96
+        width: 44.13793
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c88aa3c6b4968e44c854ef7c790b119c
+      internalID: 1609006636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chainsaw_Anims(W-64 H-98)_36
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 96
+        width: 44.13793
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35379f589d8f38a4eb06b940965b5ef3
+      internalID: -983010719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chainsaw_Anims(W-64 H-98)_37
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 96
+        width: 44.13793
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef8760d6682fa0d4898a6454952d19af
+      internalID: 459739969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chainsaw_Anims(W-64 H-98)_38
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 96
+        width: 44.13793
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a0ddeeb85d861444a5afe2251c3ba70
+      internalID: 1198321107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chainsaw_Anims(W-64 H-98)_39
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 96
+        width: 44.13793
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f6549c9dd54cbe4fac101d075bd69de
+      internalID: 249835649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chainsaw_Anims(W-64 H-98)_40
+      rect:
+        serializedVersion: 2
+        x: 836
+        y: 96
+        width: 44.13793
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1567a4d6d842994e865eae295beb16b
+      internalID: -1298360496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chainsaw_Anims(W-64 H-98)_41
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 96
+        width: 44.13793
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4b9afaf434ce2948a3881168090beb6
+      internalID: 369580482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chainsaw_Anims(W-64 H-98)_42
+      rect:
+        serializedVersion: 2
+        x: 924
+        y: 96
+        width: 44.13793
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ac97e93a7b266b42b72b3d94597db7d
+      internalID: -1908635767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chainsaw_Anims(W-64 H-98)_43
+      rect:
+        serializedVersion: 2
+        x: 968
+        y: 96
+        width: 44.13793
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00d4033614eb9b745b07f26b43a7bf29
+      internalID: 735024940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chainsaw_Anims(W-64 H-98)_44
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 44.13793
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25323986d9bb10541aa398642111c238
+      internalID: -1880683664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chainsaw_Anims(W-64 H-98)_45
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 0
+        width: 44.13793
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00d6a5fa06f496a4598fd65b186e07e1
+      internalID: -931913232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chainsaw_Anims(W-64 H-98)_46
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 0
+        width: 44.13793
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 576bebd1d79d9264d800d58ca987ac6c
+      internalID: 1221969607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chainsaw_Anims(W-64 H-98)_47
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 0
+        width: 44.13793
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d63aaa2561fbb2141ae81261a822ffc9
+      internalID: -1822093440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chainsaw_Anims(W-64 H-98)_48
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 0
+        width: 44.13793
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4853b9780daa26f41934ee2f0d9458f9
+      internalID: 1841759889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chainsaw_Anims(W-64 H-98)_49
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 0
+        width: 44.13793
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc6174c29ed06b743a7a2ce37e586579
+      internalID: -1738610163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chainsaw_Anims(W-64 H-98)_50
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 0
+        width: 44.13793
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14ff0a8292e2d194c8d8f7a5c09f3df7
+      internalID: 342150452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chainsaw_Anims(W-64 H-98)_51
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 0
+        width: 44.13793
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e352ede44ba70444806cfd76c3f6e18
+      internalID: 1576924739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chainsaw_Anims(W-64 H-98)_52
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 0
+        width: 44.13793
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6d59726bd289ad4caebdc84724ec4c6
+      internalID: 1279469478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chainsaw_Anims(W-64 H-98)_53
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 0
+        width: 44.13793
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9cf9bf6f71f380488f13231ce7682ef
+      internalID: 1041337893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chainsaw_Anims(W-64 H-98)_54
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 0
+        width: 44.13793
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c250596987f204244b45c73a1bc57524
+      internalID: 1796972657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chainsaw_Anims(W-64 H-98)_55
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 0
+        width: 44.13793
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 497413bbf84a31044b0fe923e39a5db6
+      internalID: 819895233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chainsaw_Anims(W-64 H-98)_56
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 0
+        width: 44.13793
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57c2de7a97ce14f4ba302aa830441bee
+      internalID: -1295501212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chainsaw_Anims(W-64 H-98)_57
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 0
+        width: 44.13793
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 298169c94780ece47aa306c51bbc31a7
+      internalID: -653711716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chainsaw_Anims(W-64 H-98)_58
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 0
+        width: 44.13793
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb31a26838e0e654eb593ae370be72dd
+      internalID: 1331810772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chainsaw_Anims(W-64 H-98)_59
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 0
+        width: 44.13793
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41c807d48ae0cd24798c67c7f53c0868
+      internalID: -1826366736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chainsaw_Anims(W-64 H-98)_60
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 0
+        width: 44.13793
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 231cbc398174a27449387265dd1af023
+      internalID: -1846976453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chainsaw_Anims(W-64 H-98)_61
+      rect:
+        serializedVersion: 2
+        x: 836
+        y: 0
+        width: 44.13793
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: baa06c141c85e27418af736e5b0e9960
+      internalID: 1490744478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chainsaw_Anims(W-64 H-98)_62
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 0
+        width: 44.13793
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93b784fa104bce7418ceef915e7dde71
+      internalID: -1521825036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chainsaw_Anims(W-64 H-98)_63
+      rect:
+        serializedVersion: 2
+        x: 924
+        y: 0
+        width: 44.13793
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f6bdc25838f7414291100e121741ec9
+      internalID: -1761774540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chainsaw_Anims(W-64 H-98)_64
+      rect:
+        serializedVersion: 2
+        x: 968
+        y: 0
+        width: 44.13793
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0782beda2aab10344916fcab0147de32
+      internalID: -1776090506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chainsaw_Anims(W-64 H-98)_65
+      rect:
+        serializedVersion: 2
+        x: 1012
+        y: 0
+        width: 44.13793
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 913a4be8ad752d64ba0ed9caba63a586
+      internalID: 858276339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chainsaw_Anims(W-64 H-98)_66
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 0
+        width: 44.13793
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c309e7a7c723fa4a92c5972c16e6664
+      internalID: 109571490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chainsaw_Anims(W-64 H-98)_67
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 0
+        width: 44.13793
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cc071088b1106c488c15b92117bf20c
+      internalID: 1500287128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chainsaw_Anims(W-64 H-98)_68
+      rect:
+        serializedVersion: 2
+        x: 1144
+        y: 0
+        width: 44.13793
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f533e2246a7dda4e96ce449a518ada7
+      internalID: 344297135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chainsaw_Anims(W-64 H-98)_69
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 0
+        width: 44.13793
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9ac2565900f6bd4a970b1d8d2ba27cb
+      internalID: -1813536532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chainsaw_Anims(W-64 H-98)_70
+      rect:
+        serializedVersion: 2
+        x: 1232
+        y: 0
+        width: 44.13793
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bbd70e5627c1424e908d4417482c8b8
+      internalID: 1219912684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Chainsaw_Anims(W-64 H-98)_0: -2033153163
+      Chainsaw_Anims(W-64 H-98)_1: 1745982936
+      Chainsaw_Anims(W-64 H-98)_10: -1564744734
+      Chainsaw_Anims(W-64 H-98)_11: 1761998119
+      Chainsaw_Anims(W-64 H-98)_12: 695030136
+      Chainsaw_Anims(W-64 H-98)_13: -677703110
+      Chainsaw_Anims(W-64 H-98)_14: 449704852
+      Chainsaw_Anims(W-64 H-98)_15: 894242059
+      Chainsaw_Anims(W-64 H-98)_16: 1011268229
+      Chainsaw_Anims(W-64 H-98)_17: -146737561
+      Chainsaw_Anims(W-64 H-98)_18: 122180031
+      Chainsaw_Anims(W-64 H-98)_19: 515271243
+      Chainsaw_Anims(W-64 H-98)_2: 984682962
+      Chainsaw_Anims(W-64 H-98)_20: 1422597276
+      Chainsaw_Anims(W-64 H-98)_21: -1360489341
+      Chainsaw_Anims(W-64 H-98)_22: 895172196
+      Chainsaw_Anims(W-64 H-98)_23: 961668942
+      Chainsaw_Anims(W-64 H-98)_24: 1986142651
+      Chainsaw_Anims(W-64 H-98)_25: -1139098498
+      Chainsaw_Anims(W-64 H-98)_26: 1190626075
+      Chainsaw_Anims(W-64 H-98)_27: -427080584
+      Chainsaw_Anims(W-64 H-98)_28: 1790634993
+      Chainsaw_Anims(W-64 H-98)_29: 183264898
+      Chainsaw_Anims(W-64 H-98)_3: -620917020
+      Chainsaw_Anims(W-64 H-98)_30: 1986889408
+      Chainsaw_Anims(W-64 H-98)_31: -1798548959
+      Chainsaw_Anims(W-64 H-98)_32: -719505677
+      Chainsaw_Anims(W-64 H-98)_33: 1622351170
+      Chainsaw_Anims(W-64 H-98)_34: -686387804
+      Chainsaw_Anims(W-64 H-98)_35: 1609006636
+      Chainsaw_Anims(W-64 H-98)_36: -983010719
+      Chainsaw_Anims(W-64 H-98)_37: 459739969
+      Chainsaw_Anims(W-64 H-98)_38: 1198321107
+      Chainsaw_Anims(W-64 H-98)_39: 249835649
+      Chainsaw_Anims(W-64 H-98)_4: -380496110
+      Chainsaw_Anims(W-64 H-98)_40: -1298360496
+      Chainsaw_Anims(W-64 H-98)_41: 369580482
+      Chainsaw_Anims(W-64 H-98)_42: -1908635767
+      Chainsaw_Anims(W-64 H-98)_43: 735024940
+      Chainsaw_Anims(W-64 H-98)_44: -1880683664
+      Chainsaw_Anims(W-64 H-98)_45: -931913232
+      Chainsaw_Anims(W-64 H-98)_46: 1221969607
+      Chainsaw_Anims(W-64 H-98)_47: -1822093440
+      Chainsaw_Anims(W-64 H-98)_48: 1841759889
+      Chainsaw_Anims(W-64 H-98)_49: -1738610163
+      Chainsaw_Anims(W-64 H-98)_5: -790677625
+      Chainsaw_Anims(W-64 H-98)_50: 342150452
+      Chainsaw_Anims(W-64 H-98)_51: 1576924739
+      Chainsaw_Anims(W-64 H-98)_52: 1279469478
+      Chainsaw_Anims(W-64 H-98)_53: 1041337893
+      Chainsaw_Anims(W-64 H-98)_54: 1796972657
+      Chainsaw_Anims(W-64 H-98)_55: 819895233
+      Chainsaw_Anims(W-64 H-98)_56: -1295501212
+      Chainsaw_Anims(W-64 H-98)_57: -653711716
+      Chainsaw_Anims(W-64 H-98)_58: 1331810772
+      Chainsaw_Anims(W-64 H-98)_59: -1826366736
+      Chainsaw_Anims(W-64 H-98)_6: 2073464250
+      Chainsaw_Anims(W-64 H-98)_60: -1846976453
+      Chainsaw_Anims(W-64 H-98)_61: 1490744478
+      Chainsaw_Anims(W-64 H-98)_62: -1521825036
+      Chainsaw_Anims(W-64 H-98)_63: -1761774540
+      Chainsaw_Anims(W-64 H-98)_64: -1776090506
+      Chainsaw_Anims(W-64 H-98)_65: 858276339
+      Chainsaw_Anims(W-64 H-98)_66: 109571490
+      Chainsaw_Anims(W-64 H-98)_67: 1500287128
+      Chainsaw_Anims(W-64 H-98)_68: 344297135
+      Chainsaw_Anims(W-64 H-98)_69: -1813536532
+      Chainsaw_Anims(W-64 H-98)_7: -2103406269
+      Chainsaw_Anims(W-64 H-98)_70: 1219912684
+      Chainsaw_Anims(W-64 H-98)_8: 1765133770
+      Chainsaw_Anims(W-64 H-98)_9: 1166049611
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
