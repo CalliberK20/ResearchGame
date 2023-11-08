@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b1c133cfa68c22d4b9c4612493b8201b
+guid: 8fb0a5925cafcc741aa024b388930f98
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,1156 +110,1009 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Weapon_Anims_9MM_0
+      name: Weapon_Anims_Revolver W-64 H-48_0
       rect:
         serializedVersion: 2
         x: 0
         y: 144
-        width: 45.037037
+        width: 64
         height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.24, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b3bbc5a5a55a43c4097627591d8fc8bc
-      internalID: -1858880404
+      spriteID: 056a9d9c591188f469a8843cda064118
+      internalID: -157103930
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Weapon_Anims_9MM_1
+      name: Weapon_Anims_Revolver W-64 H-48_1
       rect:
         serializedVersion: 2
-        x: 45
+        x: 64
         y: 144
-        width: 45.037037
+        width: 64
         height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.24, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2997118eaeb1fe04195f77058b707999
-      internalID: 98448101
+      spriteID: eb0b4653c7b5e764a9c9ecab675e74c4
+      internalID: -450582370
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Weapon_Anims_9MM_2
+      name: Weapon_Anims_Revolver W-64 H-48_2
       rect:
         serializedVersion: 2
-        x: 90
+        x: 128
         y: 144
-        width: 45.037037
+        width: 64
         height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.24, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2853215370e13fb498368dcbfde21383
-      internalID: 1515005679
+      spriteID: e04db149dba204344884f1e424f00ff7
+      internalID: 63240397
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Weapon_Anims_9MM_3
+      name: Weapon_Anims_Revolver W-64 H-48_3
       rect:
         serializedVersion: 2
-        x: 135
+        x: 192
         y: 144
-        width: 45.037037
+        width: 64
         height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.24, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1c9b038925565b047949d9287312764f
-      internalID: 1787223171
+      spriteID: 7c8636ed65cecfb42ab9a74396ae27f3
+      internalID: 1426290726
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Weapon_Anims_9MM_4
+      name: Weapon_Anims_Revolver W-64 H-48_4
       rect:
         serializedVersion: 2
-        x: 180
+        x: 256
         y: 144
-        width: 45.037037
+        width: 64
         height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.24, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3f91aacaf6eb97948b2f941115f27c67
-      internalID: 1106949681
+      spriteID: 82053e128c055be46a2f40660716ccb9
+      internalID: 237614686
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Weapon_Anims_9MM_5
+      name: Weapon_Anims_Revolver W-64 H-48_5
       rect:
         serializedVersion: 2
-        x: 225
+        x: 320
         y: 144
-        width: 45.037037
+        width: 64
         height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.24, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 35aa5cd5aaeff7946acebc4ed605bbe7
-      internalID: 754247486
+      spriteID: c1e19fa3c599d824c8536c4e84213a19
+      internalID: 559436676
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Weapon_Anims_9MM_6
+      name: Weapon_Anims_Revolver W-64 H-48_6
       rect:
         serializedVersion: 2
-        x: 270
+        x: 384
         y: 144
-        width: 45.037037
+        width: 64
         height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.24, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 20ce1f6e9ba112447be30bbddc6f5ffd
-      internalID: 1567097469
+      spriteID: cc721695041dbd7459a9b7727b097819
+      internalID: 1422424466
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Weapon_Anims_9MM_7
+      name: Weapon_Anims_Revolver W-64 H-48_7
       rect:
         serializedVersion: 2
-        x: 315
+        x: 448
         y: 144
-        width: 45.037037
+        width: 64
         height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.24, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f8243efe54eddc44b9b0734e0be7f722
-      internalID: 1088952417
+      spriteID: f5467a21f941dc84eb6710e41d2e7be1
+      internalID: 1611849131
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Weapon_Anims_9MM_8
+      name: Weapon_Anims_Revolver W-64 H-48_8
       rect:
         serializedVersion: 2
-        x: 360
+        x: 512
         y: 144
-        width: 45.037037
+        width: 64
         height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.24, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 13aa1c65e22bed240a247c258d736a8b
-      internalID: -2109024781
+      spriteID: 5965480cfaae91240bd48000d35d1f9c
+      internalID: 1332921123
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Weapon_Anims_9MM_9
+      name: Weapon_Anims_Revolver W-64 H-48_9
       rect:
         serializedVersion: 2
-        x: 405
+        x: 576
         y: 144
-        width: 45.037037
+        width: 64
         height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.24, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a8017a7e47d8ae24f9107790851f9f2c
-      internalID: -1483187403
+      spriteID: 5b8941ad484bd5f40948715c5de5445a
+      internalID: -529388168
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Weapon_Anims_9MM_10
+      name: Weapon_Anims_Revolver W-64 H-48_10
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 144
+        width: 64
+        height: 48
+      alignment: 9
+      pivot: {x: 0.24, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26a1a85caa28d7243acef219e7eb969c
+      internalID: 1427230441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapon_Anims_Revolver W-64 H-48_11
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 144
+        width: 64
+        height: 48
+      alignment: 9
+      pivot: {x: 0.24, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1938aab2ff9150648a7901b378fe9c74
+      internalID: -878245011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapon_Anims_Revolver W-64 H-48_12
       rect:
         serializedVersion: 2
         x: 0
         y: 96
-        width: 45.037037
+        width: 64
         height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.24, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 69ea0b27e4420d14f94bdad84a95fba1
-      internalID: -2099745049
+      spriteID: 7d804252c3051f645aefebad8d01feff
+      internalID: -1294176978
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Weapon_Anims_9MM_11
+      name: Weapon_Anims_Revolver W-64 H-48_13
       rect:
         serializedVersion: 2
-        x: 45
+        x: 64
         y: 96
-        width: 45.037037
+        width: 64
         height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.24, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 62aedecfd9813924a89d28b61f86af38
-      internalID: 2108711240
+      spriteID: 2a60e1c4e73032c4b90c7a3f0acef909
+      internalID: 1747520771
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Weapon_Anims_9MM_12
+      name: Weapon_Anims_Revolver W-64 H-48_14
       rect:
         serializedVersion: 2
-        x: 90
+        x: 128
         y: 96
-        width: 45.037037
+        width: 64
         height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.24, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7e107dd289bafa448a7c2cfe18477178
-      internalID: -707512414
+      spriteID: b2b3ac68e0f2acf48887688dc8fe1a4e
+      internalID: -118084627
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Weapon_Anims_9MM_13
+      name: Weapon_Anims_Revolver W-64 H-48_15
       rect:
         serializedVersion: 2
-        x: 135
+        x: 192
         y: 96
-        width: 45.037037
+        width: 64
         height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.24, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 93b975b5d28933e4bafa6be5d1c85832
-      internalID: -1190735430
+      spriteID: 345bd3dbc8bc35149a3b364b08fae838
+      internalID: -1860624370
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Weapon_Anims_9MM_14
+      name: Weapon_Anims_Revolver W-64 H-48_16
       rect:
         serializedVersion: 2
-        x: 180
+        x: 256
         y: 96
-        width: 45.037037
+        width: 64
         height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.24, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 61abcf73d193d4d4da736ef1cf9e48c8
-      internalID: 1922345086
+      spriteID: 66b272cc8d2dc80498d1deb6fbbac724
+      internalID: 927204276
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Weapon_Anims_9MM_15
+      name: Weapon_Anims_Revolver W-64 H-48_17
       rect:
         serializedVersion: 2
-        x: 225
+        x: 320
         y: 96
-        width: 45.037037
+        width: 64
         height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.24, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d05b8a3af1556bf4ea9f14ca15033302
-      internalID: 1696897665
+      spriteID: fae92c6e13aa339438eea2e0947cf255
+      internalID: -595626660
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Weapon_Anims_9MM_16
+      name: Weapon_Anims_Revolver W-64 H-48_18
       rect:
         serializedVersion: 2
-        x: 270
+        x: 384
         y: 96
-        width: 45.037037
+        width: 64
         height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.24, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f5cd8085530d504469f1a5c81abf2b06
-      internalID: -1364354823
+      spriteID: 6b98889713f1066459db5aa15c2dec37
+      internalID: 1763872539
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Weapon_Anims_9MM_17
+      name: Weapon_Anims_Revolver W-64 H-48_19
       rect:
         serializedVersion: 2
-        x: 315
+        x: 448
         y: 96
-        width: 45.037037
+        width: 64
         height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.24, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 24fbf674dd0ddd848a6ac69e15dde28c
-      internalID: -1989458554
+      spriteID: 5fbca93c2181728459eb07ea9675824a
+      internalID: 1373294851
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Weapon_Anims_9MM_18
+      name: Weapon_Anims_Revolver W-64 H-48_20
       rect:
         serializedVersion: 2
-        x: 360
+        x: 512
         y: 96
-        width: 45.037037
+        width: 64
         height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.24, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7cde465e110746d4396ee1aced5335b9
-      internalID: -832974845
+      spriteID: 3ea271afbfa8c5849b6250b4501f6d75
+      internalID: -919655308
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Weapon_Anims_9MM_19
+      name: Weapon_Anims_Revolver W-64 H-48_21
       rect:
         serializedVersion: 2
-        x: 405
+        x: 576
         y: 96
-        width: 45.037037
+        width: 64
         height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.24, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1cdce161b6c4c6f478b2b5c00363447a
-      internalID: -926952987
+      spriteID: 7fccca36e691d4d49872b935ddc0acac
+      internalID: 1534449621
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Weapon_Anims_9MM_20
+      name: Weapon_Anims_Revolver W-64 H-48_22
       rect:
         serializedVersion: 2
-        x: 450
+        x: 640
         y: 96
-        width: 45.037037
+        width: 64
         height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.24, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 66cf39185d4105e42808a51a9a715535
-      internalID: -2018376784
+      spriteID: f23465c6caaedd240b33eaf4864fa4e0
+      internalID: 1855357823
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Weapon_Anims_9MM_21
-      rect:
-        serializedVersion: 2
-        x: 495
-        y: 96
-        width: 45.037037
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6a18f20bf3cadfe4ca2302ed80fdc229
-      internalID: 453661685
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Weapon_Anims_9MM_22
-      rect:
-        serializedVersion: 2
-        x: 540
-        y: 96
-        width: 45.037037
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a670802c040120644a19901e8b03f7f4
-      internalID: -34862018
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Weapon_Anims_9MM_23
-      rect:
-        serializedVersion: 2
-        x: 585
-        y: 96
-        width: 45.037037
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 48e0c21acc41f114388dd05e2a83dda6
-      internalID: 1472678141
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Weapon_Anims_9MM_24
-      rect:
-        serializedVersion: 2
-        x: 630
-        y: 96
-        width: 45.037037
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dc5b4141a52823742ba33692f62080b6
-      internalID: -421959154
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Weapon_Anims_9MM_25
-      rect:
-        serializedVersion: 2
-        x: 675
-        y: 96
-        width: 45.037037
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7a45854cd71df174fa4f3ee718e347d4
-      internalID: -872713492
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Weapon_Anims_9MM_26
-      rect:
-        serializedVersion: 2
-        x: 720
-        y: 96
-        width: 45.037037
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 54466ee2556808440ae5fc9262ecb22a
-      internalID: 1630554290
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Weapon_Anims_9MM_27
-      rect:
-        serializedVersion: 2
-        x: 765
-        y: 96
-        width: 45.037037
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9f4c075edc6e84d48af92f1331c262ff
-      internalID: 390050035
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Weapon_Anims_9MM_28
-      rect:
-        serializedVersion: 2
-        x: 810
-        y: 96
-        width: 45.037037
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ec31aea5fe3614c479681df5abe492eb
-      internalID: 2063258384
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Weapon_Anims_9MM_29
-      rect:
-        serializedVersion: 2
-        x: 855
-        y: 96
-        width: 45.037037
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ffd8f37369650964fb0d87464ab483f1
-      internalID: -1750608478
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Weapon_Anims_9MM_30
-      rect:
-        serializedVersion: 2
-        x: 900
-        y: 96
-        width: 45.037037
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d36e404c4b13da74f9439f55f89ad4b2
-      internalID: 1172819665
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Weapon_Anims_9MM_31
-      rect:
-        serializedVersion: 2
-        x: 945
-        y: 96
-        width: 45.037037
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e7ac90620a20c2046ae5362d464853c0
-      internalID: 1245221100
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Weapon_Anims_9MM_32
-      rect:
-        serializedVersion: 2
-        x: 990
-        y: 96
-        width: 45.037037
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ef0c57aedf3e72343bfa6e647474eea9
-      internalID: -1793721285
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Weapon_Anims_9MM_33
-      rect:
-        serializedVersion: 2
-        x: 1035
-        y: 96
-        width: 45.037037
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e3fd67876d046bf419093f644fe26e77
-      internalID: -1016711591
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Weapon_Anims_9MM_34
-      rect:
-        serializedVersion: 2
-        x: 1080
-        y: 96
-        width: 45.037037
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ed01f9d4bd497514d93f606312e5ba8f
-      internalID: -1212079179
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Weapon_Anims_9MM_35
-      rect:
-        serializedVersion: 2
-        x: 1125
-        y: 96
-        width: 45.037037
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5fd1ea17f989f354fae615ef503d1ebe
-      internalID: -886877344
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Weapon_Anims_9MM_36
-      rect:
-        serializedVersion: 2
-        x: 1170
-        y: 96
-        width: 45.037037
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e147abdee81b8c24cbd355eef477b24d
-      internalID: -408540789
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Weapon_Anims_9MM_37
+      name: Weapon_Anims_Revolver W-64 H-48_23
       rect:
         serializedVersion: 2
         x: 0
         y: 48
-        width: 45.037037
+        width: 64
         height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.24, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b2240c6e569baec4b86d2e5738272a8f
-      internalID: -1644601034
+      spriteID: 43a58425cbe196a48963742d262d9c8e
+      internalID: 2134982978
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Weapon_Anims_9MM_38
+      name: Weapon_Anims_Revolver W-64 H-48_24
       rect:
         serializedVersion: 2
-        x: 45
+        x: 64
         y: 48
-        width: 45.037037
+        width: 64
         height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.24, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1b7366f36162c7640be47b78a0a2ded0
-      internalID: -2025021607
+      spriteID: 62bd62d497f1e2241b6b0d41c9b8a46a
+      internalID: 973958990
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Weapon_Anims_9MM_39
+      name: Weapon_Anims_Revolver W-64 H-48_25
       rect:
         serializedVersion: 2
-        x: 135
+        x: 128
         y: 48
-        width: 45.037037
+        width: 64
         height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.24, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 151208213bd398e43a438063fc23b0c7
-      internalID: 993606462
+      spriteID: 96bb09c09f575bf4ab378e3599431af8
+      internalID: -1443186089
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Weapon_Anims_9MM_40
+      name: Weapon_Anims_Revolver W-64 H-48_26
       rect:
         serializedVersion: 2
-        x: 180
+        x: 192
         y: 48
-        width: 45.037037
+        width: 64
         height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.24, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fb2b4bad673b0ed4588002f51d172dd8
-      internalID: -312144539
+      spriteID: 53d0a8b93e15c6648ae284f97ad5c0eb
+      internalID: 1383163325
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Weapon_Anims_9MM_41
+      name: Weapon_Anims_Revolver W-64 H-48_27
       rect:
         serializedVersion: 2
-        x: 225
+        x: 256
         y: 48
-        width: 45.037037
+        width: 64
         height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.24, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 48eb8513fcf79ef4383c6e12bd593d91
-      internalID: -95443753
+      spriteID: 1d97f9f964cb8b04497b9dcec392c6c1
+      internalID: 1403258291
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Weapon_Anims_9MM_42
+      name: Weapon_Anims_Revolver W-64 H-48_28
       rect:
         serializedVersion: 2
-        x: 270
+        x: 320
         y: 48
-        width: 45.037037
+        width: 64
         height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.24, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 69367100366a7814b8f3864ed742ded0
-      internalID: 1613659095
+      spriteID: 5d4c751a287ece84986cf913b75cb0f2
+      internalID: 245198301
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Weapon_Anims_9MM_43
+      name: Weapon_Anims_Revolver W-64 H-48_29
       rect:
         serializedVersion: 2
-        x: 315
+        x: 384
         y: 48
-        width: 45.037037
+        width: 64
         height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.24, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d7778761410bfd74396882ba15d93743
-      internalID: -1685119645
+      spriteID: ee6c8c3fd4a80eb478b1ce3352cd3625
+      internalID: -1588440931
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Weapon_Anims_9MM_44
+      name: Weapon_Anims_Revolver W-64 H-48_30
       rect:
         serializedVersion: 2
-        x: 360
+        x: 448
         y: 48
-        width: 45.037037
+        width: 64
         height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.24, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7d5e52e540bdd204c86553c8cf9f9a39
-      internalID: -1887443041
+      spriteID: f02a844d98520d34ebdead61bcb5de5b
+      internalID: -524358393
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Weapon_Anims_9MM_45
+      name: Weapon_Anims_Revolver W-64 H-48_31
       rect:
         serializedVersion: 2
-        x: 405
+        x: 512
         y: 48
-        width: 45.037037
+        width: 64
         height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.24, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9ac75f6eeb675a54cbd5721de083450d
-      internalID: -1947247623
+      spriteID: d38ca844c2da9cb46b08250e2520ec38
+      internalID: -1638520951
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Weapon_Anims_9MM_46
+      name: Weapon_Anims_Revolver W-64 H-48_32
       rect:
         serializedVersion: 2
-        x: 450
+        x: 576
         y: 48
-        width: 45.037037
+        width: 64
         height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.24, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bd5d1635a5416114282788244e375ff4
-      internalID: 1133889603
+      spriteID: e5d89f6b6cf6d304ba609f25f123b22a
+      internalID: 675563056
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Weapon_Anims_9MM_47
+      name: Weapon_Anims_Revolver W-64 H-48_33
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 48
+        width: 64
+        height: 48
+      alignment: 9
+      pivot: {x: 0.24, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9142ba84336017a4ea899c4da91d5739
+      internalID: -410874358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapon_Anims_Revolver W-64 H-48_34
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 48
+        width: 64
+        height: 48
+      alignment: 9
+      pivot: {x: 0.24, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8c340d380cda0b4bb27e3d1a79aaab9
+      internalID: 1901662025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapon_Anims_Revolver W-64 H-48_35
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 48
+        width: 64
+        height: 48
+      alignment: 9
+      pivot: {x: 0.24, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f74cc09f34e5d0f4690da9f751a2a18f
+      internalID: -1633083845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapon_Anims_Revolver W-64 H-48_36
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 45.037037
+        width: 64
         height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.24, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c3a708af5fd12e9438f4547d5605cad2
-      internalID: 1601738763
+      spriteID: 7abcd8309c60f504db222ab68d15baa0
+      internalID: 447641235
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Weapon_Anims_9MM_48
+      name: Weapon_Anims_Revolver W-64 H-48_37
       rect:
         serializedVersion: 2
-        x: 45
+        x: 64
         y: 0
-        width: 45.037037
+        width: 64
         height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.24, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8290371eaae505046a0aa612a89b6f69
-      internalID: -779420570
+      spriteID: 11663256a63e893498433f7e75b7b340
+      internalID: -866883699
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Weapon_Anims_9MM_49
+      name: Weapon_Anims_Revolver W-64 H-48_38
       rect:
         serializedVersion: 2
-        x: 135
+        x: 128
         y: 0
-        width: 45.037037
+        width: 64
         height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.24, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 53a6760fefd81be4d92530594df00901
-      internalID: 845633234
+      spriteID: eefb03e0f72632b4297bf0df4f7ad69f
+      internalID: 1958801135
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Weapon_Anims_9MM_50
+      name: Weapon_Anims_Revolver W-64 H-48_39
       rect:
         serializedVersion: 2
-        x: 180
+        x: 192
         y: 0
-        width: 45.037037
+        width: 64
         height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.24, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9058a0dc1f811c04f9aa89fedbfeae0a
-      internalID: -1189572462
+      spriteID: d85f25973d5862e4a850adaf9b23b4e7
+      internalID: -1003918879
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Weapon_Anims_9MM_51
+      name: Weapon_Anims_Revolver W-64 H-48_40
       rect:
         serializedVersion: 2
-        x: 225
+        x: 256
         y: 0
-        width: 45.037037
+        width: 64
         height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.24, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b1482ea4abb3e4a4a8a03dc96a97d618
-      internalID: -1887110391
+      spriteID: 486a0462bf328f348ba60bff7b199076
+      internalID: -1122976312
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Weapon_Anims_9MM_52
+      name: Weapon_Anims_Revolver W-64 H-48_41
       rect:
         serializedVersion: 2
-        x: 270
+        x: 320
         y: 0
-        width: 45.037037
+        width: 64
         height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.24, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: facfb903d2336f74ca572cf1bea6da95
-      internalID: 1990841977
+      spriteID: 45f844c6b108ac34eb0bde750fdc1765
+      internalID: -1951723911
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Weapon_Anims_9MM_53
+      name: Weapon_Anims_Revolver W-64 H-48_42
       rect:
         serializedVersion: 2
-        x: 315
+        x: 384
         y: 0
-        width: 45.037037
+        width: 64
         height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.24, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 97dfebb0b28b4e74e8e4fd639670f52a
-      internalID: 1616051249
+      spriteID: b25af4ae4b7de4b4cab65e2d555493ed
+      internalID: 1242178818
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Weapon_Anims_9MM_54
+      name: Weapon_Anims_Revolver W-64 H-48_43
       rect:
         serializedVersion: 2
-        x: 360
+        x: 448
         y: 0
-        width: 45.037037
+        width: 64
         height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.24, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 36429ddd149dd5e44a557633ee6d0556
-      internalID: -1052248244
+      spriteID: 0f5be2dc2a255d24daee7c4ca7506fbb
+      internalID: 871587553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapon_Anims_Revolver W-64 H-48_44
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 64
+        height: 48
+      alignment: 9
+      pivot: {x: 0.24, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f372dced12caf6f4ba84e90ff99630de
+      internalID: -1855302446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapon_Anims_Revolver W-64 H-48_45
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 64
+        height: 48
+      alignment: 9
+      pivot: {x: 0.24, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1183ca2856ee4554490f639800684026
+      internalID: -1122731556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapon_Anims_Revolver W-64 H-48_46
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 64
+        height: 48
+      alignment: 9
+      pivot: {x: 0.24, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a46f0677c06d9c94e848c0a55891c044
+      internalID: -1938846691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Weapon_Anims_Revolver W-64 H-48_47
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 0
+        width: 64
+        height: 48
+      alignment: 9
+      pivot: {x: 0.24, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bf1c2d74a9c33c48a16cf25875220a2
+      internalID: 502270852
       vertices: []
       indices: 
       edges: []
@@ -1275,61 +1128,54 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Weapon_Anims_9MM_0: -1858880404
-      Weapon_Anims_9MM_1: 98448101
-      Weapon_Anims_9MM_10: -2099745049
-      Weapon_Anims_9MM_11: 2108711240
-      Weapon_Anims_9MM_12: -707512414
-      Weapon_Anims_9MM_13: -1190735430
-      Weapon_Anims_9MM_14: 1922345086
-      Weapon_Anims_9MM_15: 1696897665
-      Weapon_Anims_9MM_16: -1364354823
-      Weapon_Anims_9MM_17: -1989458554
-      Weapon_Anims_9MM_18: -832974845
-      Weapon_Anims_9MM_19: -926952987
-      Weapon_Anims_9MM_2: 1515005679
-      Weapon_Anims_9MM_20: -2018376784
-      Weapon_Anims_9MM_21: 453661685
-      Weapon_Anims_9MM_22: -34862018
-      Weapon_Anims_9MM_23: 1472678141
-      Weapon_Anims_9MM_24: -421959154
-      Weapon_Anims_9MM_25: -872713492
-      Weapon_Anims_9MM_26: 1630554290
-      Weapon_Anims_9MM_27: 390050035
-      Weapon_Anims_9MM_28: 2063258384
-      Weapon_Anims_9MM_29: -1750608478
-      Weapon_Anims_9MM_3: 1787223171
-      Weapon_Anims_9MM_30: 1172819665
-      Weapon_Anims_9MM_31: 1245221100
-      Weapon_Anims_9MM_32: -1793721285
-      Weapon_Anims_9MM_33: -1016711591
-      Weapon_Anims_9MM_34: -1212079179
-      Weapon_Anims_9MM_35: -886877344
-      Weapon_Anims_9MM_36: -408540789
-      Weapon_Anims_9MM_37: -1644601034
-      Weapon_Anims_9MM_38: -2025021607
-      Weapon_Anims_9MM_39: 993606462
-      Weapon_Anims_9MM_4: 1106949681
-      Weapon_Anims_9MM_40: -312144539
-      Weapon_Anims_9MM_41: -95443753
-      Weapon_Anims_9MM_42: 1613659095
-      Weapon_Anims_9MM_43: -1685119645
-      Weapon_Anims_9MM_44: -1887443041
-      Weapon_Anims_9MM_45: -1947247623
-      Weapon_Anims_9MM_46: 1133889603
-      Weapon_Anims_9MM_47: 1601738763
-      Weapon_Anims_9MM_48: -779420570
-      Weapon_Anims_9MM_49: 845633234
-      Weapon_Anims_9MM_5: 754247486
-      Weapon_Anims_9MM_50: -1189572462
-      Weapon_Anims_9MM_51: -1887110391
-      Weapon_Anims_9MM_52: 1990841977
-      Weapon_Anims_9MM_53: 1616051249
-      Weapon_Anims_9MM_54: -1052248244
-      Weapon_Anims_9MM_6: 1567097469
-      Weapon_Anims_9MM_7: 1088952417
-      Weapon_Anims_9MM_8: -2109024781
-      Weapon_Anims_9MM_9: -1483187403
+      Weapon_Anims_Revolver W-64 H-48_0: -157103930
+      Weapon_Anims_Revolver W-64 H-48_1: -450582370
+      Weapon_Anims_Revolver W-64 H-48_10: 1427230441
+      Weapon_Anims_Revolver W-64 H-48_11: -878245011
+      Weapon_Anims_Revolver W-64 H-48_12: -1294176978
+      Weapon_Anims_Revolver W-64 H-48_13: 1747520771
+      Weapon_Anims_Revolver W-64 H-48_14: -118084627
+      Weapon_Anims_Revolver W-64 H-48_15: -1860624370
+      Weapon_Anims_Revolver W-64 H-48_16: 927204276
+      Weapon_Anims_Revolver W-64 H-48_17: -595626660
+      Weapon_Anims_Revolver W-64 H-48_18: 1763872539
+      Weapon_Anims_Revolver W-64 H-48_19: 1373294851
+      Weapon_Anims_Revolver W-64 H-48_2: 63240397
+      Weapon_Anims_Revolver W-64 H-48_20: -919655308
+      Weapon_Anims_Revolver W-64 H-48_21: 1534449621
+      Weapon_Anims_Revolver W-64 H-48_22: 1855357823
+      Weapon_Anims_Revolver W-64 H-48_23: 2134982978
+      Weapon_Anims_Revolver W-64 H-48_24: 973958990
+      Weapon_Anims_Revolver W-64 H-48_25: -1443186089
+      Weapon_Anims_Revolver W-64 H-48_26: 1383163325
+      Weapon_Anims_Revolver W-64 H-48_27: 1403258291
+      Weapon_Anims_Revolver W-64 H-48_28: 245198301
+      Weapon_Anims_Revolver W-64 H-48_29: -1588440931
+      Weapon_Anims_Revolver W-64 H-48_3: 1426290726
+      Weapon_Anims_Revolver W-64 H-48_30: -524358393
+      Weapon_Anims_Revolver W-64 H-48_31: -1638520951
+      Weapon_Anims_Revolver W-64 H-48_32: 675563056
+      Weapon_Anims_Revolver W-64 H-48_33: -410874358
+      Weapon_Anims_Revolver W-64 H-48_34: 1901662025
+      Weapon_Anims_Revolver W-64 H-48_35: -1633083845
+      Weapon_Anims_Revolver W-64 H-48_36: 447641235
+      Weapon_Anims_Revolver W-64 H-48_37: -866883699
+      Weapon_Anims_Revolver W-64 H-48_38: 1958801135
+      Weapon_Anims_Revolver W-64 H-48_39: -1003918879
+      Weapon_Anims_Revolver W-64 H-48_4: 237614686
+      Weapon_Anims_Revolver W-64 H-48_40: -1122976312
+      Weapon_Anims_Revolver W-64 H-48_41: -1951723911
+      Weapon_Anims_Revolver W-64 H-48_42: 1242178818
+      Weapon_Anims_Revolver W-64 H-48_43: 871587553
+      Weapon_Anims_Revolver W-64 H-48_44: -1855302446
+      Weapon_Anims_Revolver W-64 H-48_45: -1122731556
+      Weapon_Anims_Revolver W-64 H-48_46: -1938846691
+      Weapon_Anims_Revolver W-64 H-48_47: 502270852
+      Weapon_Anims_Revolver W-64 H-48_5: 559436676
+      Weapon_Anims_Revolver W-64 H-48_6: 1422424466
+      Weapon_Anims_Revolver W-64 H-48_7: 1611849131
+      Weapon_Anims_Revolver W-64 H-48_8: 1332921123
+      Weapon_Anims_Revolver W-64 H-48_9: -529388168
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

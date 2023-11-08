@@ -19,6 +19,9 @@ public class EnemyMovement : MonoBehaviour
         gridCreate = FindObjectOfType<GridCreateManager>();
         gridCreate.FindTarget(transform.position, target.position, this);
 
+        int count = transform.childCount;
+
+
         spriteRenderer = transform.GetChild(0).GetComponent<SpriteRenderer>();
     }
 

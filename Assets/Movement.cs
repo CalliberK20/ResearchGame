@@ -5,15 +5,25 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     public float speed = 2;
+    [Space]
+    public Animator legAnim;
 
+
+    //--------------PRIVATE VARIABLE----------------------------
     private Rigidbody2D rigid;
-    private SpriteRenderer spriteRenderer;
+    private SpriteRenderer[] spriteRenderers;
 
     // Start is called before the first frame update
     void Start()
     {
         rigid = GetComponent<Rigidbody2D>();
-        spriteRenderer = transform.GetChild(0).GetComponent<SpriteRenderer>();
+
+        int count = transform.childCount;
+        spriteRenderers = new SpriteRenderer[count];
+        for (int i = 0; i < spriteRenderers.Length; i++)
+        {
+            spriteRenderers[i] = transform.GetChild(i).GetComponent<SpriteRenderer>();
+        }
     }
 
     // Update is called once per frame
@@ -21,17 +31,29 @@ public class Movement : MonoBehaviour
     {
         Vector2 move = new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
 
-        /*if (move.magnitude > 0.1f)
-            Flip(move.x);*/
+        if (move.magnitude > 0.1f)
+        {
+            legAnim.SetBool("Run", true);
+            Flip(move.x);
+        }
+        else
+            legAnim.SetBool("Run", false);
 
         rigid.position += move * speed * Time.fixedDeltaTime;
     }
-/*
+
     void Flip(float flipMove)
     {
+        bool isFlip = false;
+
         if (flipMove < 0)
-            spriteRenderer.flipX = true;
+            isFlip = true;
         else
-            spriteRenderer.flipX = false;
-    }*/
+            isFlip = false;
+
+        foreach (SpriteRenderer spriteRender in spriteRenderers)
+        {
+            spriteRender.flipX = isFlip;
+        }
+    }
 }
