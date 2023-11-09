@@ -398,7 +398,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3655f6aa6ca582f4b82a0d8ecde6f1b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 3
   legAnim: {fileID: 1024246750}
 --- !u!70 &1003980063
 CapsuleCollider2D:
@@ -491,8 +491,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca3bf5a4a447d844889806d8ba95004a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  torsoAnim: {fileID: 1089325198}
   preBulletCount: 3
   bulletPrefab: {fileID: 2920950206305292489, guid: 6120e136d643651499335fdd7c9b4e95, type: 3}
+  weaponStats:
+  - {fileID: 11400000, guid: 638f0ab16f5328f4c9201bab0f9f5714, type: 2}
+  - {fileID: 11400000, guid: e53d1421b49e36c4aa286872b53adecf, type: 2}
+  weaponDamage: 0
   delayShot: 1
   bulletSpeed: 5
   bulletDestroyTime: 1
@@ -697,6 +702,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1089325193}
   - component: {fileID: 1089325197}
+  - component: {fileID: 1089325198}
   m_Layer: 0
   m_Name: TorsoSprite
   m_TagString: Untagged
@@ -771,6 +777,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
+--- !u!95 &1089325198
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1089325192}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 03d05adb67753784d9c9602e295a4887, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1136174371
 GameObject:
   m_ObjectHideFlags: 0

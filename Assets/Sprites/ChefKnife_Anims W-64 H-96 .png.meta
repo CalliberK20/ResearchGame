@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: cbf5e4fc9ca5a314998c60a0f917ac6c
+guid: ccc8dd3130aa40546b123d0e96318f8d
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,547 +110,589 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Leg_Anims_0
+      name: ChefKnife_Anims W-64 H-96 _0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
-        height: 32
+        width: 64
+        height: 96
       alignment: 9
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0.25, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1550ac4a52325f94ba6d29e1baf3d402
-      internalID: -1269889156
+      spriteID: baf3bd424cc4abb40ac9a71680e1dea6
+      internalID: -1906680053
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leg_Anims_1
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 0
-        width: 32
-        height: 32
-      alignment: 9
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6a401295247214e469c4acc97b078517
-      internalID: 552366357
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Leg_Anims_2
+      name: ChefKnife_Anims W-64 H-96 _1
       rect:
         serializedVersion: 2
         x: 64
         y: 0
-        width: 32
-        height: 32
+        width: 64
+        height: 96
       alignment: 9
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0.25, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 23726e8beebcd844c9594787208dec84
-      internalID: -742595094
+      spriteID: 6b629b7ae3e0590459077593e1e7c255
+      internalID: 1488941839
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leg_Anims_3
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 0
-        width: 32
-        height: 32
-      alignment: 9
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3e08c54883b532943aaff779be54233b
-      internalID: 1936043835
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Leg_Anims_4
+      name: ChefKnife_Anims W-64 H-96 _2
       rect:
         serializedVersion: 2
         x: 128
         y: 0
-        width: 32
-        height: 32
+        width: 64
+        height: 96
       alignment: 9
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0.25, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 46a810b7c0e267343a6ead158b6b364b
-      internalID: 381367527
+      spriteID: 1eb8509b81d84d948aefde67c79e3554
+      internalID: -1862558599
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leg_Anims_5
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 0
-        width: 32
-        height: 32
-      alignment: 9
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9a1a8f0fce1ba7c4ebedeca2eb3af664
-      internalID: -1544623647
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Leg_Anims_6
+      name: ChefKnife_Anims W-64 H-96 _3
       rect:
         serializedVersion: 2
         x: 192
         y: 0
-        width: 32
-        height: 32
+        width: 64
+        height: 96
       alignment: 9
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0.25, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 931584a3f95de3145be24324bd5fbf58
-      internalID: -671496704
+      spriteID: 48b05eeba738d144c85d80a63c3d3cbe
+      internalID: 2020519537
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leg_Anims_7
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 0
-        width: 32
-        height: 32
-      alignment: 9
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2ade99280cb4e30458b80bf9a7694ff0
-      internalID: 645261361
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Leg_Anims_8
+      name: ChefKnife_Anims W-64 H-96 _4
       rect:
         serializedVersion: 2
         x: 256
         y: 0
-        width: 32
-        height: 32
+        width: 64
+        height: 96
       alignment: 9
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0.25, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8575403ccb387a14888cb062caf9459e
-      internalID: -2003274528
+      spriteID: bc4e397b04ce7c2479f9a4a1a87c0ede
+      internalID: -39244338
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leg_Anims_9
-      rect:
-        serializedVersion: 2
-        x: 288
-        y: 0
-        width: 32
-        height: 32
-      alignment: 9
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fc5419a4f309a454e9d7edd46b298c2d
-      internalID: -417495332
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Leg_Anims_10
+      name: ChefKnife_Anims W-64 H-96 _5
       rect:
         serializedVersion: 2
         x: 320
         y: 0
-        width: 32
-        height: 32
+        width: 64
+        height: 96
       alignment: 9
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0.25, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ac6d30b4cb565114182d8726fb23097a
-      internalID: 613654020
+      spriteID: 7ad9df284ae90da4b8081bbb8f4a5ce6
+      internalID: 496981504
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leg_Anims_11
-      rect:
-        serializedVersion: 2
-        x: 352
-        y: 0
-        width: 32
-        height: 32
-      alignment: 9
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d07ea092eedc8404cb58be7290440f5b
-      internalID: -1645097102
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Leg_Anims_12
+      name: ChefKnife_Anims W-64 H-96 _6
       rect:
         serializedVersion: 2
         x: 384
         y: 0
-        width: 32
-        height: 32
+        width: 64
+        height: 96
       alignment: 9
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0.25, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f5b8524da87fcaf439d480f65432c65a
-      internalID: -1596048037
+      spriteID: c14b5f68bdb277f449d574a0417357df
+      internalID: -257136057
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leg_Anims_13
-      rect:
-        serializedVersion: 2
-        x: 416
-        y: 0
-        width: 32
-        height: 32
-      alignment: 9
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 632194ad7f8e1bf439400beb69382ee7
-      internalID: 157584632
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Leg_Anims_14
+      name: ChefKnife_Anims W-64 H-96 _7
       rect:
         serializedVersion: 2
         x: 448
         y: 0
-        width: 32
-        height: 32
+        width: 64
+        height: 96
       alignment: 9
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0.25, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c751c0b1e121f814199f3861281e586a
-      internalID: -105818755
+      spriteID: ed5178d8cbfeb724391e6e36ce2b77f9
+      internalID: -1903816255
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leg_Anims_15
-      rect:
-        serializedVersion: 2
-        x: 480
-        y: 0
-        width: 32
-        height: 32
-      alignment: 9
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ee97590e92f2cfc49b13db896d7d4f19
-      internalID: 421973332
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Leg_Anims_16
+      name: ChefKnife_Anims W-64 H-96 _8
       rect:
         serializedVersion: 2
         x: 512
         y: 0
-        width: 32
-        height: 32
+        width: 64
+        height: 96
       alignment: 9
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0.25, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8b035c2eae1a3764598ddada1337c0f4
-      internalID: -131551838
+      spriteID: 0738b0c3d9976dc439604bf5bcd26de5
+      internalID: -1846976935
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leg_Anims_17
-      rect:
-        serializedVersion: 2
-        x: 544
-        y: 0
-        width: 32
-        height: 32
-      alignment: 9
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 055bd77dc86246840aa447a0ddf0b077
-      internalID: 543963137
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Leg_Anims_18
+      name: ChefKnife_Anims W-64 H-96 _9
       rect:
         serializedVersion: 2
         x: 576
         y: 0
-        width: 32
-        height: 32
+        width: 64
+        height: 96
       alignment: 9
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0.25, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ab174776a039b994ba19983fa0963699
-      internalID: -1742754915
+      spriteID: 7d14b765394b38b499c45fcc66a57491
+      internalID: -1772680725
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leg_Anims_19
-      rect:
-        serializedVersion: 2
-        x: 608
-        y: 0
-        width: 32
-        height: 32
-      alignment: 9
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3d36a2349a703d1408c00a1126f9f209
-      internalID: -311516500
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Leg_Anims_20
+      name: ChefKnife_Anims W-64 H-96 _10
       rect:
         serializedVersion: 2
         x: 640
         y: 0
-        width: 32
-        height: 32
+        width: 64
+        height: 96
       alignment: 9
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0.25, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 56427ed270e36544f93f021d1ad474af
-      internalID: 1392436252
+      spriteID: 9f67f562c9687024da2fac32900203e7
+      internalID: 457266593
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leg_Anims_21
-      rect:
-        serializedVersion: 2
-        x: 672
-        y: 0
-        width: 32
-        height: 32
-      alignment: 9
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a026a53ea20eb2742bf85403adcd4a08
-      internalID: 334687016
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Leg_Anims_22
+      name: ChefKnife_Anims W-64 H-96 _11
       rect:
         serializedVersion: 2
         x: 704
         y: 0
-        width: 32
-        height: 32
+        width: 64
+        height: 96
       alignment: 9
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0.25, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 22afeb43e42d82d43a8a2f53f84413a2
-      internalID: -271239660
+      spriteID: 74473b985a02b5349bda8a15835da2f0
+      internalID: 521124907
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leg_Anims_23
-      rect:
-        serializedVersion: 2
-        x: 736
-        y: 0
-        width: 32
-        height: 32
-      alignment: 9
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9d9357a8d9f385346bb1b150972cbf89
-      internalID: 2139564623
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Leg_Anims_24
+      name: ChefKnife_Anims W-64 H-96 _12
       rect:
         serializedVersion: 2
         x: 768
         y: 0
-        width: 32
-        height: 32
+        width: 64
+        height: 96
       alignment: 9
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0.25, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4bbdeeaaedf748a4986654835b178191
-      internalID: 151802058
+      spriteID: 685f4f611398e164dbaa9e4d326d0bae
+      internalID: 1653765973
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leg_Anims_25
+      name: ChefKnife_Anims W-64 H-96 _13
       rect:
         serializedVersion: 2
-        x: 800
+        x: 832
         y: 0
-        width: 32
-        height: 32
+        width: 64
+        height: 96
       alignment: 9
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0.25, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 79837108063ace446bbb8b6c3fd85028
-      internalID: 1217698262
+      spriteID: 92ea2c2b977483a4ba3eddbbefa34780
+      internalID: 837373973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChefKnife_Anims W-64 H-96 _14
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 0
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.25, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d42eaba794b29845809f79f26b9c88d
+      internalID: -1361230867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChefKnife_Anims W-64 H-96 _15
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 0
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.25, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93ce9b1b8c6e4794bae815e4dd7a83bf
+      internalID: 1409462695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChefKnife_Anims W-64 H-96 _16
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.25, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cfed0b673881544fb7971edd8740547
+      internalID: -815306002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChefKnife_Anims W-64 H-96 _17
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 0
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.25, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d75c452aea0773746b6dfa9caaba4e02
+      internalID: 2129479987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChefKnife_Anims W-64 H-96 _18
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 0
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.25, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b12b48c886ebddd47b989c8e31792cde
+      internalID: -1801732513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChefKnife_Anims W-64 H-96 _19
+      rect:
+        serializedVersion: 2
+        x: 1216
+        y: 0
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.25, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e429d63d824caaa4fa2d2e71f5ed1768
+      internalID: -1155255542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChefKnife_Anims W-64 H-96 _20
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 0
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.25, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8ed8d1423caf824bb09a880838b5cfe
+      internalID: -1952306826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChefKnife_Anims W-64 H-96 _21
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 0
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.25, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39cfa6e7b9906514e95f9b33ce463a3e
+      internalID: 836491926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChefKnife_Anims W-64 H-96 _22
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 0
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.25, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d75400c66e4dd2b45ac5dab073593a15
+      internalID: -393413591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChefKnife_Anims W-64 H-96 _23
+      rect:
+        serializedVersion: 2
+        x: 1472
+        y: 0
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.25, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee5c7c94b5827174b82be9a6aa5c5f2b
+      internalID: 821762256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChefKnife_Anims W-64 H-96 _24
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 0
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.25, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6109c6dbbd6c0de4cb868e7fc1800372
+      internalID: -774766715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChefKnife_Anims W-64 H-96 _25
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 0
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.25, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9ca2a6a23c79b948b25625577bf3584
+      internalID: 1540571878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChefKnife_Anims W-64 H-96 _26
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 0
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.25, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cc6b350da035c844a3d7a78fa1f7446
+      internalID: -1676086949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChefKnife_Anims W-64 H-96 _27
+      rect:
+        serializedVersion: 2
+        x: 1728
+        y: 0
+        width: 64
+        height: 96
+      alignment: 9
+      pivot: {x: 0.25, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 672203142e3ba794ba982b84bace19e8
+      internalID: 1683226416
       vertices: []
       indices: 
       edges: []
@@ -666,32 +708,34 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Leg_Anims_0: -1269889156
-      Leg_Anims_1: 552366357
-      Leg_Anims_10: 613654020
-      Leg_Anims_11: -1645097102
-      Leg_Anims_12: -1596048037
-      Leg_Anims_13: 157584632
-      Leg_Anims_14: -105818755
-      Leg_Anims_15: 421973332
-      Leg_Anims_16: -131551838
-      Leg_Anims_17: 543963137
-      Leg_Anims_18: -1742754915
-      Leg_Anims_19: -311516500
-      Leg_Anims_2: -742595094
-      Leg_Anims_20: 1392436252
-      Leg_Anims_21: 334687016
-      Leg_Anims_22: -271239660
-      Leg_Anims_23: 2139564623
-      Leg_Anims_24: 151802058
-      Leg_Anims_25: 1217698262
-      Leg_Anims_3: 1936043835
-      Leg_Anims_4: 381367527
-      Leg_Anims_5: -1544623647
-      Leg_Anims_6: -671496704
-      Leg_Anims_7: 645261361
-      Leg_Anims_8: -2003274528
-      Leg_Anims_9: -417495332
+      ChefKnife_Anims W-64 H-96 _0: -1906680053
+      ChefKnife_Anims W-64 H-96 _1: 1488941839
+      ChefKnife_Anims W-64 H-96 _10: 457266593
+      ChefKnife_Anims W-64 H-96 _11: 521124907
+      ChefKnife_Anims W-64 H-96 _12: 1653765973
+      ChefKnife_Anims W-64 H-96 _13: 837373973
+      ChefKnife_Anims W-64 H-96 _14: -1361230867
+      ChefKnife_Anims W-64 H-96 _15: 1409462695
+      ChefKnife_Anims W-64 H-96 _16: -815306002
+      ChefKnife_Anims W-64 H-96 _17: 2129479987
+      ChefKnife_Anims W-64 H-96 _18: -1801732513
+      ChefKnife_Anims W-64 H-96 _19: -1155255542
+      ChefKnife_Anims W-64 H-96 _2: -1862558599
+      ChefKnife_Anims W-64 H-96 _20: -1952306826
+      ChefKnife_Anims W-64 H-96 _21: 836491926
+      ChefKnife_Anims W-64 H-96 _22: -393413591
+      ChefKnife_Anims W-64 H-96 _23: 821762256
+      ChefKnife_Anims W-64 H-96 _24: -774766715
+      ChefKnife_Anims W-64 H-96 _25: 1540571878
+      ChefKnife_Anims W-64 H-96 _26: -1676086949
+      ChefKnife_Anims W-64 H-96 _27: 1683226416
+      ChefKnife_Anims W-64 H-96 _3: 2020519537
+      ChefKnife_Anims W-64 H-96 _4: -39244338
+      ChefKnife_Anims W-64 H-96 _5: 496981504
+      ChefKnife_Anims W-64 H-96 _6: -257136057
+      ChefKnife_Anims W-64 H-96 _7: -1903816255
+      ChefKnife_Anims W-64 H-96 _8: -1846976935
+      ChefKnife_Anims W-64 H-96 _9: -1772680725
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

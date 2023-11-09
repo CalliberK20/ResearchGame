@@ -2,19 +2,41 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum WeaponType
+{
+    pistol,
+    chainsaw,
+}
+
 public class GunManager : MonoBehaviour
 {
+    public Animator torsoAnim;
+    [Space]
     public int preBulletCount = 3;
     public GameObject bulletPrefab;
     [Space]
-    public float delayShot = 1f;
-    [Space, Header("Bullet Setting")]
-    public float bulletSpeed = 1f;
-    public float bulletDestroyTime = 1f;
-    [Space]
-    public List<GameObject> bullets = new List<GameObject>();
-    private float startTime;
+    public WeaponStats[] weaponStats;
 
+
+    [Space(30)]
+    [ShowOnly]
+    public float weaponDamage;
+    [ShowOnly]
+    public float delayShot = 1f;
+    [ShowOnly]
+    public float bulletSpeed = 1f;
+    [ShowOnly]
+    public float bulletDestroyTime = 1f;
+    [Space, ShowOnly]
+    public List<GameObject> bullets = new List<GameObject>();
+    
+    
+    //-----------PRIVATE----------------------
+    private float startTime;
+    private float currentWeapon = 0;
+    private bool holdAttack = false;
+    private bool isMelee = false;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +50,8 @@ public class GunManager : MonoBehaviour
             bullets.Add(bullet);
         }
 
+        ChangeStats();
+
         startTime = delayShot;
     }
 
@@ -36,9 +60,24 @@ public class GunManager : MonoBehaviour
     {
         if(Input.GetMouseButtonDown(0))
         {
-            if (startTime >= delayShot)
-                Shoot();
+            if (GetActiveBullet() != null && startTime >= delayShot)
+            {
+                torsoAnim.SetTrigger("Shoot");
+                if (isMelee)
+                {
+
+                }
+                else
+                    Shoot();
+            }
         }
+        
+        if(Input.GetMouseButtonUp(0))
+        {
+            torsoAnim.SetBool("Hold", false);
+        }
+
+        SwitchWeapon();
 
         if (startTime < delayShot)
             startTime += Time.deltaTime;
@@ -48,23 +87,43 @@ public class GunManager : MonoBehaviour
 
     void Shoot()
     {
-        if (GetActiveBullet() != null)
+        GameObject bullet = GetActiveBullet();
+        bullet.SetActive(true);
+        bullet.transform.position = transform.position;
+
+        //----------For Rotation---------------------
+        Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - bullet.transform.position;
+        difference.Normalize();
+        float rotation_z = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
+        bullet.transform.rotation = Quaternion.Euler(0f, 0f, rotation_z);
+        bullet.GetComponent<Rigidbody2D>().velocity = bullet.transform.right * bulletSpeed;
+        //----------For Rotation---------------------
+
+        bullet.GetComponent<Bullet>().SetBulletStat(bulletDestroyTime);
+
+        startTime = 0;
+    }
+
+/*    void HoldAttack()
+    {
+        torsoAnim.SetBool("Hold", true);
+    }*/
+
+    private void SwitchWeapon()
+    {
+        if (Mathf.Abs(Input.mouseScrollDelta.y) > 0)
         {
-            GameObject bullet = GetActiveBullet();
-            bullet.SetActive(true);
-            bullet.transform.position = transform.position;
+            currentWeapon += Input.mouseScrollDelta.y;
 
-            //----------For Rotation---------------------
-            Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - bullet.transform.position;
-            difference.Normalize();
-            float rotation_z = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
-            bullet.transform.rotation = Quaternion.Euler(0f, 0f, rotation_z);
-            bullet.GetComponent<Rigidbody2D>().velocity = bullet.transform.right * bulletSpeed;
-            //----------For Rotation---------------------
+            if (currentWeapon < 0)
+                currentWeapon = 1;
+            else if (currentWeapon > 1)
+                currentWeapon = 0;
 
-            bullet.GetComponent<Bullet>().SetBulletStat(bulletDestroyTime);
+            //Change the stats when switching
+            ChangeStats();
 
-            startTime = 0;
+            torsoAnim.SetFloat("Type", currentWeapon);
         }
     }
 
@@ -76,5 +135,16 @@ public class GunManager : MonoBehaviour
                 return bullet;
         }
         return null;
+    }
+
+    private void ChangeStats()
+    {
+        isMelee = weaponStats[(int)currentWeapon].isMelee;
+
+        weaponDamage = weaponStats[(int)currentWeapon].damage;
+
+        delayShot = weaponStats[(int)currentWeapon].delayShot;
+        bulletSpeed = weaponStats[(int)currentWeapon].bulletSpeed;
+        holdAttack = weaponStats[(int)currentWeapon].holdAttack;
     }
 }
