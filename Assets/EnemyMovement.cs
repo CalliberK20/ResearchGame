@@ -8,8 +8,18 @@ public class EnemyMovement : MonoBehaviour
     public float speed = 4;
     public List<NodeGrid> path = new List<NodeGrid>();
     [Space]
+
+    //-------------PRIVATE--------------------------------------
     private GridCreateManager gridCreate;
     private SpriteRenderer spriteRenderer;
+    private Animator anim;
+
+    public void SetEnemyStats(EnemyStats newStats)
+    {
+        speed = newStats.speed;
+        anim = transform.GetChild(0).GetComponent<Animator>();
+        anim.runtimeAnimatorController = newStats.enemyAnimatorController;
+    }
 
     private void Start()
     {
@@ -18,9 +28,6 @@ public class EnemyMovement : MonoBehaviour
 
         gridCreate = FindObjectOfType<GridCreateManager>();
         gridCreate.FindTarget(transform.position, target.position, this);
-
-        int count = transform.childCount;
-
 
         spriteRenderer = transform.GetChild(0).GetComponent<SpriteRenderer>();
     }
@@ -34,10 +41,12 @@ public class EnemyMovement : MonoBehaviour
             {
                 gridCreate.FindTarget(transform.position, target.position, this);
                 Flip();
+                anim.SetBool("Run", false);
             }
             else
             {
                 transform.position = Vector2.MoveTowards(transform.position, new Vector2(path[0].GridX + 0.5f, path[0].GridY + 0.5f), speed * Time.deltaTime);
+                anim.SetBool("Run", true);
             }
         }
         else

@@ -6,9 +6,11 @@ public class EnemySpawner : MonoBehaviour
 {
     public int enemyCount;
     public GameObject enemyPrefab;
-    [Space]
-    public GameObject[] spawnPoint;
+    [Space(20)]
+    public EnemyStats[] enemyStats;
+    [Space, Header("---------------------------SPAWN SETTINGS--------------------------"), Space(7)]
     public float spawnTime;
+    public GameObject[] spawnPoint;
 
     private GameObject[] enemies;
 
@@ -21,6 +23,7 @@ public class EnemySpawner : MonoBehaviour
         {
             GameObject obj = Instantiate(enemyPrefab);
             enemies[i] = obj;
+            enemies[i].GetComponent<EnemyMovement>().SetEnemyStats(enemyStats[Random.Range(0, enemyStats.Length)]);
             obj.SetActive(false);
         }
 
