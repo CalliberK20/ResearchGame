@@ -19,15 +19,13 @@ public class GunManager : MonoBehaviour
 
 
     [Space(30)]
-    [ShowOnly]
-    public float weaponDamage;
-    [ShowOnly]
-    public float delayShot = 1f;
-    [ShowOnly]
-    public float bulletSpeed = 1f;
-    [ShowOnly]
-    public float bulletDestroyTime = 1f;
+    [ShowOnly] public float weaponDamage;
+    [ShowOnly] public float delayShot = 1f;
+    [ShowOnly] public float bulletSpeed = 1f;
+    [ShowOnly] public float bulletDestroyTime = 1f;
     [Space, ShowOnly]
+    public Vector3 strikeArea;
+    [Space(25), ShowOnly]
     public List<GameObject> bullets = new List<GameObject>();
     
     
@@ -36,7 +34,8 @@ public class GunManager : MonoBehaviour
     private float currentWeapon = 0;
     private bool holdAttack = false;
     private bool isMelee = false;
-    
+    private Movement movement;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -53,6 +52,7 @@ public class GunManager : MonoBehaviour
         ChangeStats();
 
         startTime = delayShot;
+        movement = GetComponent<Movement>();
     }
 
     // Update is called once per frame
@@ -65,7 +65,7 @@ public class GunManager : MonoBehaviour
                 torsoAnim.SetTrigger("Shoot");
                 if (isMelee)
                 {
-
+                    Strike();
                 }
                 else
                     Shoot();
@@ -77,7 +77,21 @@ public class GunManager : MonoBehaviour
             torsoAnim.SetBool("Hold", false);
         }
 
+        //------------------HANDLES SWITCHING---------------------------
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            currentWeapon = 0;
+            ChangeStats();
+            torsoAnim.SetFloat("Type", currentWeapon);
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            currentWeapon = 1;
+            ChangeStats();
+            torsoAnim.SetFloat("Type", currentWeapon);
+        }
         SwitchWeapon();
+        //-------------------------------------------------------------
 
         if (startTime < delayShot)
             startTime += Time.deltaTime;
@@ -99,9 +113,29 @@ public class GunManager : MonoBehaviour
         bullet.GetComponent<Rigidbody2D>().velocity = bullet.transform.right * bulletSpeed;
         //----------For Rotation---------------------
 
-        bullet.GetComponent<Bullet>().SetBulletStat(bulletDestroyTime);
+        bullet.GetComponent<Bullet>().SetBulletStat(weaponDamage, bulletDestroyTime);
 
         startTime = 0;
+    }
+
+    void Strike()
+    {
+        Vector3 offsetArea = Vector2.zero;
+        if(movement.isFlip)
+            offsetArea = new Vector2(-0.7f, 0);
+        else
+            offsetArea = new Vector2(0.7f, 0);
+
+        strikeArea = transform.position + offsetArea;
+
+        Collider2D[] strikeZone = Physics2D.OverlapCircleAll(strikeArea, 0.7f, LayerMask.GetMask("Enemy"));
+        foreach(Collider2D hit in strikeZone)
+        {
+            if(hit.GetComponent<EnemyMovement>())
+            {
+                hit.GetComponent<EnemyMovement>().Damage(weaponDamage);
+            }
+        }
     }
 
 /*    void HoldAttack()
@@ -122,7 +156,6 @@ public class GunManager : MonoBehaviour
 
             //Change the stats when switching
             ChangeStats();
-
             torsoAnim.SetFloat("Type", currentWeapon);
         }
     }
@@ -146,5 +179,10 @@ public class GunManager : MonoBehaviour
         delayShot = weaponStats[(int)currentWeapon].delayShot;
         bulletSpeed = weaponStats[(int)currentWeapon].bulletSpeed;
         holdAttack = weaponStats[(int)currentWeapon].holdAttack;
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(strikeArea, 0.5f);
     }
 }

@@ -6,5 +6,9 @@ using UnityEngine;
 public class EnemyStats : ScriptableObject
 {
     public RuntimeAnimatorController enemyAnimatorController;
+    public float health = 4f;
     public float speed = 2;
+    [Space]
+    public float atkDamage = 2;
+    public float atkSpeed = 2f;
 }

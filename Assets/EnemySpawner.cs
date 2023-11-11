@@ -23,7 +23,6 @@ public class EnemySpawner : MonoBehaviour
         {
             GameObject obj = Instantiate(enemyPrefab);
             enemies[i] = obj;
-            enemies[i].GetComponent<EnemyMovement>().SetEnemyStats(enemyStats[Random.Range(0, enemyStats.Length)]);
             obj.SetActive(false);
         }
 
@@ -39,6 +38,8 @@ public class EnemySpawner : MonoBehaviour
                 int ran = Random.Range(0, spawnPoint.Length);
                 enemy.transform.position = spawnPoint[ran].transform.position;
                 enemy.SetActive(true);
+                enemy.GetComponent<EnemyMovement>().enabled = true;
+                enemy.GetComponent<EnemyMovement>().SetEnemyStats(enemyStats[Random.Range(0, enemyStats.Length)]);
                 break;
             }
         }

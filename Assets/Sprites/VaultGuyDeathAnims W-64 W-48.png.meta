@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: cbf5e4fc9ca5a314998c60a0f917ac6c
+guid: fb728cc0ff6c7d541b046d40248fde86
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,463 +110,379 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Leg_Anims_0
+      name: VaultGuyDeathAnims W-64 W-48_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
-        height: 32
+        width: 64
+        height: 48
       alignment: 9
-      pivot: {x: 0.435, y: 0.5}
+      pivot: {x: 0.245, y: 0.34}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1550ac4a52325f94ba6d29e1baf3d402
-      internalID: -1269889156
+      spriteID: 331a7f8353b0a794d98f012e1f195853
+      internalID: -778025334
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leg_Anims_1
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 0
-        width: 32
-        height: 32
-      alignment: 9
-      pivot: {x: 0.495, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6a401295247214e469c4acc97b078517
-      internalID: 552366357
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Leg_Anims_2
+      name: VaultGuyDeathAnims W-64 W-48_1
       rect:
         serializedVersion: 2
         x: 64
         y: 0
-        width: 32
-        height: 32
+        width: 64
+        height: 48
       alignment: 9
-      pivot: {x: 0.495, y: 0.5}
+      pivot: {x: 0.245, y: 0.34}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 23726e8beebcd844c9594787208dec84
-      internalID: -742595094
+      spriteID: d92fcdffbba7f2049b2df291e1c0841d
+      internalID: -951277927
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leg_Anims_3
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 0
-        width: 32
-        height: 32
-      alignment: 9
-      pivot: {x: 0.495, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3e08c54883b532943aaff779be54233b
-      internalID: 1936043835
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Leg_Anims_4
+      name: VaultGuyDeathAnims W-64 W-48_2
       rect:
         serializedVersion: 2
         x: 128
         y: 0
-        width: 32
-        height: 32
+        width: 64
+        height: 48
       alignment: 9
-      pivot: {x: 0.495, y: 0.5}
+      pivot: {x: 0.245, y: 0.34}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 46a810b7c0e267343a6ead158b6b364b
-      internalID: 381367527
+      spriteID: ba49e57a36be78c459b347ac4c57ba4c
+      internalID: 804936945
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leg_Anims_5
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 0
-        width: 32
-        height: 32
-      alignment: 9
-      pivot: {x: 0.495, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9a1a8f0fce1ba7c4ebedeca2eb3af664
-      internalID: -1544623647
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Leg_Anims_6
+      name: VaultGuyDeathAnims W-64 W-48_3
       rect:
         serializedVersion: 2
         x: 192
         y: 0
-        width: 32
-        height: 32
+        width: 64
+        height: 48
       alignment: 9
-      pivot: {x: 0.495, y: 0.5}
+      pivot: {x: 0.245, y: 0.34}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 931584a3f95de3145be24324bd5fbf58
-      internalID: -671496704
+      spriteID: 1bb26254d0365674faead7a58cb67245
+      internalID: -890499365
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leg_Anims_7
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 0
-        width: 32
-        height: 32
-      alignment: 9
-      pivot: {x: 0.495, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2ade99280cb4e30458b80bf9a7694ff0
-      internalID: 645261361
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Leg_Anims_8
+      name: VaultGuyDeathAnims W-64 W-48_4
       rect:
         serializedVersion: 2
         x: 256
         y: 0
-        width: 32
-        height: 32
+        width: 64
+        height: 48
       alignment: 9
-      pivot: {x: 0.495, y: 0.5}
+      pivot: {x: 0.245, y: 0.34}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8575403ccb387a14888cb062caf9459e
-      internalID: -2003274528
+      spriteID: 6d57d88de615b124f8cefa6ab28c2ca1
+      internalID: 2026372568
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leg_Anims_9
-      rect:
-        serializedVersion: 2
-        x: 288
-        y: 0
-        width: 32
-        height: 32
-      alignment: 9
-      pivot: {x: 0.495, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fc5419a4f309a454e9d7edd46b298c2d
-      internalID: -417495332
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Leg_Anims_10
+      name: VaultGuyDeathAnims W-64 W-48_5
       rect:
         serializedVersion: 2
         x: 320
         y: 0
-        width: 32
-        height: 32
+        width: 64
+        height: 48
       alignment: 9
-      pivot: {x: 0.495, y: 0.5}
+      pivot: {x: 0.245, y: 0.34}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ac6d30b4cb565114182d8726fb23097a
-      internalID: 613654020
+      spriteID: c25e3e37d3a42414ba4be40f36acbc1b
+      internalID: -1748402035
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leg_Anims_11
-      rect:
-        serializedVersion: 2
-        x: 352
-        y: 0
-        width: 32
-        height: 32
-      alignment: 9
-      pivot: {x: 0.495, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d07ea092eedc8404cb58be7290440f5b
-      internalID: -1645097102
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Leg_Anims_12
+      name: VaultGuyDeathAnims W-64 W-48_6
       rect:
         serializedVersion: 2
         x: 384
         y: 0
-        width: 32
-        height: 32
+        width: 64
+        height: 48
       alignment: 9
-      pivot: {x: 0.495, y: 0.5}
+      pivot: {x: 0.245, y: 0.34}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f5b8524da87fcaf439d480f65432c65a
-      internalID: -1596048037
+      spriteID: 470885c4fabbd8846b13f10d0e63be88
+      internalID: -563102267
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leg_Anims_13
-      rect:
-        serializedVersion: 2
-        x: 416
-        y: 0
-        width: 32
-        height: 32
-      alignment: 9
-      pivot: {x: 0.495, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 632194ad7f8e1bf439400beb69382ee7
-      internalID: 157584632
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Leg_Anims_14
+      name: VaultGuyDeathAnims W-64 W-48_7
       rect:
         serializedVersion: 2
         x: 448
         y: 0
-        width: 32
-        height: 32
+        width: 64
+        height: 48
       alignment: 9
-      pivot: {x: 0.495, y: 0.5}
+      pivot: {x: 0.245, y: 0.34}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c751c0b1e121f814199f3861281e586a
-      internalID: -105818755
+      spriteID: f8d788422801e244db4cffdb6b556c87
+      internalID: 1059233286
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leg_Anims_15
-      rect:
-        serializedVersion: 2
-        x: 480
-        y: 0
-        width: 32
-        height: 32
-      alignment: 9
-      pivot: {x: 0.495, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ee97590e92f2cfc49b13db896d7d4f19
-      internalID: 421973332
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Leg_Anims_16
+      name: VaultGuyDeathAnims W-64 W-48_8
       rect:
         serializedVersion: 2
         x: 512
         y: 0
-        width: 32
-        height: 32
+        width: 64
+        height: 48
       alignment: 9
-      pivot: {x: 0.495, y: 0.5}
+      pivot: {x: 0.245, y: 0.34}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8b035c2eae1a3764598ddada1337c0f4
-      internalID: -131551838
+      spriteID: 1a24b90eb6464f3448906f52239555b4
+      internalID: 1149384752
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leg_Anims_17
-      rect:
-        serializedVersion: 2
-        x: 544
-        y: 0
-        width: 32
-        height: 32
-      alignment: 9
-      pivot: {x: 0.495, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 055bd77dc86246840aa447a0ddf0b077
-      internalID: 543963137
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Leg_Anims_18
+      name: VaultGuyDeathAnims W-64 W-48_9
       rect:
         serializedVersion: 2
         x: 576
         y: 0
-        width: 32
-        height: 32
+        width: 64
+        height: 48
       alignment: 9
-      pivot: {x: 0.495, y: 0.5}
+      pivot: {x: 0.245, y: 0.34}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ab174776a039b994ba19983fa0963699
-      internalID: -1742754915
+      spriteID: a8b300934701ceb47baeafbf25ef8a24
+      internalID: -1533717401
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leg_Anims_19
-      rect:
-        serializedVersion: 2
-        x: 608
-        y: 0
-        width: 32
-        height: 32
-      alignment: 9
-      pivot: {x: 0.495, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3d36a2349a703d1408c00a1126f9f209
-      internalID: -311516500
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Leg_Anims_20
+      name: VaultGuyDeathAnims W-64 W-48_10
       rect:
         serializedVersion: 2
         x: 640
         y: 0
-        width: 32
-        height: 32
+        width: 64
+        height: 48
       alignment: 9
-      pivot: {x: 0.495, y: 0.5}
+      pivot: {x: 0.245, y: 0.34}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 56427ed270e36544f93f021d1ad474af
-      internalID: 1392436252
+      spriteID: 865c50e934d49d245ad76709b06cb13f
+      internalID: 902953641
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leg_Anims_21
+      name: VaultGuyDeathAnims W-64 W-48_11
       rect:
         serializedVersion: 2
-        x: 672
+        x: 704
         y: 0
-        width: 32
-        height: 32
+        width: 64
+        height: 48
       alignment: 9
-      pivot: {x: 0.495, y: 0.5}
+      pivot: {x: 0.245, y: 0.34}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a026a53ea20eb2742bf85403adcd4a08
-      internalID: 334687016
+      spriteID: 1903d24fe409dd646995151164d733a6
+      internalID: 1418278187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VaultGuyDeathAnims W-64 W-48_12
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 64
+        height: 48
+      alignment: 9
+      pivot: {x: 0.245, y: 0.34}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f717cccd65bc1f740ae7d0ad229eb33a
+      internalID: 357826287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VaultGuyDeathAnims W-64 W-48_13
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 0
+        width: 64
+        height: 48
+      alignment: 9
+      pivot: {x: 0.245, y: 0.34}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78b194b260d11b84aa03aa23c2740195
+      internalID: -448626725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VaultGuyDeathAnims W-64 W-48_14
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 0
+        width: 64
+        height: 48
+      alignment: 9
+      pivot: {x: 0.245, y: 0.34}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f5453d186cc59f4fb506b4790d30015
+      internalID: 575882939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VaultGuyDeathAnims W-64 W-48_15
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 0
+        width: 64
+        height: 48
+      alignment: 9
+      pivot: {x: 0.245, y: 0.34}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eab63f92b5e2bca4fa542b71fd58e5ed
+      internalID: -759704687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VaultGuyDeathAnims W-64 W-48_16
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 64
+        height: 48
+      alignment: 9
+      pivot: {x: 0.245, y: 0.34}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a17392b8b75efdb429ab9c7c9a492cb4
+      internalID: -1309847182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VaultGuyDeathAnims W-64 W-48_17
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 0
+        width: 64
+        height: 48
+      alignment: 9
+      pivot: {x: 0.245, y: 0.34}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 462cb06ba9ce21444bf48de5cd0f51f9
+      internalID: 1132638022
       vertices: []
       indices: 
       edges: []
@@ -582,28 +498,24 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Leg_Anims_0: -1269889156
-      Leg_Anims_1: 552366357
-      Leg_Anims_10: 613654020
-      Leg_Anims_11: -1645097102
-      Leg_Anims_12: -1596048037
-      Leg_Anims_13: 157584632
-      Leg_Anims_14: -105818755
-      Leg_Anims_15: 421973332
-      Leg_Anims_16: -131551838
-      Leg_Anims_17: 543963137
-      Leg_Anims_18: -1742754915
-      Leg_Anims_19: -311516500
-      Leg_Anims_2: -742595094
-      Leg_Anims_20: 1392436252
-      Leg_Anims_21: 334687016
-      Leg_Anims_3: 1936043835
-      Leg_Anims_4: 381367527
-      Leg_Anims_5: -1544623647
-      Leg_Anims_6: -671496704
-      Leg_Anims_7: 645261361
-      Leg_Anims_8: -2003274528
-      Leg_Anims_9: -417495332
+      VaultGuyDeathAnims W-64 W-48_0: -778025334
+      VaultGuyDeathAnims W-64 W-48_1: -951277927
+      VaultGuyDeathAnims W-64 W-48_10: 902953641
+      VaultGuyDeathAnims W-64 W-48_11: 1418278187
+      VaultGuyDeathAnims W-64 W-48_12: 357826287
+      VaultGuyDeathAnims W-64 W-48_13: -448626725
+      VaultGuyDeathAnims W-64 W-48_14: 575882939
+      VaultGuyDeathAnims W-64 W-48_15: -759704687
+      VaultGuyDeathAnims W-64 W-48_16: -1309847182
+      VaultGuyDeathAnims W-64 W-48_17: 1132638022
+      VaultGuyDeathAnims W-64 W-48_2: 804936945
+      VaultGuyDeathAnims W-64 W-48_3: -890499365
+      VaultGuyDeathAnims W-64 W-48_4: 2026372568
+      VaultGuyDeathAnims W-64 W-48_5: -1748402035
+      VaultGuyDeathAnims W-64 W-48_6: -563102267
+      VaultGuyDeathAnims W-64 W-48_7: 1059233286
+      VaultGuyDeathAnims W-64 W-48_8: 1149384752
+      VaultGuyDeathAnims W-64 W-48_9: -1533717401
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
