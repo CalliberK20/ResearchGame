@@ -27,17 +27,11 @@ public class EnemyMovement : MonoBehaviour
         atkSpeed = newStats.atkSpeed;
         anim = transform.GetChild(0).GetComponent<Animator>();
         anim.runtimeAnimatorController = newStats.enemyAnimatorController;
-    }
-
-    private void Start()
-    {
         if (target == null)
             target = GameObject.FindGameObjectWithTag("Player").transform;
-
+        spriteRenderer = transform.GetChild(0).GetComponent<SpriteRenderer>();
         gridCreate = FindObjectOfType<GridCreateManager>();
         gridCreate.FindTarget(transform.position, target.position, this);
-
-        spriteRenderer = transform.GetChild(0).GetComponent<SpriteRenderer>();
     }
 
     private void FixedUpdate()
