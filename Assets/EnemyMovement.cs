@@ -114,15 +114,18 @@ public class EnemyMovement : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        foreach(NodeGrid n in path)
+        if(GridCreateManager.instance.showGizmos)
         {
-            Gizmos.color = Color.blue;
+            foreach (NodeGrid n in path)
+            {
+                Gizmos.color = Color.blue;
 
-            Gizmos.DrawCube(new Vector3(n.GridX + 0.5f, n.GridY + 0.5f), new Vector3(0.5f, 0.5f));
+                Gizmos.DrawCube(new Vector3(n.GridX + 0.5f, n.GridY + 0.5f), new Vector3(0.5f, 0.5f));
+            }
+
+            Gizmos.color = Color.red;
+            Gizmos.DrawWireSphere(transform.position, 0.7f);
         }
-
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, 0.7f);
     }
 }
 

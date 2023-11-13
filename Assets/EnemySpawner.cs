@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
+    public static EnemySpawner Instance;
+
     public int enemyCount;
     public GameObject enemyPrefab;
     [Space]
@@ -17,6 +19,11 @@ public class EnemySpawner : MonoBehaviour
     [ShowOnly] public List<EnemyMovement> enemyInRadius = new List<EnemyMovement>();
     [ShowOnly] public List<EnemyMovement> enemySpawned = new List<EnemyMovement>();
     private GameObject[] enemies;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -47,13 +54,14 @@ public class EnemySpawner : MonoBehaviour
             {
                 if(enemyEntry.Count > 0)
                 {
-                    int ran = Random.Range(0, enemyEntry.Count);
-                    enemy.transform.position = enemyEntry[ran].transform.position;
                     enemy.SetActive(true);
+                    int ran = Random.Range(0, enemyEntry.Count);
+                    enemy.transform.position = enemyEntry[ran].transform.position; 
                     EnemyMovement enemyMovement = enemy.GetComponent<EnemyMovement>();
                     enemyMovement.enabled = true;
                     enemyMovement.SetEnemyStats(enemyStats[Random.Range(0, enemyStats.Length)]);
-                    enemySpawned.Add(enemyMovement);
+                    if (!enemySpawned.Contains(enemyMovement))
+                        enemySpawned.Add(enemyMovement);
                 }
                 break;
             }
@@ -67,7 +75,6 @@ public class EnemySpawner : MonoBehaviour
         List<GameObject> entry = new List<GameObject>();
         List<EnemyMovement> enemiesInRadius = new List<EnemyMovement>();
 
-        DisabledAllEnemies();
         foreach (Collider2D hit in collision)
         {
             if (hit.CompareTag("SpawnPoint"))
@@ -79,15 +86,18 @@ public class EnemySpawner : MonoBehaviour
             {
                 EnemyMovement found = hit.GetComponent<EnemyMovement>();
                 if (!enemiesInRadius.Contains(found))
-                {
-                    found.gameObject.SetActive(true);
                     enemiesInRadius.Add(found);
-                }
             }
         }
 
         enemyEntry = entry;
         enemyInRadius = enemiesInRadius;
+
+        foreach (EnemyMovement enemy in enemySpawned)
+        {
+            if(!enemyInRadius.Contains(enemy))
+                enemy.gameObject.SetActive(false);
+        }
     }
 
     private void DisabledAllEnemies()
@@ -97,7 +107,6 @@ public class EnemySpawner : MonoBehaviour
             enemy.gameObject.SetActive(false);
         }
     }
-
     private void OnDrawGizmos()
     {
         Transform character = GameObject.FindWithTag("Player").transform;

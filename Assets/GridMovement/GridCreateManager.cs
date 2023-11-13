@@ -4,11 +4,20 @@ using UnityEngine.Tilemaps;
 
 public class GridCreateManager : MonoBehaviour
 {
+    public static GridCreateManager instance;
+
+    public bool showGizmos = true;
+    [Space]
     public Tilemap obstacleMap;
     [Space]
     public int rowLeght;
     public int colLeght;
     NodeGrid[,] gridList;
+
+    private void Awake()
+    {
+        instance = this;
+    }
 
     void GridCreate()
     {
@@ -189,26 +198,29 @@ public class GridCreateManager : MonoBehaviour
 
     void OnDrawGizmos()
     {
-        float addOffsetX = 0;
-        float addOffsetY = 0;
+        if(showGizmos)
+        {
+            float addOffsetX = 0;
+            float addOffsetY = 0;
 
-        if (rowLeght % 2 != 0)
-            addOffsetX = 0.5f;
+            if (rowLeght % 2 != 0)
+                addOffsetX = 0.5f;
 
-        if(colLeght % 2 != 0)
-            addOffsetY = 0.5f;
+            if (colLeght % 2 != 0)
+                addOffsetY = 0.5f;
 
             Gizmos.DrawWireCube(new Vector3(rowLeght / 2 + addOffsetX, colLeght / 2 + addOffsetY), new Vector3(rowLeght, colLeght));
-        if (gridList != null)
-        {
-            foreach (NodeGrid n in gridList)
+            if (gridList != null)
             {
-                if (n.nonWalkable)
-                    Gizmos.color = new Color(1, 0, 0, 0.3f);
-                else
-                    Gizmos.color = new Color(1, 1, 1, 0.3f);
+                foreach (NodeGrid n in gridList)
+                {
+                    if (n.nonWalkable)
+                        Gizmos.color = new Color(1, 0, 0, 0.3f);
+                    else
+                        Gizmos.color = new Color(1, 1, 1, 0.3f);
 
-                Gizmos.DrawCube(new Vector3(n.GridX + 0.5f, n.GridY + 0.5f), new Vector3(0.5f, 0.5f));
+                    Gizmos.DrawCube(new Vector3(n.GridX + 0.5f, n.GridY + 0.5f), new Vector3(0.5f, 0.5f));
+                }
             }
         }
     }

@@ -17,4 +17,4 @@ MonoBehaviour:
   damage: 2
   delayShot: 1
   bulletSpeed: 5
-  bulletDestroyTime: 1
+  bulletDestroyTime: 3

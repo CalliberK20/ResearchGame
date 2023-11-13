@@ -74,7 +74,7 @@ public class GunManager : MonoBehaviour
         
         if(Input.GetMouseButtonUp(0))
         {
-            torsoAnim.SetBool("Hold", false);
+            //torsoAnim.SetBool("Hold", false);
         }
 
         //------------------HANDLES SWITCHING---------------------------
@@ -179,6 +179,7 @@ public class GunManager : MonoBehaviour
         delayShot = weaponStats[(int)currentWeapon].delayShot;
         bulletSpeed = weaponStats[(int)currentWeapon].bulletSpeed;
         holdAttack = weaponStats[(int)currentWeapon].holdAttack;
+        bulletDestroyTime = weaponStats[(int)currentWeapon].bulletDestroyTime;
     }
 
     private void OnDrawGizmos()
