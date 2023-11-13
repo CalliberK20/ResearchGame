@@ -9,7 +9,6 @@ public class Movement : MonoBehaviour
     [Space]
     public Animator legAnim;
 
-
     //--------------PRIVATE VARIABLE----------------------------
     private Rigidbody2D rigid;
     private SpriteRenderer[] spriteRenderers;
