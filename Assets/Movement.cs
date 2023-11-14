@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Movement : MonoBehaviour
 {
@@ -8,13 +9,15 @@ public class Movement : MonoBehaviour
     public float speed = 2;
     [Space]
     public Animator legAnim;
+    [ShowOnly] public bool isDead = false;
 
     //--------------PRIVATE VARIABLE----------------------------
     private Rigidbody2D rigid;
     private SpriteRenderer[] spriteRenderers;
     private GunManager gunManager;
-    private bool isDead = false;
     [HideInInspector] public bool isFlip;
+
+    private float regHealth;
 
     // Start is called before the first frame update
     void Start()
@@ -28,6 +31,8 @@ public class Movement : MonoBehaviour
         {
             spriteRenderers[i] = transform.GetChild(i).GetComponent<SpriteRenderer>();
         }
+
+        regHealth = health;
     }
 
     // Update is called once per frame
@@ -40,12 +45,14 @@ public class Movement : MonoBehaviour
             if (move.magnitude > 0.1f)
             {
                 legAnim.SetBool("Run", true);
-                Flip(move.x);
             }
             else
                 legAnim.SetBool("Run", false);
 
             rigid.position += move * speed * Time.fixedDeltaTime;
+
+            if (Input.GetButton("Horizontal"))
+                Flip(move.x);
         }    
     }
 
@@ -53,7 +60,10 @@ public class Movement : MonoBehaviour
     {
         health -= damage;
 
-        if(health <= 0)
+        Image healthBar = UIManager.Instance.GetHealthBar();
+        healthBar.fillAmount -= damage / regHealth;
+
+        if(!isDead && health <= 0)
         {
             legAnim.SetTrigger("Die");
             gunManager.enabled = false;

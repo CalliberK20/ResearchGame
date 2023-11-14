@@ -58,45 +58,48 @@ public class GunManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetMouseButtonDown(0))
+        if(!movement.isDead)
         {
-            if (GetActiveBullet() != null && startTime >= delayShot)
+            if (Input.GetMouseButtonDown(0))
             {
-                torsoAnim.SetTrigger("Shoot");
-                if (isMelee)
+                if (GetActiveBullet() != null && startTime >= delayShot)
                 {
-                    Strike();
+                    torsoAnim.SetTrigger("Shoot");
+                    if (isMelee)
+                    {
+                        Strike();
+                    }
+                    else
+                        Shoot();
                 }
-                else
-                    Shoot();
             }
-        }
-        
-        if(Input.GetMouseButtonUp(0))
-        {
-            //torsoAnim.SetBool("Hold", false);
-        }
 
-        //------------------HANDLES SWITCHING---------------------------
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            currentWeapon = 0;
-            ChangeStats();
-            torsoAnim.SetFloat("Type", currentWeapon);
-        }
-        else if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            currentWeapon = 1;
-            ChangeStats();
-            torsoAnim.SetFloat("Type", currentWeapon);
-        }
-        SwitchWeapon();
-        //-------------------------------------------------------------
+            if (Input.GetMouseButtonUp(0))
+            {
+                //torsoAnim.SetBool("Hold", false);
+            }
 
-        if (startTime < delayShot)
-            startTime += Time.deltaTime;
+            //------------------HANDLES SWITCHING---------------------------
+            if (Input.GetKeyDown(KeyCode.Alpha1))
+            {
+                currentWeapon = 0;
+                ChangeStats();
+                torsoAnim.SetFloat("Type", currentWeapon);
+            }
+            else if (Input.GetKeyDown(KeyCode.Alpha2))
+            {
+                currentWeapon = 1;
+                ChangeStats();
+                torsoAnim.SetFloat("Type", currentWeapon);
+            }
+            SwitchWeapon();
+            //-------------------------------------------------------------
 
-        Debug.DrawLine(transform.position, Camera.main.ScreenToWorldPoint(Input.mousePosition), Color.red);
+            if (startTime < delayShot)
+                startTime += Time.deltaTime;
+
+            Debug.DrawLine(transform.position, Camera.main.ScreenToWorldPoint(Input.mousePosition), Color.red);
+        }
     }
 
     void Shoot()

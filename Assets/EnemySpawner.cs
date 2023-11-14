@@ -37,8 +37,6 @@ public class EnemySpawner : MonoBehaviour
             enemies[i].name = "Enemy " + i.ToString();
             obj.SetActive(false);
         }
-
-        InvokeRepeating("SpawnEnemy", spawnTime, spawnTime);
     }
 
     private void Update()
@@ -46,7 +44,7 @@ public class EnemySpawner : MonoBehaviour
         SpawnRadius();
     }
 
-    void SpawnEnemy()
+    public void SpawnEnemy(EnemyType type)
     {
         foreach(GameObject enemy in enemies)
         {
@@ -59,7 +57,7 @@ public class EnemySpawner : MonoBehaviour
                     enemy.transform.position = enemyEntry[ran].transform.position; 
                     EnemyMovement enemyMovement = enemy.GetComponent<EnemyMovement>();
                     enemyMovement.enabled = true;
-                    enemyMovement.SetEnemyStats(enemyStats[Random.Range(0, enemyStats.Length)]);
+                    enemyMovement.SetEnemyStats(TypeToStats(type));
                     if (!enemySpawned.Contains(enemyMovement))
                         enemySpawned.Add(enemyMovement);
                 }
@@ -100,13 +98,16 @@ public class EnemySpawner : MonoBehaviour
         }
     }
 
-    private void DisabledAllEnemies()
+    private EnemyStats TypeToStats(EnemyType type)
     {
-        foreach(EnemyMovement enemy in enemySpawned)
+        switch (type)
         {
-            enemy.gameObject.SetActive(false);
+            case EnemyType.normal:return enemyStats[0];
+            case EnemyType.heavy: return enemyStats[1];
         }
+        return enemyStats[0];
     }
+
     private void OnDrawGizmos()
     {
         Transform character = GameObject.FindWithTag("Player").transform;
