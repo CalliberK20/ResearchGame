@@ -21,6 +21,8 @@ public class GunManager : MonoBehaviour
     [Space(30)]
     [ShowOnly] public float weaponDamage;
     [ShowOnly] public float delayShot = 1f;
+    [ShowOnly] public float reloadSpeed = 3;
+    [ShowOnly] public int ammo = 5;
     [ShowOnly] public float bulletSpeed = 1f;
     [ShowOnly] public float bulletDestroyTime = 1f;
     [Space, ShowOnly]
@@ -30,11 +32,16 @@ public class GunManager : MonoBehaviour
     
     
     //-----------PRIVATE----------------------
-    private float startTime;
+    private float startDelay;
+    private float startReload;
+    private int currentAmmo;
+
     private float currentWeapon = 0;
     private bool holdAttack = false;
     private bool isMelee = false;
+
     private Movement movement;
+    private bool isReloading = false;
 
     // Start is called before the first frame update
     void Start()
@@ -50,8 +57,9 @@ public class GunManager : MonoBehaviour
         }
 
         ChangeStats();
-
-        startTime = delayShot;
+        startDelay = delayShot;
+        currentAmmo = ammo;
+        UIManager.Instance.ammoText.text = currentAmmo.ToString();
         movement = GetComponent<Movement>();
     }
 
@@ -62,7 +70,8 @@ public class GunManager : MonoBehaviour
         {
             if (Input.GetMouseButtonDown(0))
             {
-                if (GetActiveBullet() != null && startTime >= delayShot)
+                GameObject bullet = GetActiveBullet();
+                if (bullet != null && startDelay >= delayShot && !isReloading)
                 {
                     torsoAnim.SetTrigger("Shoot");
                     if (isMelee)
@@ -70,7 +79,7 @@ public class GunManager : MonoBehaviour
                         Strike();
                     }
                     else
-                        Shoot();
+                        Shoot(bullet);
                 }
             }
 
@@ -95,19 +104,32 @@ public class GunManager : MonoBehaviour
             SwitchWeapon();
             //-------------------------------------------------------------
 
-            if (startTime < delayShot)
-                startTime += Time.deltaTime;
+            if (startDelay < delayShot)
+                startDelay += Time.deltaTime;
+
+
+            if (isReloading)
+            {
+                startReload += Time.deltaTime;
+                if(startReload >= reloadSpeed)
+                {
+                    currentAmmo = ammo;
+                    UIManager.Instance.ammoText.text = currentAmmo.ToString();
+                    startReload = 0;
+                    isReloading = false;
+                }
+            }
 
             Debug.DrawLine(transform.position, Camera.main.ScreenToWorldPoint(Input.mousePosition), Color.red);
         }
     }
 
-    void Shoot()
+    void Shoot(GameObject bullet)
     {
-        GameObject bullet = GetActiveBullet();
         bullet.SetActive(true);
         bullet.transform.position = transform.position;
 
+        #region Rotation
         //----------For Rotation---------------------
         Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - bullet.transform.position;
         difference.Normalize();
@@ -115,10 +137,19 @@ public class GunManager : MonoBehaviour
         bullet.transform.rotation = Quaternion.Euler(0f, 0f, rotation_z);
         bullet.GetComponent<Rigidbody2D>().velocity = bullet.transform.right * bulletSpeed;
         //----------For Rotation---------------------
+        #endregion
 
+        if(!isMelee)
+        {
+            currentAmmo--;
+            UIManager.Instance.ammoText.text = currentAmmo.ToString();
+            if (currentAmmo <= 0)
+            {
+                isReloading = true;
+            }
+        }
         bullet.GetComponent<Bullet>().SetBulletStat(weaponDamage, bulletDestroyTime);
-
-        startTime = 0;
+        startDelay = 0;
     }
 
     void Strike()
@@ -182,6 +213,9 @@ public class GunManager : MonoBehaviour
         delayShot = weaponStats[(int)currentWeapon].delayShot;
         bulletSpeed = weaponStats[(int)currentWeapon].bulletSpeed;
         holdAttack = weaponStats[(int)currentWeapon].holdAttack;
+
+        ammo = weaponStats[(int)currentWeapon].ammo;
+
         bulletDestroyTime = weaponStats[(int)currentWeapon].bulletDestroyTime;
     }
 

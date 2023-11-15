@@ -60,7 +60,7 @@ public class Movement : MonoBehaviour
     {
         health -= damage;
 
-        Image healthBar = UIManager.Instance.GetHealthBar();
+        Image healthBar = UIManager.Instance.healthBar;
         healthBar.fillAmount -= damage / regHealth;
 
         if(!isDead && health <= 0)

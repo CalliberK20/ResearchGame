@@ -10,6 +10,7 @@ public class WeaponStatsEditor : Editor
 
     SerializedProperty damage;
 
+    SerializedProperty ammo;
     SerializedProperty delayShot;
     SerializedProperty bulletSpeed;
     SerializedProperty bulletDestroyTime;
@@ -22,6 +23,7 @@ public class WeaponStatsEditor : Editor
 
         damage = serializedObject.FindProperty("damage");
 
+        ammo = serializedObject.FindProperty("ammo");
         delayShot = serializedObject.FindProperty("delayShot");
         bulletSpeed = serializedObject.FindProperty("bulletSpeed");
         bulletDestroyTime = serializedObject.FindProperty("bulletDestroyTime");
@@ -48,6 +50,7 @@ public class WeaponStatsEditor : Editor
 
         if (rangeWeapon)
         {
+            EditorGUILayout.PropertyField(ammo);
             EditorGUILayout.PropertyField(delayShot);
             EditorGUILayout.PropertyField(bulletSpeed);
             EditorGUILayout.PropertyField(bulletDestroyTime);
