@@ -17,24 +17,23 @@ public class GunManager : MonoBehaviour
     [Space]
     public WeaponStats[] weaponStats;
 
-
     [Space(30)]
     [ShowOnly] public float weaponDamage;
-    [ShowOnly] public float delayShot = 1f;
+    [ShowOnly] public float atkDelay = 1f;
     [ShowOnly] public float reloadSpeed = 3;
     [ShowOnly] public int ammo = 5;
     [ShowOnly] public float bulletSpeed = 1f;
     [ShowOnly] public float bulletDestroyTime = 1f;
     [Space, ShowOnly]
     public Vector3 strikeArea;
-    [Space(25), ShowOnly]
-    public List<GameObject> bullets = new List<GameObject>();
-    
     
     //-----------PRIVATE----------------------
+    private List<GameObject> bullets = new List<GameObject>();
+    private int[] currentAmmos;
+
+
     private float startDelay;
     private float startReload;
-    private int currentAmmo;
 
     private float currentWeapon = 0;
     private bool holdAttack = false;
@@ -57,9 +56,17 @@ public class GunManager : MonoBehaviour
         }
 
         ChangeStats();
-        startDelay = delayShot;
-        currentAmmo = ammo;
-        UIManager.Instance.ammoText.text = currentAmmo.ToString();
+        currentAmmos = new int[weaponStats.Length];
+        for (int i = 0; i < currentAmmos.Length; i++)
+        {
+            if (!weaponStats[i].isMelee)
+                currentAmmos[i] = weaponStats[i].ammo;
+            else
+                currentAmmos[i] = 0;
+        }
+        startDelay = atkDelay;
+        
+        UIManager.Instance.ammoText.text = currentAmmos[(int)currentWeapon].ToString();
         movement = GetComponent<Movement>();
     }
 
@@ -71,7 +78,7 @@ public class GunManager : MonoBehaviour
             if (Input.GetMouseButtonDown(0))
             {
                 GameObject bullet = GetActiveBullet();
-                if (bullet != null && startDelay >= delayShot && !isReloading)
+                if (bullet != null && startDelay >= atkDelay && !isReloading)
                 {
                     torsoAnim.SetTrigger("Shoot");
                     if (isMelee)
@@ -104,7 +111,7 @@ public class GunManager : MonoBehaviour
             SwitchWeapon();
             //-------------------------------------------------------------
 
-            if (startDelay < delayShot)
+            if (startDelay < atkDelay)
                 startDelay += Time.deltaTime;
 
 
@@ -113,8 +120,8 @@ public class GunManager : MonoBehaviour
                 startReload += Time.deltaTime;
                 if(startReload >= reloadSpeed)
                 {
-                    currentAmmo = ammo;
-                    UIManager.Instance.ammoText.text = currentAmmo.ToString();
+                    currentAmmos[(int)currentWeapon] = ammo;
+                    UIManager.Instance.ammoText.text = currentAmmos[(int)currentWeapon].ToString();
                     startReload = 0;
                     isReloading = false;
                 }
@@ -141,9 +148,9 @@ public class GunManager : MonoBehaviour
 
         if(!isMelee)
         {
-            currentAmmo--;
-            UIManager.Instance.ammoText.text = currentAmmo.ToString();
-            if (currentAmmo <= 0)
+            currentAmmos[(int)currentWeapon]--;
+            UIManager.Instance.ammoText.text = currentAmmos[(int)currentWeapon].ToString();
+            if (currentAmmos[(int)currentWeapon] <= 0)
             {
                 isReloading = true;
             }
@@ -190,6 +197,7 @@ public class GunManager : MonoBehaviour
 
             //Change the stats when switching
             ChangeStats();
+            UIManager.Instance.ammoText.text = currentAmmos[(int)currentWeapon].ToString();
             torsoAnim.SetFloat("Type", currentWeapon);
         }
     }
@@ -210,13 +218,26 @@ public class GunManager : MonoBehaviour
 
         weaponDamage = weaponStats[(int)currentWeapon].damage;
 
-        delayShot = weaponStats[(int)currentWeapon].delayShot;
-        bulletSpeed = weaponStats[(int)currentWeapon].bulletSpeed;
-        holdAttack = weaponStats[(int)currentWeapon].holdAttack;
+        if(isMelee)
+        {
+            atkDelay = 0;
+            bulletSpeed = 0;
+            holdAttack = weaponStats[(int)currentWeapon].holdAttack;
 
-        ammo = weaponStats[(int)currentWeapon].ammo;
+            ammo = 0;
 
-        bulletDestroyTime = weaponStats[(int)currentWeapon].bulletDestroyTime;
+            bulletDestroyTime = 0;
+        }
+        else
+        {
+            atkDelay = weaponStats[(int)currentWeapon].delayShot;
+            bulletSpeed = weaponStats[(int)currentWeapon].bulletSpeed;
+            holdAttack = weaponStats[(int)currentWeapon].holdAttack;
+
+            ammo = weaponStats[(int)currentWeapon].ammo;
+
+            bulletDestroyTime = weaponStats[(int)currentWeapon].bulletDestroyTime;
+        }
     }
 
     private void OnDrawGizmos()

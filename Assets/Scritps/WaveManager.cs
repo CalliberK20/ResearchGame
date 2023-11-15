@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public enum EnemyType
 {
+    random,
     normal,
     heavy,
 }
@@ -24,7 +26,7 @@ public class WaveManager : MonoBehaviour
         public EnemyType[] zombieType;  
     }
 
-    private void Start()
+    void Start ()
     {
         StartCoroutine(WaveDelay());
     }
@@ -32,9 +34,11 @@ public class WaveManager : MonoBehaviour
     private IEnumerator WaveDelay()
     {
         currentWave = 1;
+        
         for (int i = 0; i < waves.Length; i++)
         {
             Wave wave = waves[i];
+            UIManager.Instance.waveText.text = currentWave.ToString();
             foreach (EnemyType enemyType in wave.zombieType)
             {
                 yield return new WaitForSeconds(Random.Range(wave.minTime, wave.maxTime));

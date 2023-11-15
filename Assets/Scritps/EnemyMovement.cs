@@ -34,6 +34,11 @@ public class EnemyMovement : MonoBehaviour
         gridCreate.FindTarget(transform.position, target.position, this);
     }
 
+    public void FindPLayerOnSpawn()
+    {
+        gridCreate.FindTarget(transform.position, target.position, this);
+    }
+
     private void FixedUpdate()
     {
         if (Vector2.Distance(transform.position, target.position) <= 0.7f)

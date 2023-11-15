@@ -54,7 +54,7 @@ public class EnemySpawner : MonoBehaviour
                 {
                     enemy.SetActive(true);
                     int ran = Random.Range(0, enemyEntry.Count);
-                    enemy.transform.position = enemyEntry[ran].transform.position; 
+                    enemy.transform.position = enemyEntry[ran].GetComponent<SpawnPoint>().Spawn(); 
                     EnemyMovement enemyMovement = enemy.GetComponent<EnemyMovement>();
                     enemyMovement.enabled = true;
                     enemyMovement.SetEnemyStats(TypeToStats(type));
@@ -94,7 +94,11 @@ public class EnemySpawner : MonoBehaviour
         foreach (EnemyMovement enemy in enemySpawned)
         {
             if(!enemyInRadius.Contains(enemy))
-                enemy.gameObject.SetActive(false);
+            {
+                int ran = Random.Range(0, enemyEntry.Count);
+                enemy.transform.position = enemyEntry[ran].GetComponent<SpawnPoint>().Spawn();
+                enemy.FindPLayerOnSpawn();
+            }
         }
     }
 
@@ -105,7 +109,8 @@ public class EnemySpawner : MonoBehaviour
             case EnemyType.normal:return enemyStats[0];
             case EnemyType.heavy: return enemyStats[1];
         }
-        return enemyStats[0];
+        int ran = Random.Range(0, enemyStats.Length);
+        return enemyStats[ran];
     }
 
     private void OnDrawGizmos()

@@ -6,12 +6,14 @@ using UnityEngine;
 [CustomEditor(typeof(WeaponStats))]
 public class WeaponStatsEditor : Editor
 {
+    SerializedProperty weaponSprite;
+
     SerializedProperty isMelee;
 
     SerializedProperty damage;
 
     SerializedProperty ammo;
-    SerializedProperty delayShot;
+    SerializedProperty atkDelay;
     SerializedProperty bulletSpeed;
     SerializedProperty bulletDestroyTime;
 
@@ -19,12 +21,14 @@ public class WeaponStatsEditor : Editor
 
     private void OnEnable()
     {
+        weaponSprite = serializedObject.FindProperty("weaponSprite");
+
         isMelee = serializedObject.FindProperty("isMelee");
 
         damage = serializedObject.FindProperty("damage");
 
         ammo = serializedObject.FindProperty("ammo");
-        delayShot = serializedObject.FindProperty("delayShot");
+        atkDelay = serializedObject.FindProperty("atkDelay");
         bulletSpeed = serializedObject.FindProperty("bulletSpeed");
         bulletDestroyTime = serializedObject.FindProperty("bulletDestroyTime");
     }
@@ -34,6 +38,8 @@ public class WeaponStatsEditor : Editor
         WeaponStats _weaponStats = (WeaponStats)target;
 
         serializedObject.Update();
+
+        EditorGUILayout.PropertyField(weaponSprite);
 
         EditorGUILayout.PropertyField(isMelee);
 
@@ -51,7 +57,7 @@ public class WeaponStatsEditor : Editor
         if (rangeWeapon)
         {
             EditorGUILayout.PropertyField(ammo);
-            EditorGUILayout.PropertyField(delayShot);
+            EditorGUILayout.PropertyField(atkDelay);
             EditorGUILayout.PropertyField(bulletSpeed);
             EditorGUILayout.PropertyField(bulletDestroyTime);
         }

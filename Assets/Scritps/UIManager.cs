@@ -13,7 +13,7 @@ public class UIManager : MonoBehaviour
     public TextMeshProUGUI ammoText;
     public TextMeshProUGUI waveText;
 
-    private void Start()
+    private void Awake()
     {
         Instance = this;
     }

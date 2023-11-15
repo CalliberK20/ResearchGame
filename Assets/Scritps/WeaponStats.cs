@@ -5,6 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Weapon Stats")]
 public class WeaponStats : ScriptableObject
 {
+    public Sprite weaponSprite;
     public bool holdAttack;
     public bool isMelee = false;
 

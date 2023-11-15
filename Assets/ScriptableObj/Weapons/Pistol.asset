@@ -12,9 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 403245a0e5f2eed4b9c364dc203b565b, type: 3}
   m_Name: Pistol
   m_EditorClassIdentifier: 
+  weaponSprite: {fileID: 42923945, guid: 340f96cfab9c3154daa778035238fc96, type: 3}
   holdAttack: 0
   isMelee: 0
   damage: 2
+  ammo: 5
   delayShot: 1
   bulletSpeed: 5
   bulletDestroyTime: 3
