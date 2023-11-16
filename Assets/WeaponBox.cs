@@ -7,9 +7,12 @@ public class WeaponBox : MonoBehaviour
     public WeaponStats[] weaponStats;
     private SpriteRenderer spriteObj;
     private Animator chestAnim;
+    private GunManager gunManager;
     // Start is called before the first frame update
     void Start()
     {
+        gunManager = GameObject.FindGameObjectWithTag("Player").GetComponent<GunManager>();
+
         chestAnim = GetComponent<Animator>();
         spriteObj = transform.GetChild(0).GetComponent<SpriteRenderer>();
     }
@@ -31,9 +34,13 @@ public class WeaponBox : MonoBehaviour
             yield return new WaitForSeconds(0.1f);
         }
     }
-
+    
     public void GunToGive()
     {
-
+        StopAllCoroutines();
+        WeaponStats weapon = weaponStats[Random.Range(0, weaponStats.Length)];
+        spriteObj.sprite = weapon.weaponSprite;
+        if (!gunManager.weaponStats.Contains(weapon))
+            gunManager.GiveNewWeapon(weapon);
     }
 }

@@ -6,9 +6,11 @@ public class Bullet : MonoBehaviour
 {
     private float time = 3f;
     private float damage = 0;
+    public TrailRenderer trail;
 
     public void SetBulletStat(float newDmg, float newTime)
     {
+        trail.Clear();
         time = newTime;
         damage = newDmg;
         StartCoroutine(DestroyObj());

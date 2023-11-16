@@ -6,8 +6,13 @@ using UnityEngine;
 public class WeaponStats : ScriptableObject
 {
     public Sprite weaponSprite;
+    public float weaponPrice = 20;
+
+    public int weaponAnimatorType = 0;
+    [Space]
     public bool holdAttack;
     public bool isMelee = false;
+    public float atkRate = 1f; 
 
     public float damage = 2;
 

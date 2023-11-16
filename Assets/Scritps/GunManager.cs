@@ -2,12 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum WeaponType
-{
-    pistol,
-    chainsaw,
-}
-
 public class GunManager : MonoBehaviour
 {
     public Animator torsoAnim;
@@ -15,21 +9,24 @@ public class GunManager : MonoBehaviour
     public int preBulletCount = 3;
     public GameObject bulletPrefab;
     [Space]
-    public WeaponStats[] weaponStats;
+    public List<WeaponStats> weaponStats = new List<WeaponStats>();
 
+    #region Properties
     [Space(30)]
     [ShowOnly] public float weaponDamage;
-    [ShowOnly] public float atkDelay = 1f;
     [ShowOnly] public float reloadSpeed = 3;
     [ShowOnly] public int ammo = 5;
+    [ShowOnly] public float atkRate = 1f;
     [ShowOnly] public float bulletSpeed = 1f;
     [ShowOnly] public float bulletDestroyTime = 1f;
     [Space, ShowOnly]
     public Vector3 strikeArea;
-    
+    #endregion
+
+
     //-----------PRIVATE----------------------
     private List<GameObject> bullets = new List<GameObject>();
-    private int[] currentAmmos;
+    private List<int> currentAmmos = new List<int>();
 
 
     private float startDelay;
@@ -56,15 +53,16 @@ public class GunManager : MonoBehaviour
         }
 
         ChangeStats();
-        currentAmmos = new int[weaponStats.Length];
-        for (int i = 0; i < currentAmmos.Length; i++)
+        torsoAnim.SetFloat("Type", weaponStats[(int)currentWeapon].weaponAnimatorType);
+
+        for (int i = 0; i < weaponStats.Count; i++)
         {
+            int getAmmo = 0;
             if (!weaponStats[i].isMelee)
-                currentAmmos[i] = weaponStats[i].ammo;
-            else
-                currentAmmos[i] = 0;
+                getAmmo = weaponStats[i].ammo;
+            currentAmmos.Add(getAmmo);
         }
-        startDelay = atkDelay;
+        startDelay = atkRate;
         
         UIManager.Instance.ammoText.text = currentAmmos[(int)currentWeapon].ToString();
         movement = GetComponent<Movement>();
@@ -78,7 +76,7 @@ public class GunManager : MonoBehaviour
             if (Input.GetMouseButtonDown(0))
             {
                 GameObject bullet = GetActiveBullet();
-                if (bullet != null && startDelay >= atkDelay && !isReloading)
+                if (bullet != null && startDelay >= atkRate && !isReloading)
                 {
                     torsoAnim.SetTrigger("Shoot");
                     if (isMelee)
@@ -96,22 +94,31 @@ public class GunManager : MonoBehaviour
             }
 
             //------------------HANDLES SWITCHING---------------------------
-            if (Input.GetKeyDown(KeyCode.Alpha1))
+            if (Mathf.Abs(Input.mouseScrollDelta.y) > 0)
             {
-                currentWeapon = 0;
-                ChangeStats();
-                torsoAnim.SetFloat("Type", currentWeapon);
+                currentWeapon += Input.mouseScrollDelta.y;
+
+                if (currentWeapon < 0)
+                    currentWeapon = weaponStats.Count - 1;
+                else if (currentWeapon > weaponStats.Count - 1)
+                    currentWeapon = 0;
             }
-            else if (Input.GetKeyDown(KeyCode.Alpha2))
+
+            if(weaponStats.Count > 0)
             {
-                currentWeapon = 1;
-                ChangeStats();
-                torsoAnim.SetFloat("Type", currentWeapon);
+                if (Input.GetKeyDown(KeyCode.Alpha1))
+                {
+                    currentWeapon = 0;
+                }
+                else if (Input.GetKeyDown(KeyCode.Alpha2))
+                {
+                    currentWeapon = 1;
+                }
             }
             SwitchWeapon();
             //-------------------------------------------------------------
 
-            if (startDelay < atkDelay)
+            if (startDelay < atkRate)
                 startDelay += Time.deltaTime;
 
 
@@ -142,6 +149,7 @@ public class GunManager : MonoBehaviour
         difference.Normalize();
         float rotation_z = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
         bullet.transform.rotation = Quaternion.Euler(0f, 0f, rotation_z);
+        bullet.transform.position = bullet.transform.position + (bullet.transform.right * 0.4f);
         bullet.GetComponent<Rigidbody2D>().velocity = bullet.transform.right * bulletSpeed;
         //----------For Rotation---------------------
         #endregion
@@ -172,7 +180,7 @@ public class GunManager : MonoBehaviour
         Collider2D[] strikeZone = Physics2D.OverlapCircleAll(strikeArea, 0.7f, LayerMask.GetMask("Enemy"));
         foreach(Collider2D hit in strikeZone)
         {
-            if(hit.GetComponent<EnemyMovement>())
+            if(hit.GetComponent<EnemyMovement>() && hit.GetComponent<EnemyMovement>().enabled)
             {
                 hit.GetComponent<EnemyMovement>().Damage(weaponDamage);
             }
@@ -186,20 +194,25 @@ public class GunManager : MonoBehaviour
 
     private void SwitchWeapon()
     {
-        if (Mathf.Abs(Input.mouseScrollDelta.y) > 0)
+        //Change the stats when switching
+        ChangeStats();
+        UIManager.Instance.ammoText.text = currentAmmos[(int)currentWeapon].ToString();
+        torsoAnim.SetFloat("Type", weaponStats[(int)currentWeapon].weaponAnimatorType);
+    }
+
+    public void GiveNewWeapon(WeaponStats newWeapon)
+    {
+        if (!weaponStats.Contains(newWeapon))
         {
-            currentWeapon += Input.mouseScrollDelta.y;
+            weaponStats.Add(newWeapon);
 
-            if (currentWeapon < 0)
-                currentWeapon = 1;
-            else if (currentWeapon > 1)
-                currentWeapon = 0;
-
-            //Change the stats when switching
-            ChangeStats();
-            UIManager.Instance.ammoText.text = currentAmmos[(int)currentWeapon].ToString();
-            torsoAnim.SetFloat("Type", currentWeapon);
+            int getAmmo = 0;
+            if (!newWeapon.isMelee)
+                getAmmo = newWeapon.ammo;
+            currentAmmos.Add(getAmmo);
         }
+        else
+            Debug.Log("Has the gun");
     }
 
     GameObject GetActiveBullet()
@@ -220,7 +233,7 @@ public class GunManager : MonoBehaviour
 
         if(isMelee)
         {
-            atkDelay = 0;
+            atkRate = 0;
             bulletSpeed = 0;
             holdAttack = weaponStats[(int)currentWeapon].holdAttack;
 
@@ -230,7 +243,7 @@ public class GunManager : MonoBehaviour
         }
         else
         {
-            atkDelay = weaponStats[(int)currentWeapon].delayShot;
+            atkRate = weaponStats[(int)currentWeapon].delayShot;
             bulletSpeed = weaponStats[(int)currentWeapon].bulletSpeed;
             holdAttack = weaponStats[(int)currentWeapon].holdAttack;
 

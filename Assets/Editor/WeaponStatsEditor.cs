@@ -7,13 +7,16 @@ using UnityEngine;
 public class WeaponStatsEditor : Editor
 {
     SerializedProperty weaponSprite;
+    SerializedProperty weaponPrice;
+
+    SerializedProperty weaponAnimatorType;
 
     SerializedProperty isMelee;
 
     SerializedProperty damage;
 
     SerializedProperty ammo;
-    SerializedProperty atkDelay;
+    SerializedProperty atkRate;
     SerializedProperty bulletSpeed;
     SerializedProperty bulletDestroyTime;
 
@@ -22,13 +25,16 @@ public class WeaponStatsEditor : Editor
     private void OnEnable()
     {
         weaponSprite = serializedObject.FindProperty("weaponSprite");
+        weaponPrice = serializedObject.FindProperty("weaponPrice");
+
+        weaponAnimatorType = serializedObject.FindProperty("weaponAnimatorType");
 
         isMelee = serializedObject.FindProperty("isMelee");
 
         damage = serializedObject.FindProperty("damage");
 
         ammo = serializedObject.FindProperty("ammo");
-        atkDelay = serializedObject.FindProperty("atkDelay");
+        atkRate = serializedObject.FindProperty("atkRate");
         bulletSpeed = serializedObject.FindProperty("bulletSpeed");
         bulletDestroyTime = serializedObject.FindProperty("bulletDestroyTime");
     }
@@ -40,10 +46,14 @@ public class WeaponStatsEditor : Editor
         serializedObject.Update();
 
         EditorGUILayout.PropertyField(weaponSprite);
-
+        EditorGUILayout.PropertyField(weaponPrice);
+        EditorGUILayout.Space(5f);
+        EditorGUILayout.PropertyField(weaponAnimatorType);
+        EditorGUILayout.Space(10);
         EditorGUILayout.PropertyField(isMelee);
 
         EditorGUILayout.PropertyField(damage);
+        EditorGUILayout.PropertyField(atkRate);
 
         EditorGUILayout.Space(10);
 
@@ -57,7 +67,6 @@ public class WeaponStatsEditor : Editor
         if (rangeWeapon)
         {
             EditorGUILayout.PropertyField(ammo);
-            EditorGUILayout.PropertyField(atkDelay);
             EditorGUILayout.PropertyField(bulletSpeed);
             EditorGUILayout.PropertyField(bulletDestroyTime);
         }

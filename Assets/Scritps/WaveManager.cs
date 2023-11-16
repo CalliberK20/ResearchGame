@@ -31,6 +31,13 @@ public class WaveManager : MonoBehaviour
         StartCoroutine(WaveDelay());
     }
 
+    public void Update()
+    {
+        float fps = 1f / Time.unscaledDeltaTime;
+        if (fps <= 100)
+            Debug.LogError("FPS has reach its minimun");
+    }
+
     private IEnumerator WaveDelay()
     {
         currentWave = 1;
