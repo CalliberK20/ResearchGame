@@ -7,14 +7,17 @@ public class WeaponMiniShop : MonoBehaviour
 {
     public float radius = 3f;
     public WeaponStats weaponToSell;
+    private float bulletCostRate = 0.3f;
     [Space]
     [ShowOnly] public float weaponPrice = 0;
 
     private TextMeshPro priceText;
     private bool hasBought = false;
+    private CashManager cashManager;
 
     private void Start()
     {
+        cashManager = CashManager.instance;
         priceText = transform.GetChild(0).GetComponent<TextMeshPro>();
         weaponPrice = weaponToSell.weaponPrice;
     }
@@ -23,6 +26,7 @@ public class WeaponMiniShop : MonoBehaviour
     void Update()
     {
         Collider2D hit = Physics2D.OverlapCircle(transform.position, radius, LayerMask.GetMask("Player"));
+        float rate = weaponPrice * bulletCostRate;
         if(hit != null && hit.CompareTag("Player"))
         {
             priceText.gameObject.SetActive(true);
@@ -31,7 +35,7 @@ public class WeaponMiniShop : MonoBehaviour
                 hasBought = true;
                 if (!weaponToSell.isMelee)
                 {
-                    priceText.text = "Buy Bullets";
+                    priceText.text = "Buy Bullets : $" + rate.ToString();
                 }
             }
             else
@@ -40,11 +44,21 @@ public class WeaponMiniShop : MonoBehaviour
             if(Input.GetKeyDown(KeyCode.E))
             {
                 if (hasBought)
-                    Debug.Log("Buy Ammo");
+                {
+                    if (cashManager.SuffiecientAmount(rate))
+                    {
+                        Debug.Log("Buy Ammo");
+                        cashManager.LoseMoney(rate);
+                    }
+                }
                 else
                 {
-                    hit.GetComponent<GunManager>().GiveNewWeapon(weaponToSell);
-                    Debug.Log("Buy Gun");
+                    if(cashManager.SuffiecientAmount(weaponPrice))
+                    {
+                        hit.GetComponent<GunManager>().GiveNewWeapon(weaponToSell);
+                        Debug.Log("Buy Gun");
+                        cashManager.LoseMoney(weaponPrice);
+                    }
                 }
             }
         }

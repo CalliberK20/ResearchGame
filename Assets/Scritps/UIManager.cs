@@ -10,6 +10,8 @@ public class UIManager : MonoBehaviour
 
     public Image healthBar;
     [Space]
+    public TextMeshProUGUI cashAmount;
+    [Space]
     public TextMeshProUGUI ammoText;
     public TextMeshProUGUI waveText;
 

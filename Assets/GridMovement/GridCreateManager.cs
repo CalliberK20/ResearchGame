@@ -43,7 +43,7 @@ public class GridCreateManager : MonoBehaviour
         }
     }
 
-    public void FindTarget(Vector3 seekPoint, Vector3 tarPoint, EnemyMovement enemySource)
+    public List<NodeGrid> FindTarget(Vector3 seekPoint, Vector3 tarPoint)
     {
         GridCreate();
 
@@ -71,17 +71,14 @@ public class GridCreateManager : MonoBehaviour
             openPath.Remove(node);
             closePath.Add(node);
 
-
             if (node == targetPoint)
             {
-                RetracePath(seekerPoint, targetPoint, enemySource);
-                break;
-            }
+                return RetracePath(seekerPoint, targetPoint);
 
+            }
 
             foreach (NodeGrid neighbor in GetNeighbors(node))
             {
-                //Debug.Log("X: " + neighbor.GridX + ", Y:" + neighbor.GridY);
                 if (neighbor.nonWalkable || closePath.Contains(neighbor))
                     continue;
 
@@ -96,6 +93,8 @@ public class GridCreateManager : MonoBehaviour
                 }
             }
         }
+
+        return null;
     }
 
 
@@ -156,7 +155,7 @@ public class GridCreateManager : MonoBehaviour
         return neighbors;
     }
 
-    private void RetracePath(NodeGrid pointA, NodeGrid pointB, EnemyMovement lead)
+    private List<NodeGrid> RetracePath(NodeGrid pointA, NodeGrid pointB)
     {
         List<NodeGrid> pathF = new List<NodeGrid>();
         NodeGrid currentPath = pointB;
@@ -169,7 +168,7 @@ public class GridCreateManager : MonoBehaviour
 
         pathF.Reverse();
 
-        lead.path = pathF;
+        return pathF;
     }
 
     

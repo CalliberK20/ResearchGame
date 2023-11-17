@@ -12,6 +12,7 @@ public class WeaponStatsEditor : Editor
     SerializedProperty weaponAnimatorType;
 
     SerializedProperty isMelee;
+    SerializedProperty holdAttack;
 
     SerializedProperty damage;
 
@@ -30,6 +31,7 @@ public class WeaponStatsEditor : Editor
         weaponAnimatorType = serializedObject.FindProperty("weaponAnimatorType");
 
         isMelee = serializedObject.FindProperty("isMelee");
+        holdAttack = serializedObject.FindProperty("holdAttack");
 
         damage = serializedObject.FindProperty("damage");
 
@@ -51,7 +53,8 @@ public class WeaponStatsEditor : Editor
         EditorGUILayout.PropertyField(weaponAnimatorType);
         EditorGUILayout.Space(10);
         EditorGUILayout.PropertyField(isMelee);
-
+        EditorGUILayout.PropertyField(holdAttack);
+        EditorGUILayout.Space(10);
         EditorGUILayout.PropertyField(damage);
         EditorGUILayout.PropertyField(atkRate);
 

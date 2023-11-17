@@ -27,6 +27,7 @@ public class GunManager : MonoBehaviour
     //-----------PRIVATE----------------------
     private List<GameObject> bullets = new List<GameObject>();
     private List<int> currentAmmos = new List<int>();
+    private List<int> maxAmmos = new List<int>();
 
 
     private float startDelay;
@@ -61,10 +62,10 @@ public class GunManager : MonoBehaviour
             if (!weaponStats[i].isMelee)
                 getAmmo = weaponStats[i].ammo;
             currentAmmos.Add(getAmmo);
+            maxAmmos.Add(getAmmo);
         }
         startDelay = atkRate;
-        
-        UIManager.Instance.ammoText.text = currentAmmos[(int)currentWeapon].ToString();
+
         movement = GetComponent<Movement>();
     }
 
@@ -87,10 +88,20 @@ public class GunManager : MonoBehaviour
                         Shoot(bullet);
                 }
             }
+            
+            if(holdAttack && Input.GetMouseButton(0))
+            {
+                torsoAnim.SetBool("Hold", true);
+                if (startDelay >= atkRate)
+                {
+                    Strike();
+                    startDelay = 0;
+                }
+            }
 
             if (Input.GetMouseButtonUp(0))
             {
-                //torsoAnim.SetBool("Hold", false);
+                torsoAnim.SetBool("Hold", false);
             }
 
             //------------------HANDLES SWITCHING---------------------------
@@ -122,13 +133,20 @@ public class GunManager : MonoBehaviour
                 startDelay += Time.deltaTime;
 
 
-            if (isReloading)
+            if (isReloading && maxAmmos[(int)currentWeapon] > 0)
             {
                 startReload += Time.deltaTime;
                 if(startReload >= reloadSpeed)
                 {
-                    currentAmmos[(int)currentWeapon] = ammo;
-                    UIManager.Instance.ammoText.text = currentAmmos[(int)currentWeapon].ToString();
+                    int bulletToGive = 0;
+                    if (maxAmmos[(int)currentWeapon] >= ammo)
+                        bulletToGive = ammo;
+                    else
+                        bulletToGive = maxAmmos[(int)currentWeapon];
+
+                    currentAmmos[(int)currentWeapon] = bulletToGive;
+                    maxAmmos[(int)currentWeapon] -= bulletToGive;
+
                     startReload = 0;
                     isReloading = false;
                 }
@@ -157,7 +175,7 @@ public class GunManager : MonoBehaviour
         if(!isMelee)
         {
             currentAmmos[(int)currentWeapon]--;
-            UIManager.Instance.ammoText.text = currentAmmos[(int)currentWeapon].ToString();
+            UIManager.Instance.ammoText.text = currentAmmos[(int)currentWeapon].ToString() + "/" + maxAmmos[(int)currentWeapon].ToString();
             if (currentAmmos[(int)currentWeapon] <= 0)
             {
                 isReloading = true;
@@ -196,8 +214,17 @@ public class GunManager : MonoBehaviour
     {
         //Change the stats when switching
         ChangeStats();
-        UIManager.Instance.ammoText.text = currentAmmos[(int)currentWeapon].ToString();
+        UIManager.Instance.ammoText.text = currentAmmos[(int)currentWeapon].ToString() + "/" + maxAmmos[(int)currentWeapon].ToString();
         torsoAnim.SetFloat("Type", weaponStats[(int)currentWeapon].weaponAnimatorType);
+        isReloading = false;
+
+        if (!isMelee)
+        {
+            if (currentAmmos[(int)currentWeapon] <= 0)
+            {
+                isReloading = true;
+            }
+        }
     }
 
     public void GiveNewWeapon(WeaponStats newWeapon)
@@ -210,6 +237,7 @@ public class GunManager : MonoBehaviour
             if (!newWeapon.isMelee)
                 getAmmo = newWeapon.ammo;
             currentAmmos.Add(getAmmo);
+            maxAmmos.Add(getAmmo);
         }
         else
             Debug.Log("Has the gun");
@@ -227,6 +255,7 @@ public class GunManager : MonoBehaviour
 
     private void ChangeStats()
     {
+        holdAttack = weaponStats[(int)currentWeapon].holdAttack;
         isMelee = weaponStats[(int)currentWeapon].isMelee;
 
         weaponDamage = weaponStats[(int)currentWeapon].damage;
@@ -235,7 +264,6 @@ public class GunManager : MonoBehaviour
         {
             atkRate = 0;
             bulletSpeed = 0;
-            holdAttack = weaponStats[(int)currentWeapon].holdAttack;
 
             ammo = 0;
 
@@ -245,7 +273,6 @@ public class GunManager : MonoBehaviour
         {
             atkRate = weaponStats[(int)currentWeapon].delayShot;
             bulletSpeed = weaponStats[(int)currentWeapon].bulletSpeed;
-            holdAttack = weaponStats[(int)currentWeapon].holdAttack;
 
             ammo = weaponStats[(int)currentWeapon].ammo;
 

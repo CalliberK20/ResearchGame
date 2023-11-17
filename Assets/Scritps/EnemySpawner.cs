@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
@@ -97,7 +98,7 @@ public class EnemySpawner : MonoBehaviour
             {
                 int ran = Random.Range(0, enemyEntry.Count);
                 enemy.transform.position = enemyEntry[ran].GetComponent<SpawnPoint>().Spawn();
-                enemy.FindPLayerOnSpawn();
+                enemy.path = new List<NodeGrid>();
             }
         }
     }

@@ -18,6 +18,7 @@ public class EnemyMovement : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private Animator anim;
     private bool isAttacking = false;
+    private float reward;
 
     public void SetEnemyStats(EnemyStats newStats)
     {
@@ -25,18 +26,14 @@ public class EnemyMovement : MonoBehaviour
         health = newStats.health;
         atkDamage = newStats.atkDamage;
         atkSpeed = newStats.atkSpeed;
+        reward = newStats.reward;
         anim = transform.GetChild(0).GetComponent<Animator>();
         anim.runtimeAnimatorController = newStats.enemyAnimatorController;
         if (target == null)
             target = GameObject.FindGameObjectWithTag("Player").transform;
         spriteRenderer = transform.GetChild(0).GetComponent<SpriteRenderer>();
         gridCreate = FindObjectOfType<GridCreateManager>();
-        gridCreate.FindTarget(transform.position, target.position, this);
-    }
-
-    public void FindPLayerOnSpawn()
-    {
-        gridCreate.FindTarget(transform.position, target.position, this);
+        path = new List<NodeGrid>();
     }
 
     private void FixedUpdate()
@@ -55,7 +52,7 @@ public class EnemyMovement : MonoBehaviour
                 NodeGrid pathGrid = path[0];
                 if (transform.position.x == pathGrid.GridX + 0.5f && transform.position.y == pathGrid.GridY + 0.5f)
                 {
-                    gridCreate.FindTarget(transform.position, target.position, this);
+                    path = new List<NodeGrid>();
                     Flip();
                     anim.SetBool("Run", false);
                 }
@@ -67,9 +64,8 @@ public class EnemyMovement : MonoBehaviour
             }
             else
             {
-                gridCreate.FindTarget(transform.position, target.position, this);
+                path = gridCreate.FindTarget(transform.position, target.position);
             }
-
         }
     }
 
@@ -104,6 +100,7 @@ public class EnemyMovement : MonoBehaviour
         {
             anim.SetTrigger("Die");
             enabled = false;
+            CashManager.instance.GiveMoney(reward);
             StartCoroutine(DesipateDelay());
         }
     }

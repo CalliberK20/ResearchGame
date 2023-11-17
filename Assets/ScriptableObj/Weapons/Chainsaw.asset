@@ -12,4 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 403245a0e5f2eed4b9c364dc203b565b, type: 3}
   m_Name: Chainsaw
   m_EditorClassIdentifier: 
-  holdAttack: 0
+  weaponSprite: {fileID: 0}
+  weaponPrice: 20
+  weaponAnimatorType: 2
+  isMelee: 1
+  holdAttack: 1
+  atkRate: 1
+  damage: 2
+  ammo: 5
+  delayShot: 1
+  bulletSpeed: 4
+  bulletDestroyTime: 2
