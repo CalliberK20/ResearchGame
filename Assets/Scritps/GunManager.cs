@@ -243,6 +243,11 @@ public class GunManager : MonoBehaviour
             Debug.Log("Has the gun");
     }
 
+    public void GetMoreAmmo(int amount)
+    {
+        maxAmmos[(int)currentWeapon] += amount;
+    }
+
     GameObject GetActiveBullet()
     {
         foreach(GameObject bullet in bullets)

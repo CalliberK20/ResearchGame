@@ -7,9 +7,12 @@ public class WeaponMiniShop : MonoBehaviour
 {
     public float radius = 3f;
     public WeaponStats weaponToSell;
-    private float bulletCostRate = 0.3f;
+    [Space]
+    public SpriteRenderer gunTypeRender;
     [Space]
     [ShowOnly] public float weaponPrice = 0;
+    
+    private float bulletCostRate = 0.3f;
 
     private TextMeshPro priceText;
     private bool hasBought = false;
@@ -19,6 +22,7 @@ public class WeaponMiniShop : MonoBehaviour
     {
         cashManager = CashManager.instance;
         priceText = transform.GetChild(0).GetComponent<TextMeshPro>();
+        gunTypeRender.sprite = weaponToSell.weaponSprite;
         weaponPrice = weaponToSell.weaponPrice;
     }
 
@@ -30,9 +34,13 @@ public class WeaponMiniShop : MonoBehaviour
         if(hit != null && hit.CompareTag("Player"))
         {
             priceText.gameObject.SetActive(true);
-            if (hit.GetComponent<GunManager>().weaponStats.Contains(weaponToSell))
+
+            GunManager gunManager = hit.GetComponent<GunManager>();
+
+            if (gunManager.weaponStats.Contains(weaponToSell))
             {
                 hasBought = true;
+                priceText.text = "";
                 if (!weaponToSell.isMelee)
                 {
                     priceText.text = "Buy Bullets : $" + rate.ToString();
@@ -45,8 +53,9 @@ public class WeaponMiniShop : MonoBehaviour
             {
                 if (hasBought)
                 {
-                    if (cashManager.SuffiecientAmount(rate))
+                    if (!weaponToSell.isMelee && cashManager.SuffiecientAmount(rate))
                     {
+                        gunManager.GetMoreAmmo(weaponToSell.ammo);
                         Debug.Log("Buy Ammo");
                         cashManager.LoseMoney(rate);
                     }
@@ -55,7 +64,7 @@ public class WeaponMiniShop : MonoBehaviour
                 {
                     if(cashManager.SuffiecientAmount(weaponPrice))
                     {
-                        hit.GetComponent<GunManager>().GiveNewWeapon(weaponToSell);
+                        gunManager.GiveNewWeapon(weaponToSell);
                         Debug.Log("Buy Gun");
                         cashManager.LoseMoney(weaponPrice);
                     }

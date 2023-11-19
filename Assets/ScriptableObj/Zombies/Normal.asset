@@ -15,5 +15,6 @@ MonoBehaviour:
   enemyAnimatorController: {fileID: 9100000, guid: 558c7b27f8cc1a34db55999404c61b7e, type: 2}
   health: 4
   speed: 1
+  reward: 50
   atkDamage: 2
   atkSpeed: 1
