@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d867acb2e140c7447814cc6a53b77f64
+guid: 636f0d62942e30844ab672697a570189
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Main Menu Buttons_0
+      name: Main Menu Text_0
       rect:
         serializedVersion: 2
-        x: 81
-        y: 291
-        width: 240
-        height: 75
+        x: 30
+        y: 72
+        width: 35
+        height: 13
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e7708df485089664e94fd1d506c22da3
-      internalID: 1897147192
+      spriteID: 8221661d6e143324a80198a3d1f099a0
+      internalID: -1008779023
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Main Menu Buttons_1
+      name: Main Menu Text_4
       rect:
         serializedVersion: 2
-        x: 81
-        y: 201
-        width: 240
-        height: 75
+        x: 23
+        y: 41
+        width: 48
+        height: 13
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f89669ab343706543b4bc2a3f2c41455
-      internalID: 1664419384
+      spriteID: 60f1bb4ef30b46d448e27cf061a3f4d7
+      internalID: -1884674573
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Main Menu Buttons_2
+      name: Main Menu Text_12
       rect:
         serializedVersion: 2
-        x: 81
-        y: 105
-        width: 240
-        height: 75
+        x: 35
+        y: 10
+        width: 26
+        height: 13
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,8 +166,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 81856fcafcdfc404bab05b074eed2edd
-      internalID: 485417668
+      spriteID: f36ba5b7802042947ad3810b698439c4
+      internalID: 627362798
       vertices: []
       indices: 
       edges: []
@@ -183,9 +183,19 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Main Menu Buttons_0: 1897147192
-      Main Menu Buttons_1: 1664419384
-      Main Menu Buttons_2: 485417668
+      Main Menu Text_0: -1008779023
+      Main Menu Text_1: -34225331
+      Main Menu Text_10: 115022284
+      Main Menu Text_11: 1693784794
+      Main Menu Text_12: 627362798
+      Main Menu Text_2: -146248480
+      Main Menu Text_3: -1111248222
+      Main Menu Text_4: -1884674573
+      Main Menu Text_5: -1346360535
+      Main Menu Text_6: 867867735
+      Main Menu Text_7: 1571524027
+      Main Menu Text_8: 2133378835
+      Main Menu Text_9: 576115496
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
