@@ -8,12 +8,6 @@ public class FollowCamera : MonoBehaviour
     public float smoothTime = 3;
     private Vector3 velocity;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void FixedUpdate()
     {

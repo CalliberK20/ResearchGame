@@ -205,11 +205,6 @@ public class GunManager : MonoBehaviour
         }
     }
 
-/*    void HoldAttack()
-    {
-        torsoAnim.SetBool("Hold", true);
-    }*/
-
     private void SwitchWeapon()
     {
         //Change the stats when switching
