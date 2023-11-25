@@ -6,6 +6,7 @@ using UnityEngine;
 public class WeaponStats : ScriptableObject
 {
     public Sprite weaponSprite;
+    public AudioClip weaponAudioClip;
     public float weaponPrice = 20;
 
     public int weaponAnimatorType = 0;

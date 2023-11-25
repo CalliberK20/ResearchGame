@@ -13,8 +13,12 @@ MonoBehaviour:
   m_Name: Pistol
   m_EditorClassIdentifier: 
   weaponSprite: {fileID: 42923945, guid: 340f96cfab9c3154daa778035238fc96, type: 3}
-  holdAttack: 0
+  weaponAudioClip: {fileID: 8300000, guid: 619a2b8206aee2d42966659e8e675bea, type: 3}
+  weaponPrice: 20
+  weaponAnimatorType: 0
   isMelee: 0
+  holdAttack: 0
+  atkRate: 1
   damage: 2
   ammo: 5
   delayShot: 1

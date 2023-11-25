@@ -13,9 +13,11 @@ MonoBehaviour:
   m_Name: Knife
   m_EditorClassIdentifier: 
   weaponSprite: {fileID: 528937802, guid: 340f96cfab9c3154daa778035238fc96, type: 3}
+  weaponAudioClip: {fileID: 8300000, guid: 66d51aa8eca00e248ad9e33d586987ab, type: 3}
+  weaponPrice: 20
   weaponAnimatorType: 1
-  holdAttack: 0
   isMelee: 1
+  holdAttack: 0
   atkRate: 1
   damage: 2
   ammo: 5

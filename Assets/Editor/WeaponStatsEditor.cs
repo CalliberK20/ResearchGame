@@ -7,6 +7,7 @@ using UnityEngine;
 public class WeaponStatsEditor : Editor
 {
     SerializedProperty weaponSprite;
+    SerializedProperty weaponAudioClip;
     SerializedProperty weaponPrice;
 
     SerializedProperty weaponAnimatorType;
@@ -26,6 +27,7 @@ public class WeaponStatsEditor : Editor
     private void OnEnable()
     {
         weaponSprite = serializedObject.FindProperty("weaponSprite");
+        weaponAudioClip = serializedObject.FindProperty("weaponAudioClip");
         weaponPrice = serializedObject.FindProperty("weaponPrice");
 
         weaponAnimatorType = serializedObject.FindProperty("weaponAnimatorType");
@@ -48,6 +50,7 @@ public class WeaponStatsEditor : Editor
         serializedObject.Update();
 
         EditorGUILayout.PropertyField(weaponSprite);
+        EditorGUILayout.PropertyField(weaponAudioClip);
         EditorGUILayout.PropertyField(weaponPrice);
         EditorGUILayout.Space(5f);
         EditorGUILayout.PropertyField(weaponAnimatorType);

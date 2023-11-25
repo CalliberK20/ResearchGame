@@ -40,6 +40,8 @@ public class GunManager : MonoBehaviour
     private Movement movement;
     private bool isReloading = false;
 
+    private AudioSource audioSource;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -67,6 +69,7 @@ public class GunManager : MonoBehaviour
         startDelay = atkRate;
 
         movement = GetComponent<Movement>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -86,6 +89,9 @@ public class GunManager : MonoBehaviour
                     }
                     else
                         Shoot(bullet);
+                    audioSource.loop = false;
+                    audioSource.clip = weaponStats[(int)currentWeapon].weaponAudioClip;
+                    audioSource.Play();
                 }
             }
             
@@ -97,11 +103,17 @@ public class GunManager : MonoBehaviour
                     Strike();
                     startDelay = 0;
                 }
+                audioSource.loop = true;
+                audioSource.clip = weaponStats[(int)currentWeapon].weaponAudioClip;
+                if (!audioSource.isPlaying)
+                    audioSource.Play();
             }
 
             if (Input.GetMouseButtonUp(0))
             {
                 torsoAnim.SetBool("Hold", false);
+                if (audioSource.isPlaying && audioSource.loop)
+                    audioSource.Stop();
             }
 
             //------------------HANDLES SWITCHING---------------------------
