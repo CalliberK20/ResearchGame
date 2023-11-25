@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -14,9 +14,9 @@ public class GunManager : MonoBehaviour
     #region Properties
     [Space(30)]
     [ShowOnly] public float weaponDamage;
+    [ShowOnly] public float atkRate = 1f;
     [ShowOnly] public float reloadSpeed = 3;
     [ShowOnly] public int ammo = 5;
-    [ShowOnly] public float atkRate = 1f;
     [ShowOnly] public float bulletSpeed = 1f;
     [ShowOnly] public float bulletDestroyTime = 1f;
     [Space, ShowOnly]
@@ -92,6 +92,7 @@ public class GunManager : MonoBehaviour
                     audioSource.loop = false;
                     audioSource.clip = weaponStats[(int)currentWeapon].weaponAudioClip;
                     audioSource.Play();
+                    startDelay = 0;
                 }
             }
             
@@ -101,7 +102,6 @@ public class GunManager : MonoBehaviour
                 if (startDelay >= atkRate)
                 {
                     Strike();
-                    startDelay = 0;
                 }
                 audioSource.loop = true;
                 audioSource.clip = weaponStats[(int)currentWeapon].weaponAudioClip;
@@ -109,11 +109,12 @@ public class GunManager : MonoBehaviour
                     audioSource.Play();
             }
 
-            if (Input.GetMouseButtonUp(0))
+            if (holdAttack && Input.GetMouseButtonUp(0))
             {
                 torsoAnim.SetBool("Hold", false);
                 if (audioSource.isPlaying && audioSource.loop)
                     audioSource.Stop();
+                startDelay = 0;
             }
 
             //------------------HANDLES SWITCHING---------------------------
@@ -143,6 +144,7 @@ public class GunManager : MonoBehaviour
 
             if (startDelay < atkRate)
                 startDelay += Time.deltaTime;
+            Debug.Log(startDelay);
 
 
             if (isReloading && maxAmmos[(int)currentWeapon] > 0)
@@ -194,7 +196,6 @@ public class GunManager : MonoBehaviour
             }
         }
         bullet.GetComponent<Bullet>().SetBulletStat(weaponDamage, bulletDestroyTime);
-        startDelay = 0;
     }
 
     void Strike()
@@ -269,12 +270,12 @@ public class GunManager : MonoBehaviour
     {
         holdAttack = weaponStats[(int)currentWeapon].holdAttack;
         isMelee = weaponStats[(int)currentWeapon].isMelee;
+        atkRate = weaponStats[(int)currentWeapon].atkRate;
 
         weaponDamage = weaponStats[(int)currentWeapon].damage;
 
         if(isMelee)
         {
-            atkRate = 0;
             bulletSpeed = 0;
 
             ammo = 0;
@@ -283,7 +284,6 @@ public class GunManager : MonoBehaviour
         }
         else
         {
-            atkRate = weaponStats[(int)currentWeapon].delayShot;
             bulletSpeed = weaponStats[(int)currentWeapon].bulletSpeed;
 
             ammo = weaponStats[(int)currentWeapon].ammo;

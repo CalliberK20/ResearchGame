@@ -1562,7 +1562,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &118961103
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1575,7 +1575,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5666c67f0e5109f499cbe0358f068205, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyCount: 70
+  enemyCount: 100
   enemyPrefab: {fileID: 7677698114563321347, guid: 79c8b9200780dd341a1564faee2771d6, type: 3}
   spawnRadius: 26
   enemyStats:
@@ -7798,9 +7798,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e53d1421b49e36c4aa286872b53adecf, type: 2}
   - {fileID: 11400000, guid: be09aef43ce9f7748ac1c7a8a3797eda, type: 2}
   weaponDamage: 0
+  atkRate: 1
   reloadSpeed: 3
   ammo: 5
-  atkRate: 1
   bulletSpeed: 5
   bulletDestroyTime: 1
   strikeArea: {x: 0, y: 0, z: 0}
