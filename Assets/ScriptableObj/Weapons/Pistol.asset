@@ -14,6 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponSprite: {fileID: 42923945, guid: 340f96cfab9c3154daa778035238fc96, type: 3}
   weaponAudioClip: {fileID: 8300000, guid: 619a2b8206aee2d42966659e8e675bea, type: 3}
+  weaponName: Pistol
+  weaponDescrip: Can Shoot
   weaponPrice: 20
   weaponAnimatorType: 0
   isMelee: 0

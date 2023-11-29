@@ -7,11 +7,13 @@ public class MainMenu : MonoBehaviour
 {
     public void TranstionScene(string sceneName)
     {
+        Debug.Log("Loading");
         SceneManager.LoadSceneAsync(sceneName);
     }
 
     public void QuitGame()
     {
+        Debug.Log("Quit");
         Application.Quit();
     }
 }

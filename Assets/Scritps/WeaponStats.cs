@@ -7,6 +7,9 @@ public class WeaponStats : ScriptableObject
 {
     public Sprite weaponSprite;
     public AudioClip weaponAudioClip;
+    public string weaponName;
+    public string weaponDescrip;
+
     public float weaponPrice = 20;
 
     public int weaponAnimatorType = 0;

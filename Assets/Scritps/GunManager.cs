@@ -144,7 +144,7 @@ public class GunManager : MonoBehaviour
 
             if (startDelay < atkRate)
                 startDelay += Time.deltaTime;
-            Debug.Log(startDelay);
+            //Debug.Log(startDelay);
 
 
             if (isReloading && maxAmmos[(int)currentWeapon] > 0)

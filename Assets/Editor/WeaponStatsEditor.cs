@@ -8,6 +8,9 @@ public class WeaponStatsEditor : Editor
 {
     SerializedProperty weaponSprite;
     SerializedProperty weaponAudioClip;
+    SerializedProperty weaponName;
+    SerializedProperty weaponDescrip;
+
     SerializedProperty weaponPrice;
 
     SerializedProperty weaponAnimatorType;
@@ -23,11 +26,16 @@ public class WeaponStatsEditor : Editor
     SerializedProperty bulletDestroyTime;
 
     bool rangeWeapon = false;
+    bool infoShow = false;
 
     private void OnEnable()
     {
         weaponSprite = serializedObject.FindProperty("weaponSprite");
         weaponAudioClip = serializedObject.FindProperty("weaponAudioClip");
+        weaponName = serializedObject.FindProperty("weaponName");
+        weaponDescrip = serializedObject.FindProperty("weaponDescrip");
+
+
         weaponPrice = serializedObject.FindProperty("weaponPrice");
 
         weaponAnimatorType = serializedObject.FindProperty("weaponAnimatorType");
@@ -51,9 +59,21 @@ public class WeaponStatsEditor : Editor
 
         EditorGUILayout.PropertyField(weaponSprite);
         EditorGUILayout.PropertyField(weaponAudioClip);
-        EditorGUILayout.PropertyField(weaponPrice);
-        EditorGUILayout.Space(5f);
-        EditorGUILayout.PropertyField(weaponAnimatorType);
+        EditorGUILayout.Space(10f);
+
+        infoShow = EditorGUILayout.BeginFoldoutHeaderGroup(infoShow, "Information: ");
+        if(infoShow)
+        {
+            EditorGUILayout.PropertyField(weaponName);
+            EditorGUILayout.LabelField("Weapon Description");
+            _weaponStats.weaponDescrip = EditorGUILayout.TextArea(_weaponStats.weaponDescrip, GUILayout.MinHeight(35), GUILayout.ExpandHeight(true));
+            EditorGUILayout.Space(10f);
+            EditorGUILayout.PropertyField(weaponPrice);
+            EditorGUILayout.Space(5f);
+            EditorGUILayout.PropertyField(weaponAnimatorType);
+        }
+        EditorGUILayout.EndFoldoutHeaderGroup();
+
         EditorGUILayout.Space(10);
         EditorGUILayout.PropertyField(isMelee);
         EditorGUILayout.PropertyField(holdAttack);

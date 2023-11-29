@@ -14,6 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponSprite: {fileID: 528937802, guid: 340f96cfab9c3154daa778035238fc96, type: 3}
   weaponAudioClip: {fileID: 8300000, guid: 66d51aa8eca00e248ad9e33d586987ab, type: 3}
+  weaponName: Knife
+  weaponDescrip: Can Stab
   weaponPrice: 20
   weaponAnimatorType: 1
   isMelee: 1

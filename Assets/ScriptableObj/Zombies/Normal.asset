@@ -13,6 +13,9 @@ MonoBehaviour:
   m_Name: Normal
   m_EditorClassIdentifier: 
   enemyAnimatorController: {fileID: 9100000, guid: 558c7b27f8cc1a34db55999404c61b7e, type: 2}
+  zombieSprite: {fileID: 1256761939, guid: 3e0181fe4f89a514e8a4d5cc459da238, type: 3}
+  zombieName: Normal
+  zombieDescrip: Slow and normal
   health: 4
   speed: 1
   reward: 50

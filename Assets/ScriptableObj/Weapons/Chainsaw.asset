@@ -14,6 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponSprite: {fileID: -1118827935, guid: 531eb2d6d1aba004f8e9a90f8a08422f, type: 3}
   weaponAudioClip: {fileID: 8300000, guid: db2d0973a545ff04d9611ff847325b2f, type: 3}
+  weaponName: Chainsaw
+  weaponDescrip: Can pack a punch.
   weaponPrice: 20
   weaponAnimatorType: 2
   isMelee: 1

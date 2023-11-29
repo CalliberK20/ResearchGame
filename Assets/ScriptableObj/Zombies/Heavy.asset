@@ -13,7 +13,11 @@ MonoBehaviour:
   m_Name: Heavy
   m_EditorClassIdentifier: 
   enemyAnimatorController: {fileID: 9100000, guid: 525a25ea36cfe644281efc313ca03648, type: 2}
+  zombieSprite: {fileID: 366049847, guid: 3e0181fe4f89a514e8a4d5cc459da238, type: 3}
+  zombieName: Heavy
+  zombieDescrip: They can pack a punch.
   health: 4
   speed: 2
+  reward: 20
   atkDamage: 2
   atkSpeed: 2

@@ -6,6 +6,11 @@ using UnityEngine;
 public class EnemyStats : ScriptableObject
 {
     public RuntimeAnimatorController enemyAnimatorController;
+    public Sprite zombieSprite;
+    public string zombieName;
+    [TextArea(2, 10)]
+    public string zombieDescrip;
+    [Space]
     public float health = 4f;
     public float speed = 2;
     [Space]
