@@ -16,7 +16,6 @@ public class WeaponBox : MonoBehaviour
         chestAnim = GetComponent<Animator>();
         spriteObj = transform.GetChild(0).GetComponent<SpriteRenderer>();
     }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.CompareTag("Player"))

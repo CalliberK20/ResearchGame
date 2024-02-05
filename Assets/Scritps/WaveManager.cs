@@ -12,7 +12,10 @@ public enum EnemyType
 
 public class WaveManager : MonoBehaviour
 {
+    public static WaveManager instance;
+
     [ShowOnly]public int currentWave = 0;
+    public int numOfZombiesInGame = 0;
     [Space]
     public Wave[] waves;
 
@@ -26,6 +29,11 @@ public class WaveManager : MonoBehaviour
         public EnemyType[] zombieType;  
     }
 
+    private void Awake()
+    {
+        instance = this;
+    }
+
     void Start ()
     {
         StartCoroutine(WaveDelay());
@@ -34,7 +42,7 @@ public class WaveManager : MonoBehaviour
     public void Update()
     {
         float fps = 1f / Time.unscaledDeltaTime;
-        if (fps <= 100)
+        if (fps <= 60)
             Debug.LogError("FPS has reach its minimun");
     }
 
@@ -48,7 +56,9 @@ public class WaveManager : MonoBehaviour
             UIManager.Instance.waveText.text = currentWave.ToString();
             foreach (EnemyType enemyType in wave.zombieType)
             {
-                yield return new WaitForSeconds(Random.Range(wave.minTime, wave.maxTime));
+                float delayTime = Random.Range(wave.minTime, wave.maxTime);
+                yield return new WaitForSeconds(delayTime);
+                numOfZombiesInGame++;
                 EnemySpawner.Instance.SpawnEnemy(enemyType);
             }
 
@@ -57,6 +67,9 @@ public class WaveManager : MonoBehaviour
 
             currentWave++;
         }
+
+        yield return new WaitUntil(() => numOfZombiesInGame <= 0);
+        StartCoroutine(SceneLead.ResetScene(3f));
     }
 
     private void OnValidate()

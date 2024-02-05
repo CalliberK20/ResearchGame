@@ -16,17 +16,20 @@ public class Door : MonoBehaviour
     public GameObject barrierCollider;
     [Space]
     public LayerMask layersToOpen;
+    [HideInInspector]
     public List<Collider2D> collider = new List<Collider2D>();
-
+    private Collider2D player;
     private bool isBought = false;
 
     private void Start()
     {
+        isBought = false;
         if (parentDoor != null)
         {
             textPrice.gameObject.SetActive(false);
             barrierCollider.SetActive(false);
         }
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Collider2D>();
     }
 
     // Update is called once per frame
@@ -40,7 +43,7 @@ public class Door : MonoBehaviour
             {
                 doorSpriteObj.SetActive(false);
             }
-            else if (!collider[0].CompareTag("Player") || isBought)
+            else if (!collider.Contains(player) || isBought)
                 doorSpriteObj.SetActive(false);
             else if (!isBought)
             {

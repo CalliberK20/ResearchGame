@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
+using static UnityEngine.EventSystems.EventTrigger;
 
 public class EnemySpawner : MonoBehaviour
 {
@@ -17,8 +18,6 @@ public class EnemySpawner : MonoBehaviour
     public float spawnTime;
     [Space]
     [ShowOnly] public List<GameObject> enemyEntry = new List<GameObject>();
-    [ShowOnly] public List<EnemyMovement> enemyInRadius = new List<EnemyMovement>();
-    [ShowOnly] public List<EnemyMovement> enemySpawned = new List<EnemyMovement>();
     private GameObject[] enemies;
 
     private void Awake()
@@ -59,8 +58,6 @@ public class EnemySpawner : MonoBehaviour
                     EnemyMovement enemyMovement = enemy.GetComponent<EnemyMovement>();
                     enemyMovement.enabled = true;
                     enemyMovement.SetEnemyStats(TypeToStats(type));
-                    if (!enemySpawned.Contains(enemyMovement))
-                        enemySpawned.Add(enemyMovement);
                 }
                 break;
             }
@@ -69,10 +66,8 @@ public class EnemySpawner : MonoBehaviour
 
     private void SpawnRadius()
     {
-        Transform character = GameObject.FindWithTag("Player").transform;
-        Collider2D[] collision = Physics2D.OverlapCircleAll(character.position, spawnRadius);
+        Collider2D[] collision = Physics2D.OverlapBoxAll(Camera.main.transform.position, FollowCamera.viewPort, 0f);
         List<GameObject> entry = new List<GameObject>();
-        List<EnemyMovement> enemiesInRadius = new List<EnemyMovement>();
 
         foreach (Collider2D hit in collision)
         {
@@ -81,26 +76,8 @@ public class EnemySpawner : MonoBehaviour
                 if (!entry.Contains(hit.gameObject))
                     entry.Add(hit.gameObject);
             }
-            if(hit.CompareTag("Enemy"))
-            {
-                EnemyMovement found = hit.GetComponent<EnemyMovement>();
-                if (!enemiesInRadius.Contains(found))
-                    enemiesInRadius.Add(found);
-            }
         }
-
         enemyEntry = entry;
-        enemyInRadius = enemiesInRadius;
-
-        foreach (EnemyMovement enemy in enemySpawned)
-        {
-            if(!enemyInRadius.Contains(enemy))
-            {
-                int ran = Random.Range(0, enemyEntry.Count);
-                enemy.transform.position = enemyEntry[ran].GetComponent<SpawnPoint>().Spawn();
-                enemy.path = new List<NodeGrid>();
-            }
-        }
     }
 
     private EnemyStats TypeToStats(EnemyType type)
@@ -112,12 +89,5 @@ public class EnemySpawner : MonoBehaviour
         }
         int ran = Random.Range(0, enemyStats.Length);
         return enemyStats[ran];
-    }
-
-    private void OnDrawGizmos()
-    {
-        Transform character = GameObject.FindWithTag("Player").transform;
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(character.position, spawnRadius);
     }
 }

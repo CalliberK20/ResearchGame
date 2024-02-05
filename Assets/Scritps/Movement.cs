@@ -26,7 +26,7 @@ public class Movement : MonoBehaviour
         gunManager = GetComponent<GunManager>();
 
         int count = transform.childCount;
-        spriteRenderers = new SpriteRenderer[count];
+        spriteRenderers = new SpriteRenderer[count - 1];
         for (int i = 0; i < spriteRenderers.Length; i++)
         {
             spriteRenderers[i] = transform.GetChild(i).GetComponent<SpriteRenderer>();
@@ -38,22 +38,22 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if(!isDead)
+        if (isDead)
+            return;
+
+        Vector2 move = new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+
+        if (move.magnitude > 0.1f)
         {
-            Vector2 move = new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+            legAnim.SetBool("Run", true);
+        }
+        else
+            legAnim.SetBool("Run", false);
 
-            if (move.magnitude > 0.1f)
-            {
-                legAnim.SetBool("Run", true);
-            }
-            else
-                legAnim.SetBool("Run", false);
+        rigid.position += move * speed * Time.fixedDeltaTime;
 
-            rigid.position += move * speed * Time.fixedDeltaTime;
-
-            if (Input.GetButton("Horizontal"))
-                Flip(move.x);
-        }    
+        if (Input.GetButton("Horizontal"))
+            Flip(move.x);
     }
 
     public void Damage(float damage)
@@ -68,6 +68,7 @@ public class Movement : MonoBehaviour
             legAnim.SetTrigger("Die");
             gunManager.enabled = false;
             gunManager.torsoAnim.gameObject.SetActive(false);
+            StartCoroutine(SceneLead.ResetScene(2));
             isDead = true;
         }
     }

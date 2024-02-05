@@ -27,11 +27,11 @@ public class EnemyMovement : MonoBehaviour
         atkDamage = newStats.atkDamage;
         atkSpeed = newStats.atkSpeed;
         reward = newStats.reward;
-        anim = transform.GetChild(0).GetComponent<Animator>();
+        anim = GetComponent<Animator>();
         anim.runtimeAnimatorController = newStats.enemyAnimatorController;
         if (target == null)
             target = GameObject.FindGameObjectWithTag("Player").transform;
-        spriteRenderer = transform.GetChild(0).GetComponent<SpriteRenderer>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
         gridCreate = FindObjectOfType<GridCreateManager>();
         path = new List<NodeGrid>();
     }
@@ -53,18 +53,6 @@ public class EnemyMovement : MonoBehaviour
                 float ranX = Random.Range(0f, 1f);
                 float ranY = Random.Range(0f, 1f);
                 Vector2 movePos = new Vector2(path[0].GridX + ranX, path[0].GridY + ranY);
-
-                /*                if (Vector2.Distance(transform.position, new Vector2(movePos.x, movePos.y)) > 0.5f)
-                                {
-                                    transform.position = Vector2.MoveTowards(transform.position, movePos, speed * Time.deltaTime);
-                                    anim.SetBool("Run", true);
-                                }
-                                else if (Vector2.Distance(transform.position, new Vector2(movePos.x, movePos.y)) < 0.5f)
-                                {
-                                    path = new List<NodeGrid>();
-                                    Flip();
-                                    anim.SetBool("Run", false);
-                                }*/
 
                 if (transform.position.x == pathGrid.GridX + 0.5f && transform.position.y == pathGrid.GridY + 0.5f)
                 {
@@ -118,12 +106,12 @@ public class EnemyMovement : MonoBehaviour
             anim.SetTrigger("Die");
             enabled = false;
             CashManager.instance.GiveMoney(reward);
+            WaveManager.instance.numOfZombiesInGame--;
             StartCoroutine(DesipateDelay());
         }
     }
 
     //---------------------------------------------------------------------------
-
 
     private IEnumerator DesipateDelay()
     {

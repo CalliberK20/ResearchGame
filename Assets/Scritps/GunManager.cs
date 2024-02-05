@@ -1,15 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GunManager : MonoBehaviour
 {
+
+    public Image reloadImage;
+
     public Animator torsoAnim;
     [Space]
     public int preBulletCount = 3;
     public GameObject bulletPrefab;
     [Space]
     public List<WeaponStats> weaponStats = new List<WeaponStats>();
+    public List<Weapon> weaponInventory = new List<Weapon>();
 
     #region Properties
     [Space(30)]
@@ -26,9 +31,13 @@ public class GunManager : MonoBehaviour
 
     //-----------PRIVATE----------------------
     private List<GameObject> bullets = new List<GameObject>();
-    private List<int> currentAmmos = new List<int>();
-    private List<int> maxAmmos = new List<int>();
 
+    [System.Serializable]
+    public class Weapon
+    {
+        public int currentAmmo;
+        public int maxAmmo;
+    }
 
     private float startDelay;
     private float startReload;
@@ -41,7 +50,7 @@ public class GunManager : MonoBehaviour
     private bool isReloading = false;
 
     private AudioSource audioSource;
-
+    private Weapon currentWeaponOnHold;
     // Start is called before the first frame update
     void Start()
     {
@@ -60,11 +69,12 @@ public class GunManager : MonoBehaviour
 
         for (int i = 0; i < weaponStats.Count; i++)
         {
+            Weapon newWeapon = new Weapon();
             int getAmmo = 0;
             if (!weaponStats[i].isMelee)
                 getAmmo = weaponStats[i].ammo;
-            currentAmmos.Add(getAmmo);
-            maxAmmos.Add(getAmmo);
+            newWeapon.currentAmmo = getAmmo;
+            weaponInventory.Add(newWeapon);
         }
         startDelay = atkRate;
 
@@ -75,99 +85,104 @@ public class GunManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(!movement.isDead)
+        if (movement.isDead)
+            return;
+
+        if (Input.GetMouseButtonDown(0))
         {
-            if (Input.GetMouseButtonDown(0))
+            GameObject bullet = GetActiveBullet();
+            if (bullet != null && startDelay >= atkRate && !isReloading)
             {
-                GameObject bullet = GetActiveBullet();
-                if (bullet != null && startDelay >= atkRate && !isReloading)
-                {
-                    torsoAnim.SetTrigger("Shoot");
-                    if (isMelee)
-                    {
-                        Strike();
-                    }
-                    else
-                        Shoot(bullet);
-                    audioSource.loop = false;
-                    audioSource.clip = weaponStats[(int)currentWeapon].weaponAudioClip;
-                    audioSource.Play();
-                    startDelay = 0;
-                }
-            }
-            
-            if(holdAttack && Input.GetMouseButton(0))
-            {
-                torsoAnim.SetBool("Hold", true);
-                if (startDelay >= atkRate)
+                torsoAnim.SetTrigger("Shoot");
+                if (isMelee)
                 {
                     Strike();
                 }
-                audioSource.loop = true;
+                else
+                    Shoot(bullet);
+                audioSource.loop = false;
                 audioSource.clip = weaponStats[(int)currentWeapon].weaponAudioClip;
-                if (!audioSource.isPlaying)
-                    audioSource.Play();
-            }
-
-            if (holdAttack && Input.GetMouseButtonUp(0))
-            {
-                torsoAnim.SetBool("Hold", false);
-                if (audioSource.isPlaying && audioSource.loop)
-                    audioSource.Stop();
+                audioSource.Play();
                 startDelay = 0;
             }
-
-            //------------------HANDLES SWITCHING---------------------------
-            if (Mathf.Abs(Input.mouseScrollDelta.y) > 0)
-            {
-                currentWeapon += Input.mouseScrollDelta.y;
-
-                if (currentWeapon < 0)
-                    currentWeapon = weaponStats.Count - 1;
-                else if (currentWeapon > weaponStats.Count - 1)
-                    currentWeapon = 0;
-            }
-
-            if(weaponStats.Count > 0)
-            {
-                if (Input.GetKeyDown(KeyCode.Alpha1))
-                {
-                    currentWeapon = 0;
-                }
-                else if (Input.GetKeyDown(KeyCode.Alpha2))
-                {
-                    currentWeapon = 1;
-                }
-            }
-            SwitchWeapon();
-            //-------------------------------------------------------------
-
-            if (startDelay < atkRate)
-                startDelay += Time.deltaTime;
-            //Debug.Log(startDelay);
-
-
-            if (isReloading && maxAmmos[(int)currentWeapon] > 0)
-            {
-                startReload += Time.deltaTime;
-                if(startReload >= reloadSpeed)
-                {
-                    int bulletToGive = 0;
-                    if (maxAmmos[(int)currentWeapon] >= ammo)
-                        bulletToGive = ammo;
-                    else
-                        bulletToGive = maxAmmos[(int)currentWeapon];
-
-                    currentAmmos[(int)currentWeapon] = bulletToGive;
-                    maxAmmos[(int)currentWeapon] -= bulletToGive;
-
-                    startReload = 0;
-                    isReloading = false;
-                }
-            }
-
-            Debug.DrawLine(transform.position, Camera.main.ScreenToWorldPoint(Input.mousePosition), Color.red);
         }
+
+        if (holdAttack && Input.GetMouseButton(0))
+        {
+            torsoAnim.SetBool("Hold", true);
+            if (startDelay >= atkRate)
+            {
+                Strike();
+            }
+            audioSource.loop = true;
+            audioSource.clip = weaponStats[(int)currentWeapon].weaponAudioClip;
+            if (!audioSource.isPlaying)
+                audioSource.Play();
+        }
+
+        if (holdAttack && Input.GetMouseButtonUp(0))
+        {
+            torsoAnim.SetBool("Hold", false);
+            if (audioSource.isPlaying && audioSource.loop)
+                audioSource.Stop();
+            startDelay = 0;
+        }
+
+        //------------------HANDLES SWITCHING---------------------------
+        if (Mathf.Abs(Input.mouseScrollDelta.y) > 0)
+        {
+            currentWeapon += Input.mouseScrollDelta.y;
+
+            if (currentWeapon < 0)
+                currentWeapon = weaponStats.Count - 1;
+            else if (currentWeapon > weaponStats.Count - 1)
+                currentWeapon = 0;
+        }
+
+        if (weaponStats.Count > 0)
+        {
+            if (Input.GetKeyDown(KeyCode.Alpha1))
+            {
+                currentWeapon = 0;
+            }
+            else if (Input.GetKeyDown(KeyCode.Alpha2))
+            {
+                currentWeapon = 1;
+            }
+        }
+        currentWeaponOnHold = weaponInventory[(int)currentWeapon];
+        SwitchWeapon();
+        //-------------------------------------------------------------
+
+        if (startDelay < atkRate)
+            startDelay += Time.deltaTime;
+
+        if (isReloading && currentWeaponOnHold.maxAmmo > 0)
+        {
+            reloadImage.gameObject.SetActive(true);
+            startReload += Time.deltaTime;
+            float convert = startReload / reloadSpeed;
+            reloadImage.fillAmount = convert;
+            if (startReload >= reloadSpeed)
+            {
+                int bulletToGive = 0;
+                if (currentWeaponOnHold.maxAmmo >= ammo)
+                    bulletToGive = ammo;
+                else
+                    bulletToGive = currentWeaponOnHold.maxAmmo;
+
+                currentWeaponOnHold.currentAmmo = bulletToGive;
+                currentWeaponOnHold.maxAmmo -= bulletToGive;
+
+                startReload = 0;
+                isReloading = false;
+                reloadImage.fillAmount = 0;
+                reloadImage.gameObject.SetActive(false);
+            }
+        }
+
+        Debug.DrawLine(transform.position, Camera.main.ScreenToWorldPoint(Input.mousePosition), Color.red);
+    
     }
 
     void Shoot(GameObject bullet)
@@ -188,9 +203,9 @@ public class GunManager : MonoBehaviour
 
         if(!isMelee)
         {
-            currentAmmos[(int)currentWeapon]--;
-            UIManager.Instance.ammoText.text = currentAmmos[(int)currentWeapon].ToString() + "/" + maxAmmos[(int)currentWeapon].ToString();
-            if (currentAmmos[(int)currentWeapon] <= 0)
+            currentWeaponOnHold.currentAmmo--;
+            UIManager.Instance.ammoText.text = currentWeaponOnHold.currentAmmo.ToString() + "/" + currentWeaponOnHold.maxAmmo.ToString();
+            if (currentWeaponOnHold.currentAmmo <= 0)
             {
                 isReloading = true;
             }
@@ -222,13 +237,13 @@ public class GunManager : MonoBehaviour
     {
         //Change the stats when switching
         ChangeStats();
-        UIManager.Instance.ammoText.text = currentAmmos[(int)currentWeapon].ToString() + "/" + maxAmmos[(int)currentWeapon].ToString();
+        UIManager.Instance.ammoText.text = currentWeaponOnHold.currentAmmo.ToString() + "/" + currentWeaponOnHold.maxAmmo.ToString();
         torsoAnim.SetFloat("Type", weaponStats[(int)currentWeapon].weaponAnimatorType);
         isReloading = false;
 
         if (!isMelee)
         {
-            if (currentAmmos[(int)currentWeapon] <= 0)
+            if (currentWeaponOnHold.currentAmmo <= 0)
             {
                 isReloading = true;
             }
@@ -241,11 +256,12 @@ public class GunManager : MonoBehaviour
         {
             weaponStats.Add(newWeapon);
 
+            Weapon newWeaponToGet = new Weapon();
             int getAmmo = 0;
             if (!newWeapon.isMelee)
                 getAmmo = newWeapon.ammo;
-            currentAmmos.Add(getAmmo);
-            maxAmmos.Add(getAmmo);
+            newWeaponToGet.currentAmmo = getAmmo;
+            weaponInventory.Add(newWeaponToGet);
         }
         else
             Debug.Log("Has the gun");
@@ -253,7 +269,7 @@ public class GunManager : MonoBehaviour
 
     public void GetMoreAmmo(int amount)
     {
-        maxAmmos[(int)currentWeapon] += amount;
+        currentWeaponOnHold.maxAmmo += amount;
     }
 
     GameObject GetActiveBullet()

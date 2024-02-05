@@ -19,6 +19,28 @@ public class GridCreateManager : MonoBehaviour
         instance = this;
     }
 
+    void Start()
+    {
+        GridCreate();
+    }
+
+    public void CheckForBlockage()
+    {
+        foreach(var grid in gridList)
+        {
+            int x = grid.GridX; int y = grid.GridY;
+
+            if (obstacleMap != null && obstacleMap.HasTile(new Vector3Int(x, y, 0)))
+            {
+                gridList[Mathf.Abs(x), Mathf.Abs(y)].nonWalkable = true;
+            }
+            else if (Physics2D.OverlapCircle(new Vector3(x + 0.5f, y + 0.5f), 0.4f, LayerMask.GetMask("Blocked")))
+            {
+                gridList[Mathf.Abs(x), Mathf.Abs(y)].nonWalkable = true;
+            }
+        }
+    }
+
     void GridCreate()
     {
         gridList = new NodeGrid[rowLeght, colLeght];
@@ -30,22 +52,15 @@ public class GridCreateManager : MonoBehaviour
 
                 gridList[Mathf.Abs(x), Mathf.Abs(y)] = new NodeGrid(x, y);
                 gridList[Mathf.Abs(x), Mathf.Abs(y)].nonWalkable = false;
-
-                if (obstacleMap != null && obstacleMap.HasTile(new Vector3Int(x, y, 0)))
-                {
-                    gridList[Mathf.Abs(x), Mathf.Abs(y)].nonWalkable = true;
-                }
-                else if (Physics2D.OverlapCircle(new Vector3(x + 0.5f, y + 0.5f), 0.4f, LayerMask.GetMask("Blocked")))
-                {
-                    gridList[Mathf.Abs(x), Mathf.Abs(y)].nonWalkable = true;
-                }
             }
         }
+
+        CheckForBlockage();
     }
 
     public List<NodeGrid> FindTarget(Vector3 seekPoint, Vector3 tarPoint)
     {
-        GridCreate();
+        //CheckForBlockage();
 
         List<NodeGrid> openPath = new List<NodeGrid>();
         HashSet<NodeGrid> closePath = new HashSet<NodeGrid>();

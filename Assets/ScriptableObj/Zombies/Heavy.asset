@@ -16,8 +16,8 @@ MonoBehaviour:
   zombieSprite: {fileID: 366049847, guid: 3e0181fe4f89a514e8a4d5cc459da238, type: 3}
   zombieName: Heavy
   zombieDescrip: They can pack a punch.
-  health: 4
-  speed: 2
+  health: 6
+  speed: 1
   reward: 20
   atkDamage: 2
   atkSpeed: 2
