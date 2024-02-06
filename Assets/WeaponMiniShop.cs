@@ -37,7 +37,7 @@ public class WeaponMiniShop : MonoBehaviour
 
             GunManager gunManager = hit.GetComponent<GunManager>();
 
-            if (gunManager.weaponStats.Contains(weaponToSell))
+            if (gunManager.WeaponContainInventory(weaponToSell))
             {
                 hasBought = true;
                 priceText.text = "";

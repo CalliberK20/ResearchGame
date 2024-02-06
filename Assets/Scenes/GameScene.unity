@@ -10725,9 +10725,10 @@ MonoBehaviour:
   torsoAnim: {fileID: 1089325198}
   preBulletCount: 3
   bulletPrefab: {fileID: 2920950206305292489, guid: 6120e136d643651499335fdd7c9b4e95, type: 3}
-  weaponStats:
-  - {fileID: 11400000, guid: 638f0ab16f5328f4c9201bab0f9f5714, type: 2}
-  weaponInventory: []
+  weaponInventory:
+  - weapon: {fileID: 11400000, guid: 638f0ab16f5328f4c9201bab0f9f5714, type: 2}
+    currentAmmo: 5
+    maxAmmo: 5
   weaponDamage: 0
   atkRate: 1
   reloadSpeed: 3

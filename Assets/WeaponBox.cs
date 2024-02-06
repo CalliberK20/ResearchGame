@@ -39,7 +39,6 @@ public class WeaponBox : MonoBehaviour
         StopAllCoroutines();
         WeaponStats weapon = weaponStats[Random.Range(0, weaponStats.Length)];
         spriteObj.sprite = weapon.weaponSprite;
-        if (!gunManager.weaponStats.Contains(weapon))
-            gunManager.GiveNewWeapon(weapon);
+        gunManager.GiveNewWeapon(weapon);
     }
 }

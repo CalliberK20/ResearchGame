@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using static GunManager;
 
 public class GunManager : MonoBehaviour
 {
@@ -13,7 +14,7 @@ public class GunManager : MonoBehaviour
     public int preBulletCount = 3;
     public GameObject bulletPrefab;
     [Space]
-    public List<WeaponStats> weaponStats = new List<WeaponStats>();
+    //public List<WeaponStats> weaponStats = new List<WeaponStats>();
     public List<Weapon> weaponInventory = new List<Weapon>();
 
     #region Properties
@@ -35,8 +36,18 @@ public class GunManager : MonoBehaviour
     [System.Serializable]
     public class Weapon
     {
+        public WeaponStats weapon;
         public int currentAmmo;
         public int maxAmmo;
+
+        public Weapon() { }
+
+        public Weapon(WeaponStats weapon, int currentAmmo, int maxAmmo)
+        {
+            this.weapon = weapon;
+            this.currentAmmo = currentAmmo;
+            this.maxAmmo = maxAmmo;
+        }
     }
 
     private float startDelay;
@@ -64,18 +75,10 @@ public class GunManager : MonoBehaviour
             bullets.Add(bullet);
         }
 
+        currentWeaponOnHold = weaponInventory[(int)currentWeapon];
         ChangeStats();
-        torsoAnim.SetFloat("Type", weaponStats[(int)currentWeapon].weaponAnimatorType);
+        torsoAnim.SetFloat("Type", currentWeaponOnHold.weapon.weaponAnimatorType);
 
-        for (int i = 0; i < weaponStats.Count; i++)
-        {
-            Weapon newWeapon = new Weapon();
-            int getAmmo = 0;
-            if (!weaponStats[i].isMelee)
-                getAmmo = weaponStats[i].ammo;
-            newWeapon.currentAmmo = getAmmo;
-            weaponInventory.Add(newWeapon);
-        }
         startDelay = atkRate;
 
         movement = GetComponent<Movement>();
@@ -101,7 +104,7 @@ public class GunManager : MonoBehaviour
                 else
                     Shoot(bullet);
                 audioSource.loop = false;
-                audioSource.clip = weaponStats[(int)currentWeapon].weaponAudioClip;
+                audioSource.clip = currentWeaponOnHold.weapon.weaponAudioClip;
                 audioSource.Play();
                 startDelay = 0;
             }
@@ -115,7 +118,7 @@ public class GunManager : MonoBehaviour
                 Strike();
             }
             audioSource.loop = true;
-            audioSource.clip = weaponStats[(int)currentWeapon].weaponAudioClip;
+            audioSource.clip = currentWeaponOnHold.weapon.weaponAudioClip;
             if (!audioSource.isPlaying)
                 audioSource.Play();
         }
@@ -134,12 +137,12 @@ public class GunManager : MonoBehaviour
             currentWeapon += Input.mouseScrollDelta.y;
 
             if (currentWeapon < 0)
-                currentWeapon = weaponStats.Count - 1;
-            else if (currentWeapon > weaponStats.Count - 1)
+                currentWeapon = weaponInventory.Count - 1;
+            else if (currentWeapon > weaponInventory.Count - 1)
                 currentWeapon = 0;
         }
 
-        if (weaponStats.Count > 0)
+        if (weaponInventory.Count > 0)
         {
             if (Input.GetKeyDown(KeyCode.Alpha1))
             {
@@ -150,7 +153,6 @@ public class GunManager : MonoBehaviour
                 currentWeapon = 1;
             }
         }
-        currentWeaponOnHold = weaponInventory[(int)currentWeapon];
         SwitchWeapon();
         //-------------------------------------------------------------
 
@@ -236,9 +238,10 @@ public class GunManager : MonoBehaviour
     private void SwitchWeapon()
     {
         //Change the stats when switching
+        currentWeaponOnHold = weaponInventory[(int)currentWeapon];
         ChangeStats();
         UIManager.Instance.ammoText.text = currentWeaponOnHold.currentAmmo.ToString() + "/" + currentWeaponOnHold.maxAmmo.ToString();
-        torsoAnim.SetFloat("Type", weaponStats[(int)currentWeapon].weaponAnimatorType);
+        torsoAnim.SetFloat("Type", currentWeaponOnHold.weapon.weaponAnimatorType);
         isReloading = false;
 
         if (!isMelee)
@@ -252,9 +255,10 @@ public class GunManager : MonoBehaviour
 
     public void GiveNewWeapon(WeaponStats newWeapon)
     {
-        if (!weaponStats.Contains(newWeapon))
+        Weapon weapon = new Weapon(newWeapon, newWeapon.ammo, newWeapon.ammo);
+        if (!WeaponContainInventory(newWeapon))
         {
-            weaponStats.Add(newWeapon);
+            weaponInventory.Add(weapon);
 
             Weapon newWeaponToGet = new Weapon();
             int getAmmo = 0;
@@ -284,11 +288,11 @@ public class GunManager : MonoBehaviour
 
     private void ChangeStats()
     {
-        holdAttack = weaponStats[(int)currentWeapon].holdAttack;
-        isMelee = weaponStats[(int)currentWeapon].isMelee;
-        atkRate = weaponStats[(int)currentWeapon].atkRate;
+        holdAttack = currentWeaponOnHold.weapon.holdAttack;
+        isMelee = currentWeaponOnHold.weapon.isMelee;
+        atkRate = currentWeaponOnHold.weapon.atkRate;
 
-        weaponDamage = weaponStats[(int)currentWeapon].damage;
+        weaponDamage = currentWeaponOnHold.weapon.damage;
 
         if(isMelee)
         {
@@ -300,12 +304,23 @@ public class GunManager : MonoBehaviour
         }
         else
         {
-            bulletSpeed = weaponStats[(int)currentWeapon].bulletSpeed;
+            bulletSpeed = currentWeaponOnHold.weapon.bulletSpeed;
 
-            ammo = weaponStats[(int)currentWeapon].ammo;
+            ammo = currentWeaponOnHold.weapon.ammo;
 
-            bulletDestroyTime = weaponStats[(int)currentWeapon].bulletDestroyTime;
+            bulletDestroyTime = currentWeaponOnHold.weapon.bulletDestroyTime;
         }
+    }
+
+    public WeaponStats WeaponContainInventory(WeaponStats weaponToSearch)
+    {
+        foreach(Weapon weapon in weaponInventory)
+        {
+            if (weapon.weapon == weaponToSearch)
+                return weapon.weapon;
+        }
+        Debug.Log("Weapon not found");
+        return null;
     }
 
     private void OnDrawGizmos()

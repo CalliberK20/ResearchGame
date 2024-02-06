@@ -19,6 +19,8 @@ public class EnemyMovement : MonoBehaviour
     private Animator anim;
     private bool isAttacking = false;
     private float reward;
+    private float ranX;
+    private float ranY;
 
     public void SetEnemyStats(EnemyStats newStats)
     {
@@ -49,21 +51,20 @@ public class EnemyMovement : MonoBehaviour
         {
             if (path.Count > 0)
             {
-                NodeGrid pathGrid = path[0];
-                float ranX = Random.Range(0f, 1f);
-                float ranY = Random.Range(0f, 1f);
-                Vector2 movePos = new Vector2(path[0].GridX + ranX, path[0].GridY + ranY);
+                Vector3 movePos = new Vector2(path[0].GridX + ranX, path[0].GridY + ranY);
 
-                if (transform.position.x == pathGrid.GridX + 0.5f && transform.position.y == pathGrid.GridY + 0.5f)
+                if (transform.position == movePos)
                 {
                     path = new List<NodeGrid>();
                     Flip();
                     anim.SetBool("Run", false);
+                    ranX = Random.Range(0f, 1f);
+                    ranY = Random.Range(0f, 1f);
                 }
                 else
                 {
 
-                    transform.position = Vector2.MoveTowards(transform.position, new Vector2(pathGrid.GridX + 0.5f, pathGrid.GridY + 0.5f), speed * Time.deltaTime);
+                    transform.position = Vector2.MoveTowards(transform.position, new Vector2(movePos.x, movePos.y), speed * Time.deltaTime);
                     anim.SetBool("Run", true);
                 }
             }
