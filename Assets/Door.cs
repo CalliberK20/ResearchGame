@@ -16,10 +16,12 @@ public class Door : MonoBehaviour
     public GameObject barrierCollider;
     [Space]
     public LayerMask layersToOpen;
+
+    [Space, ShowOnly]
+    public bool isBought = false;
     [HideInInspector]
-    public List<Collider2D> collider = new List<Collider2D>();
+    public new List<Collider2D> collider = new List<Collider2D>();
     private Collider2D player;
-    private bool isBought = false;
 
     private void Start()
     {
@@ -57,7 +59,7 @@ public class Door : MonoBehaviour
             doorSpriteObj.SetActive(true);
         }
 
-        if(Input.GetKeyDown(KeyCode.E))
+        if(collider.Contains(player.GetComponent<Collider2D>()) && Input.GetKeyDown(KeyCode.E))
         {
             if (!isBought && CashManager.instance.cash >= entryPass)
             {

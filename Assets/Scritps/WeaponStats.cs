@@ -6,7 +6,7 @@ using UnityEngine;
 public class WeaponStats : ScriptableObject
 {
     public Sprite weaponSprite;
-    public AudioClip weaponAudioClip;
+    public string weaponAudioName;
     public string weaponName;
     public string weaponDescrip;
 

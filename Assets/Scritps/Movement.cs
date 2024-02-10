@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class Movement : MonoBehaviour
 {
+    public GameObject loseParent;
+    [Space]
     public float health = 50;
     public float speed = 2;
     [Space]
@@ -68,6 +70,7 @@ public class Movement : MonoBehaviour
             legAnim.SetTrigger("Die");
             gunManager.enabled = false;
             gunManager.torsoAnim.gameObject.SetActive(false);
+            loseParent.SetActive(true);
             StartCoroutine(SceneLead.ResetScene(2));
             isDead = true;
         }

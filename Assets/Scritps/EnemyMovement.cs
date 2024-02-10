@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Tilemaps;
 using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
@@ -22,6 +21,13 @@ public class EnemyMovement : MonoBehaviour
     private float ranX;
     private float ranY;
 
+    private AudioSource audioSource;
+
+    private void Awake()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
+
     public void SetEnemyStats(EnemyStats newStats)
     {
         speed = newStats.speed;
@@ -36,6 +42,12 @@ public class EnemyMovement : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         gridCreate = FindObjectOfType<GridCreateManager>();
         path = new List<NodeGrid>();
+        Sound sound = AudioManager.instance.GetAudio("Zombie");
+        audioSource.clip = sound.clip;
+        audioSource.volume = sound.volume;
+        audioSource.loop = sound.loop;
+        audioSource.outputAudioMixerGroup = sound.mixer;
+        audioSource.Play();
     }
 
     private void FixedUpdate()
@@ -66,6 +78,11 @@ public class EnemyMovement : MonoBehaviour
 
                     transform.position = Vector2.MoveTowards(transform.position, new Vector2(movePos.x, movePos.y), speed * Time.deltaTime);
                     anim.SetBool("Run", true);
+                    if (!FollowCamera.OnView(transform))
+                    {
+                        ReSpawnOnPoint();
+                        path.Clear();
+                    }
                 }
             }
             else
@@ -73,6 +90,13 @@ public class EnemyMovement : MonoBehaviour
                 path = gridCreate.FindTarget(transform.position, target.position);
             }
         }
+    }
+
+    void ReSpawnOnPoint()
+    {
+        EnemySpawner spawner = EnemySpawner.Instance;
+        int ran = Random.Range(0, spawner.enemyEntry.Count);
+        transform.position = spawner.enemyEntry[ran].GetComponent<SpawnPoint>().Spawn();
     }
 
     private void Flip()
@@ -108,7 +132,12 @@ public class EnemyMovement : MonoBehaviour
             enabled = false;
             CashManager.instance.GiveMoney(reward);
             WaveManager.instance.numOfZombiesInGame--;
+            audioSource.Stop();
             StartCoroutine(DesipateDelay());
+            Sound sound = AudioManager.instance.GetAudio("ZombieDead");
+            audioSource.volume = sound.volume;
+            audioSource.loop = sound.loop;
+            audioSource.Play();
         }
     }
 

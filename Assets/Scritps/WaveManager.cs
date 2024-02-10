@@ -18,7 +18,7 @@ public class WaveManager : MonoBehaviour
     public int numOfZombiesInGame = 0;
     [Space]
     public Wave[] waves;
-
+    public GameObject winParent;
 
     [System.Serializable]
     public class Wave
@@ -69,6 +69,7 @@ public class WaveManager : MonoBehaviour
         }
 
         yield return new WaitUntil(() => numOfZombiesInGame <= 0);
+        winParent.gameObject.SetActive(true);
         StartCoroutine(SceneLead.ResetScene(3f));
     }
 

@@ -17,29 +17,30 @@ public class WeaponMiniShop : MonoBehaviour
     private TextMeshPro priceText;
     private bool hasBought = false;
     private CashManager cashManager;
+    private GunManager gunManager;
+    public float rate;
 
     private void Start()
     {
         cashManager = CashManager.instance;
         priceText = transform.GetChild(0).GetComponent<TextMeshPro>();
+        gunManager = GameObject.FindWithTag("Player").GetComponent<GunManager>();
+
         gunTypeRender.sprite = weaponToSell.weaponSprite;
         weaponPrice = weaponToSell.weaponPrice;
+        rate = weaponPrice * bulletCostRate;
     }
 
     // Update is called once per frame
     void Update()
     {
         Collider2D hit = Physics2D.OverlapCircle(transform.position, radius, LayerMask.GetMask("Player"));
-        float rate = weaponPrice * bulletCostRate;
-        if(hit != null && hit.CompareTag("Player"))
+        if(hit != null)
         {
             priceText.gameObject.SetActive(true);
 
-            GunManager gunManager = hit.GetComponent<GunManager>();
-
             if (gunManager.WeaponContainInventory(weaponToSell))
             {
-                hasBought = true;
                 priceText.text = "";
                 if (!weaponToSell.isMelee)
                 {
@@ -51,28 +52,35 @@ public class WeaponMiniShop : MonoBehaviour
 
             if(Input.GetKeyDown(KeyCode.E))
             {
-                if (hasBought)
-                {
-                    if (!weaponToSell.isMelee && cashManager.SuffiecientAmount(rate))
-                    {
-                        gunManager.GetMoreAmmo(weaponToSell.ammo);
-                        Debug.Log("Buy Ammo");
-                        cashManager.LoseMoney(rate);
-                    }
-                }
-                else
-                {
-                    if(cashManager.SuffiecientAmount(weaponPrice))
-                    {
-                        gunManager.GiveNewWeapon(weaponToSell);
-                        Debug.Log("Buy Gun");
-                        cashManager.LoseMoney(weaponPrice);
-                    }
-                }
+                BuyWeapon();
             }
         }
         else
             priceText.gameObject.SetActive(false);
+    }
+
+    void BuyWeapon()
+    {
+        float price;
+
+        if (!hasBought)
+            price = weaponPrice;
+        else
+            price = rate;
+
+        if (cashManager.SuffiecientAmount(price))
+        {
+            cashManager.LoseMoney(price);
+            AudioManager.instance.PlayAudio("Buy");
+            if (!hasBought)
+            {
+                gunManager.GiveNewWeapon(weaponToSell);
+                hasBought = true;
+                return;
+            }
+            if (!weaponToSell.isMelee)
+                gunManager.GetMoreAmmo(weaponToSell.ammo);
+        }    
     }
 
     private void OnDrawGizmos()

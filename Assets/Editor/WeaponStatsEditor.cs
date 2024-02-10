@@ -7,7 +7,7 @@ using UnityEngine;
 public class WeaponStatsEditor : Editor
 {
     SerializedProperty weaponSprite;
-    SerializedProperty weaponAudioClip;
+    SerializedProperty weaponAudioName;
     SerializedProperty weaponName;
     SerializedProperty weaponDescrip;
 
@@ -31,7 +31,7 @@ public class WeaponStatsEditor : Editor
     private void OnEnable()
     {
         weaponSprite = serializedObject.FindProperty("weaponSprite");
-        weaponAudioClip = serializedObject.FindProperty("weaponAudioClip");
+        weaponAudioName = serializedObject.FindProperty("weaponAudioName");
         weaponName = serializedObject.FindProperty("weaponName");
         weaponDescrip = serializedObject.FindProperty("weaponDescrip");
 
@@ -58,13 +58,13 @@ public class WeaponStatsEditor : Editor
         serializedObject.Update();
 
         EditorGUILayout.PropertyField(weaponSprite);
-        EditorGUILayout.PropertyField(weaponAudioClip);
+        EditorGUILayout.PropertyField(weaponAudioName);
         EditorGUILayout.Space(10f);
 
         infoShow = EditorGUILayout.BeginFoldoutHeaderGroup(infoShow, "Information: ");
         if(infoShow)
         {
-            EditorGUILayout.PropertyField(weaponName);
+            EditorGUILayout.PropertyField(weaponAudioName);
             EditorGUILayout.LabelField("Weapon Description");
             _weaponStats.weaponDescrip = EditorGUILayout.TextArea(_weaponStats.weaponDescrip, GUILayout.MinHeight(35), GUILayout.ExpandHeight(true));
             EditorGUILayout.Space(10f);

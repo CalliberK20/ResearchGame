@@ -66,7 +66,7 @@ public class EnemySpawner : MonoBehaviour
 
     private void SpawnRadius()
     {
-        Collider2D[] collision = Physics2D.OverlapBoxAll(Camera.main.transform.position, FollowCamera.viewPort, 0f);
+        Collider2D[] collision = Physics2D.OverlapBoxAll(Camera.main.transform.position, FollowCamera.viewPoint, 0f);
         List<GameObject> entry = new List<GameObject>();
 
         foreach (Collider2D hit in collision)
@@ -89,5 +89,11 @@ public class EnemySpawner : MonoBehaviour
         }
         int ran = Random.Range(0, enemyStats.Length);
         return enemyStats[ran];
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireCube(Camera.main.transform.position, FollowCamera.viewPoint);
     }
 }

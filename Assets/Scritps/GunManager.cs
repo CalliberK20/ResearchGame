@@ -91,8 +91,19 @@ public class GunManager : MonoBehaviour
         if (movement.isDead)
             return;
 
+        Sound sound = AudioManager.instance.GetAudio(currentWeaponOnHold.weapon.weaponAudioName);
+
         if (Input.GetMouseButtonDown(0))
         {
+            if(isReloading)
+            {
+                Sound emptyGun = AudioManager.instance.GetAudio("Empty");
+                audioSource.clip = emptyGun.clip;
+                audioSource.loop = emptyGun.loop;
+                audioSource.Play();
+            }
+
+
             GameObject bullet = GetActiveBullet();
             if (bullet != null && startDelay >= atkRate && !isReloading)
             {
@@ -103,8 +114,9 @@ public class GunManager : MonoBehaviour
                 }
                 else
                     Shoot(bullet);
-                audioSource.loop = false;
-                audioSource.clip = currentWeaponOnHold.weapon.weaponAudioClip;
+
+                audioSource.clip = sound.clip;
+                audioSource.loop = sound.loop;
                 audioSource.Play();
                 startDelay = 0;
             }
@@ -117,8 +129,8 @@ public class GunManager : MonoBehaviour
             {
                 Strike();
             }
-            audioSource.loop = true;
-            audioSource.clip = currentWeaponOnHold.weapon.weaponAudioClip;
+            audioSource.loop = sound.loop;
+            audioSource.clip = sound.clip;
             if (!audioSource.isPlaying)
                 audioSource.Play();
         }
@@ -126,7 +138,7 @@ public class GunManager : MonoBehaviour
         if (holdAttack && Input.GetMouseButtonUp(0))
         {
             torsoAnim.SetBool("Hold", false);
-            if (audioSource.isPlaying && audioSource.loop)
+            if (audioSource.isPlaying && sound.loop)
                 audioSource.Stop();
             startDelay = 0;
         }
