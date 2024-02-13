@@ -14,6 +14,7 @@ public class MenuManager : MonoBehaviour
         {
             pauseParent.SetActive(true);
             Time.timeScale = 0f;
+            CustomCustor.instance.SetActive(false);
         }
     }
 
@@ -25,5 +26,6 @@ public class MenuManager : MonoBehaviour
     public void ResumeGame()
     {
         Time.timeScale = 1f;
+        CustomCustor.instance.SetActive(true);
     }
 }

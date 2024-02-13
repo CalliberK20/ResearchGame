@@ -13,14 +13,14 @@ public class FollowCamera : MonoBehaviour
     {
         float height = 2f * Camera.main.orthographicSize;
         float width = height * Camera.main.aspect;
-        viewPoint = new Vector3(width, height);
+        viewPoint = new Vector3(width * 2, height * 2);
     }
 
     public static bool OnView(Transform obj)
     {
         Transform pos = Camera.main.transform;
-        Vector3 max = new Vector3(pos.position.x + 14.25f, pos.position.y + Camera.main.orthographicSize);
-        Vector3 min = new Vector3(pos.position.x - 14.25f, pos.position.y - Camera.main.orthographicSize);
+        Vector3 max = new Vector3(pos.position.x + 14.25f * 2, pos.position.y + Camera.main.orthographicSize * 2);
+        Vector3 min = new Vector3(pos.position.x - 14.25f * 2 , pos.position.y - Camera.main.orthographicSize * 2);
 
         if (obj.position.x < max.x && obj.position.x > min.x && obj.position.y < max.y && obj.position.y > min.y)
             return true;

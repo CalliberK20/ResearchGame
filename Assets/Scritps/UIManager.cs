@@ -14,6 +14,7 @@ public class UIManager : MonoBehaviour
     [Space]
     public TextMeshProUGUI ammoText;
     public TextMeshProUGUI waveText;
+    public Image cursor;
 
     private void Awake()
     {
