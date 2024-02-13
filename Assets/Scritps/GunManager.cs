@@ -50,6 +50,9 @@ public class GunManager : MonoBehaviour
         }
     }
 
+    [HideInInspector]
+    public float givenReloadSpeed = 0f;
+
     private float startDelay;
     private float startReload;
 
@@ -174,7 +177,7 @@ public class GunManager : MonoBehaviour
         if (isReloading && currentWeaponOnHold.maxAmmo > 0)
         {
             reloadImage.gameObject.SetActive(true);
-            startReload += Time.deltaTime;
+            startReload += Time.deltaTime + givenReloadSpeed;
             float convert = startReload / reloadSpeed;
             reloadImage.fillAmount = convert;
             if (startReload >= reloadSpeed)

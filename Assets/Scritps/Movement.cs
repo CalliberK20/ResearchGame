@@ -18,7 +18,8 @@ public class Movement : MonoBehaviour
     private SpriteRenderer[] spriteRenderers;
     private GunManager gunManager;
     [HideInInspector] public bool isFlip;
-
+    [HideInInspector]
+    public float givenSpeed = 0f;
     private float regHealth;
 
     // Start is called before the first frame update
@@ -52,10 +53,15 @@ public class Movement : MonoBehaviour
         else
             legAnim.SetBool("Run", false);
 
-        rigid.position += move * speed * Time.fixedDeltaTime;
+        rigid.position += move * (speed + givenSpeed) * Time.fixedDeltaTime;
 
         if (Input.GetButton("Horizontal"))
             Flip(move.x);
+    }
+
+    public void GiveHealth(float health)
+    {
+        this.health += health;
     }
 
     public void Damage(float damage)
