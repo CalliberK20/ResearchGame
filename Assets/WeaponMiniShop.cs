@@ -15,7 +15,7 @@ public class WeaponMiniShop : MonoBehaviour
     private float bulletCostRate = 0.3f;
 
     private TextMeshPro priceText;
-    private bool hasBought = false;
+    private bool contain = false;
     private CashManager cashManager;
     private GunManager gunManager;
     public float rate;
@@ -62,8 +62,8 @@ public class WeaponMiniShop : MonoBehaviour
     void BuyWeapon()
     {
         float price;
-
-        if (!hasBought)
+        contain = gunManager.WeaponContainInventory(weaponToSell);
+        if (!contain)
             price = weaponPrice;
         else
             price = rate;
@@ -72,10 +72,9 @@ public class WeaponMiniShop : MonoBehaviour
         {
             cashManager.LoseMoney(price);
             AudioManager.instance.PlayAudio("Buy");
-            if (!hasBought)
+            if (!contain)
             {
                 gunManager.GiveNewWeapon(weaponToSell);
-                hasBought = true;
                 return;
             }
             if (!weaponToSell.isMelee)

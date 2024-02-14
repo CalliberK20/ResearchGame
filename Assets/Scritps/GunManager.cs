@@ -2,19 +2,36 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using static GunManager;
+
+[System.Serializable]
+public class Weapon
+{
+    public WeaponStats weapon;
+    public int currentAmmo;
+    public int maxAmmo;
+
+    public Weapon() { }
+
+    public Weapon(WeaponStats weapon, int currentAmmo, int maxAmmo)
+    {
+        this.weapon = weapon;
+        this.currentAmmo = currentAmmo;
+        this.maxAmmo = maxAmmo;
+    }
+}
 
 public class GunManager : MonoBehaviour
 {
-
+    public GameObject weaponDropPrefab;
+    [Space]
     public Image reloadImage;
-
     public Animator torsoAnim;
     [Space]
     public int preBulletCount = 3;
     public GameObject bulletPrefab;
     [Space]
     //public List<WeaponStats> weaponStats = new List<WeaponStats>();
+    public Weapon currentWeaponOnHold;
     public List<Weapon> weaponInventory = new List<Weapon>();
 
     #region Properties
@@ -33,23 +50,6 @@ public class GunManager : MonoBehaviour
     //-----------PRIVATE----------------------
     private List<GameObject> bullets = new List<GameObject>();
 
-    [System.Serializable]
-    public class Weapon
-    {
-        public WeaponStats weapon;
-        public int currentAmmo;
-        public int maxAmmo;
-
-        public Weapon() { }
-
-        public Weapon(WeaponStats weapon, int currentAmmo, int maxAmmo)
-        {
-            this.weapon = weapon;
-            this.currentAmmo = currentAmmo;
-            this.maxAmmo = maxAmmo;
-        }
-    }
-
     [HideInInspector]
     public float givenReloadSpeed = 0f;
 
@@ -64,7 +64,6 @@ public class GunManager : MonoBehaviour
     private bool isReloading = false;
 
     private AudioSource audioSource;
-    private Weapon currentWeaponOnHold;
     // Start is called before the first frame update
     void Start()
     {
@@ -105,10 +104,26 @@ public class GunManager : MonoBehaviour
                 audioSource.loop = emptyGun.loop;
                 audioSource.Play();
             }
+        }
 
-
+        if (Input.GetMouseButton(0))
+        {
             GameObject bullet = GetActiveBullet();
-            if (bullet != null && startDelay >= atkRate && !isReloading)
+            if(currentWeaponOnHold.weapon.holdAttack)
+            {
+                Debug.Log("Running Chainsaw");
+                torsoAnim.SetTrigger("Shoot");
+                torsoAnim.SetBool("Hold", true);
+                if (startDelay >= atkRate)
+                {
+                    Strike();
+                }
+                audioSource.loop = sound.loop;
+                audioSource.clip = sound.clip;
+                if (!audioSource.isPlaying)
+                    audioSource.Play();
+            }
+            else if (bullet != null && startDelay >= atkRate && !isReloading)
             {
                 torsoAnim.SetTrigger("Shoot");
                 if (isMelee)
@@ -122,20 +137,8 @@ public class GunManager : MonoBehaviour
                 audioSource.loop = sound.loop;
                 audioSource.Play();
                 startDelay = 0;
+                
             }
-        }
-
-        if (holdAttack && Input.GetMouseButton(0))
-        {
-            torsoAnim.SetBool("Hold", true);
-            if (startDelay >= atkRate)
-            {
-                Strike();
-            }
-            audioSource.loop = sound.loop;
-            audioSource.clip = sound.clip;
-            if (!audioSource.isPlaying)
-                audioSource.Play();
         }
 
         if (holdAttack && Input.GetMouseButtonUp(0))
@@ -146,10 +149,24 @@ public class GunManager : MonoBehaviour
             startDelay = 0;
         }
 
+        if(weaponInventory.Count > 1 && Input.GetKeyDown(KeyCode.Q))
+        {
+            GameObject dropGun = Instantiate(weaponDropPrefab, transform.position - new Vector3(0, -0.4f), Quaternion.identity);
+            GunStatPickUp gunStatPickUp = dropGun.GetComponent<GunStatPickUp>();
+            gunStatPickUp.weapon = currentWeaponOnHold.weapon;
+            gunStatPickUp.currentAmmo = currentWeaponOnHold.currentAmmo;
+            gunStatPickUp.maxAmmo = currentWeaponOnHold.maxAmmo;
+            weaponInventory.Remove(currentWeaponOnHold);
+
+            if (currentWeapon >= weaponInventory.Count)
+                currentWeapon--;
+        }
+
+
         //------------------HANDLES SWITCHING---------------------------
         if (Mathf.Abs(Input.mouseScrollDelta.y) > 0)
         {
-            currentWeapon += Input.mouseScrollDelta.y;
+            currentWeapon -= Input.mouseScrollDelta.y;
 
             if (currentWeapon < 0)
                 currentWeapon = weaponInventory.Count - 1;
@@ -274,16 +291,24 @@ public class GunManager : MonoBehaviour
         if (!WeaponContainInventory(newWeapon))
         {
             weaponInventory.Add(weapon);
-
-            Weapon newWeaponToGet = new Weapon();
-            int getAmmo = 0;
-            if (!newWeapon.isMelee)
-                getAmmo = newWeapon.ammo;
-            newWeaponToGet.currentAmmo = getAmmo;
-            weaponInventory.Add(newWeaponToGet);
         }
         else
             Debug.Log("Has the gun");
+
+        currentWeapon = weaponInventory.Count - 1;
+    }
+
+    public void GiveNewWeapon(WeaponStats newWeapon, int currentAmmo)
+    {
+        Weapon weapon = new Weapon(newWeapon, currentAmmo, newWeapon.ammo);
+        if (!WeaponContainInventory(newWeapon))
+        {
+            weaponInventory.Add(weapon);
+        }
+        else
+            Debug.Log("Has the gun");
+
+        currentWeapon = weaponInventory.Count - 1;
     }
 
     public void GetMoreAmmo(int amount)

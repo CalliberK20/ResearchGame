@@ -21,7 +21,7 @@ MonoBehaviour:
   isMelee: 0
   holdAttack: 0
   atkRate: 1
-  damage: 2
+  damage: 3
   ammo: 5
   delayShot: 1
   bulletSpeed: 5

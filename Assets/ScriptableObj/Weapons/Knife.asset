@@ -20,8 +20,8 @@ MonoBehaviour:
   weaponAnimatorType: 1
   isMelee: 1
   holdAttack: 0
-  atkRate: 1
-  damage: 2
+  atkRate: 0.4
+  damage: 5
   ammo: 5
   delayShot: 1
   bulletSpeed: 1
