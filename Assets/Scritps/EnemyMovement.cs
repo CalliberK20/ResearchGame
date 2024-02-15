@@ -13,6 +13,7 @@ public class EnemyMovement : MonoBehaviour
     [Space]
 
     //-------------PRIVATE--------------------------------------
+    private bool canLatch = false;
     private GridCreateManager gridCreate;
     private SpriteRenderer spriteRenderer;
     private Animator anim;
@@ -22,6 +23,8 @@ public class EnemyMovement : MonoBehaviour
     private float ranY;
 
     private AudioSource audioSource;
+    private bool nowLatching = false;
+    private Movement targetMovement;
 
     private void Awake()
     {
@@ -30,6 +33,8 @@ public class EnemyMovement : MonoBehaviour
 
     public void SetEnemyStats(EnemyStats newStats)
     {
+        nowLatching = false;
+        canLatch = newStats.canLatch;
         speed = newStats.speed;
         health = newStats.health;
         atkDamage = newStats.atkDamage;
@@ -38,7 +43,10 @@ public class EnemyMovement : MonoBehaviour
         anim = GetComponent<Animator>();
         anim.runtimeAnimatorController = newStats.enemyAnimatorController;
         if (target == null)
+        {
             target = GameObject.FindGameObjectWithTag("Player").transform;
+            targetMovement = target.GetComponent<Movement>();
+        }
         spriteRenderer = GetComponent<SpriteRenderer>();
         gridCreate = FindObjectOfType<GridCreateManager>();
         path = new List<NodeGrid>();
@@ -52,6 +60,14 @@ public class EnemyMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (nowLatching)
+        {
+            transform.position = target.position;
+            if (!isAttacking)
+                StartCoroutine(Attack());
+            return;
+        }
+
         if (Vector2.Distance(transform.position, target.position) <= 0.7f)
         {
             Flip();
@@ -114,8 +130,10 @@ public class EnemyMovement : MonoBehaviour
     private IEnumerator Attack()
     {
         isAttacking = true;
+        nowLatching = canLatch;
         anim.SetTrigger("Attack");
-        target.GetComponent<Movement>().Damage(atkDamage);
+        targetMovement.Damage(atkDamage);
+        StartCoroutine(targetMovement.GiveSlowness(0.7f));
         yield return new WaitForSeconds(atkSpeed);
         isAttacking = false;
     }

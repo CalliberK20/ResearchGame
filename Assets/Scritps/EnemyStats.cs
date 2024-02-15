@@ -18,4 +18,6 @@ public class EnemyStats : ScriptableObject
     [Space]
     public float atkDamage = 2;
     public float atkSpeed = 2f;
+    [Space]
+    public bool canLatch = false;
 }

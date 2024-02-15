@@ -96,4 +96,11 @@ public class Movement : MonoBehaviour
             spriteRender.flipX = isFlip;
         }
     }
+
+    public IEnumerator GiveSlowness(float slowness)
+    {
+        givenSpeed = -slowness;
+        yield return new WaitForSeconds(5f);
+        givenSpeed = 0;
+    }
 }
