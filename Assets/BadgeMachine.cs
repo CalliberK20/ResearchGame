@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -21,12 +22,13 @@ public class BadgeMachine : MonoBehaviour
 {
     public BadgeMachine script;
     public BadgeSprite[] badgeSprites;
+    public float pointsPrice = 1000;
     public BadgeType badgeType;
     public bool canBeInteracted = false;
     [Space]
     public float healthToGive = 30f;
     public float speedToGive = 6.0f;
-    public float reloadSpdToGive = 6.0f;
+    public float deductiveReloadSpeed = 6.0f;
     public float time = 6f;
     [Space]
     public float refillTime = 3f;
@@ -35,7 +37,9 @@ public class BadgeMachine : MonoBehaviour
     private Movement movement;
     private GunManager gunManager;
     private SpriteRenderer spriteRenderer;
-    private Image badgeSource;
+    private TextMeshPro text;
+
+    private bool perkAcquired = false;
 
     private void OnValidate()
     {
@@ -46,21 +50,22 @@ public class BadgeMachine : MonoBehaviour
     private void Start()
     {
         GameObject player = GameObject.FindGameObjectWithTag("Player");
+        text = transform.GetChild(0).GetComponent<TextMeshPro>();
         movement = player.GetComponent<Movement>();
         gunManager = player.GetComponent<GunManager>();
 
         spriteRenderer = GetComponent<SpriteRenderer>();
         spriteRenderer.sprite = badgeSprites[(int)badgeType].machineSprite;
-
-        badgeSource = UIManager.Instance.badgeImage;
-
+        
         refilling = refillTime;
+        text.gameObject.SetActive(false);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.CompareTag("Player"))
         {
+            text.text = "Price: " + pointsPrice;
             canBeInteracted = true;
         }
     }
@@ -70,83 +75,54 @@ public class BadgeMachine : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             canBeInteracted= false;
+            text.gameObject.SetActive(false);
         }
     }
 
     private void Update()
     {
-        if (refilling >= refillTime && canBeInteracted && !badgeSource.gameObject.activeInHierarchy)
+        if (!perkAcquired && canBeInteracted)
         {
-            if(Input.GetKeyDown(KeyCode.E))
-            TakeEf();
+            text.gameObject.SetActive(true);
+            if (Input.GetKeyDown(KeyCode.E))
+                TakeEf();
         }
-
-        refilling += Time.deltaTime;
     }
 
-    private IEnumerator GreenBadge()
+    private void GreenBadge()
     {
         movement.GiveHealth(healthToGive);
-        yield return new WaitForSeconds(time);
-        badgeSource.gameObject.SetActive(false);
     }
 
-    private IEnumerator BlueBadge()
+    private void BlueBadge()
     {
-        movement.givenSpeed = speedToGive /100f;
-        float spilt = time / 2;
-        yield return new WaitForSeconds(spilt);
-
-        int i = 10;
-        while (i > 0)
-        {
-            yield return new WaitForSeconds(spilt / 10);
-            UIManager.Instance.badgeImage.gameObject.SetActive(true);
-            yield return new WaitForSeconds(spilt / 10);
-            UIManager.Instance.badgeImage.gameObject.SetActive(false);
-            i--;
-        }
-
-        movement.givenSpeed = 0;
+        movement.givenSpeed = speedToGive / 100f;
     }
 
-    private IEnumerator YellowBadge()
+    private void YellowBadge()
     {
-        gunManager.givenReloadSpeed = reloadSpdToGive / 100f;
-        float spilt = time / 2;
-        Debug.Log(spilt);
-        yield return new WaitForSeconds(spilt);
-
-        int i = 10;
-        while(i > 0)
-        {
-            yield return new WaitForSeconds(spilt / 10);
-            badgeSource.gameObject.SetActive(true);
-            yield return new WaitForSeconds(spilt / 10);
-            badgeSource.gameObject.SetActive(false);
-            i--;
-        }
-
-        gunManager.givenReloadSpeed = 0;
+        gunManager.givenReloadSpeed = deductiveReloadSpeed / 100f;
     }
 
     void TakeEf()
     {
+        perkAcquired = true;
+        text.gameObject.SetActive(false);
         canBeInteracted = false;
         StopAllCoroutines();
 
-        badgeSource.gameObject.SetActive(true);
-        badgeSource.sprite = badgeSprites[(int)badgeType].badgeSprite;
+        Image image = Instantiate(UIManager.Instance.badgeImage, UIManager.Instance.badgeParent.transform).GetComponent<Image>();
+        image.sprite = badgeSprites[(int)badgeType].badgeSprite;
         switch (badgeType)
         {
             case BadgeType.green:
-                StartCoroutine(GreenBadge());
+                GreenBadge();
                 break;
             case BadgeType.blue:
-                StartCoroutine(BlueBadge());
+                BlueBadge();
                 break;
             case BadgeType.yellow:
-                StartCoroutine(YellowBadge());
+                YellowBadge();
                 break;
         }
     }

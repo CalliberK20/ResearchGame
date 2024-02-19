@@ -194,12 +194,13 @@ public class GunManager : MonoBehaviour
         if (isReloading && currentWeaponOnHold.maxAmmo > 0)
         {
             reloadImage.gameObject.SetActive(true);
-            startReload += Time.deltaTime + givenReloadSpeed;
-            float convert = startReload / reloadSpeed;
+            startReload += Time.deltaTime;
+            float converReloadSpeed = reloadSpeed - givenReloadSpeed;
+            float convert = startReload / converReloadSpeed;
             reloadImage.fillAmount = convert;
-            if (startReload >= reloadSpeed)
+            if (startReload >= converReloadSpeed)
             {
-                int bulletToGive = 0;
+                int bulletToGive;
                 if (currentWeaponOnHold.maxAmmo >= ammo)
                     bulletToGive = ammo;
                 else
