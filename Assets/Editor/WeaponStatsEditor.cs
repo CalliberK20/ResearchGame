@@ -23,6 +23,7 @@ public class WeaponStatsEditor : Editor
     SerializedProperty ammo;
     SerializedProperty atkRate;
     SerializedProperty bulletSpeed;
+    SerializedProperty reloadSpeed;
     SerializedProperty bulletDestroyTime;
 
     bool rangeWeapon = false;
@@ -48,6 +49,7 @@ public class WeaponStatsEditor : Editor
         ammo = serializedObject.FindProperty("ammo");
         atkRate = serializedObject.FindProperty("atkRate");
         bulletSpeed = serializedObject.FindProperty("bulletSpeed");
+        reloadSpeed = serializedObject.FindProperty("reloadSpeed");
         bulletDestroyTime = serializedObject.FindProperty("bulletDestroyTime");
     }
 
@@ -94,6 +96,7 @@ public class WeaponStatsEditor : Editor
         {
             EditorGUILayout.PropertyField(ammo);
             EditorGUILayout.PropertyField(bulletSpeed);
+            EditorGUILayout.PropertyField(reloadSpeed);
             EditorGUILayout.PropertyField(bulletDestroyTime);
         }
         GUI.enabled = true;

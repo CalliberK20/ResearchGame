@@ -5,6 +5,24 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "EnemyType")]
 public class EnemyStats : ScriptableObject
 {
+    public EnemyStats()
+    {
+
+    }
+
+    public EnemyStats(RuntimeAnimatorController enemyAnimatorController, Sprite zombieSprite, float health, float speed, float reward, float atkDamage, float atkSpeed, bool canLatch)
+    {
+        this.enemyAnimatorController = enemyAnimatorController;
+        this.zombieSprite = zombieSprite;
+        this.health = health;
+        this.speed = speed;
+        this.reward = reward;
+        this.atkDamage = atkDamage;
+        this.atkSpeed = atkSpeed;
+        this.canLatch = canLatch;
+    }
+
+
     public RuntimeAnimatorController enemyAnimatorController;
     public Sprite zombieSprite;
     public string zombieName;

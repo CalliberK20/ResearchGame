@@ -16,6 +16,8 @@ public class WaveManager : MonoBehaviour
 
     [ShowOnly]public int currentWave = 0;
     public int numOfZombiesInGame = 0;
+    public float rewardRate = 5;
+    public float difficultyRate = 10;
     [Space]
     public Wave[] waves;
     public GameObject winParent;
@@ -28,6 +30,9 @@ public class WaveManager : MonoBehaviour
         public float maxTime = 2;
         public EnemyType[] zombieType;  
     }
+
+    public float currentRewardRate;
+    public float currentdifficultyRate;
 
     private void Awake()
     {
@@ -49,7 +54,9 @@ public class WaveManager : MonoBehaviour
     private IEnumerator WaveDelay()
     {
         currentWave = 1;
-        
+        int increaseDifficulty = 1;
+        int milestone = 5;
+
         for (int i = 0; i < waves.Length; i++)
         {
             Wave wave = waves[i];
@@ -66,6 +73,13 @@ public class WaveManager : MonoBehaviour
             yield return new WaitForSeconds(15f);
 
             currentWave++;
+            if(currentWave >= 1)
+            {
+                currentdifficultyRate = difficultyRate * increaseDifficulty;
+                currentRewardRate = rewardRate * increaseDifficulty;
+                increaseDifficulty++;
+                milestone += 5;
+            }
         }
 
         yield return new WaitUntil(() => numOfZombiesInGame <= 0);

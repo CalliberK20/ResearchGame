@@ -133,7 +133,8 @@ public class EnemyMovement : MonoBehaviour
         nowLatching = canLatch;
         anim.SetTrigger("Attack");
         targetMovement.Damage(atkDamage);
-        StartCoroutine(targetMovement.GiveSlowness(0.7f));
+        if (canLatch)
+            StartCoroutine(targetMovement.GiveSlowness(0.7f));
         yield return new WaitForSeconds(atkSpeed);
         isAttacking = false;
     }

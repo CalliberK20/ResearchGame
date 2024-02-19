@@ -346,7 +346,7 @@ public class GunManager : MonoBehaviour
         else
         {
             bulletSpeed = currentWeaponOnHold.weapon.bulletSpeed;
-
+            reloadSpeed = currentWeaponOnHold.weapon.reloadSpeed;
             ammo = currentWeaponOnHold.weapon.ammo;
 
             bulletDestroyTime = currentWeaponOnHold.weapon.bulletDestroyTime;

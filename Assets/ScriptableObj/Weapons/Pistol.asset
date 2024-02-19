@@ -25,4 +25,5 @@ MonoBehaviour:
   ammo: 5
   delayShot: 1
   bulletSpeed: 5
+  reloadSpeed: 3
   bulletDestroyTime: 3

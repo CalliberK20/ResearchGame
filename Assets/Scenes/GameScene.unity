@@ -1668,7 +1668,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &118961103
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1685,7 +1685,8 @@ MonoBehaviour:
   enemyPrefab: {fileID: 7677698114563321347, guid: 79c8b9200780dd341a1564faee2771d6, type: 3}
   spawnRadius: 26
   enemyStats:
-  - {fileID: 11400000, guid: dee01fc089e9718459d3f3df9abcc79b, type: 2}
+  - {fileID: 11400000, guid: 249068ddda3f7f342b4fdf6adfb0a8f3, type: 2}
+  - {fileID: 11400000, guid: d41abb62f5df40940a094819ec48803c, type: 2}
   spawnTime: 5
   enemyEntry: []
 --- !u!4 &118961104
@@ -1755,6 +1756,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentWave: 0
   numOfZombiesInGame: 0
+  rewardRate: 5
+  difficultyRate: 10
   waves:
   - waveName: Wave 1
     minTime: 0.2
@@ -1781,6 +1784,8 @@ MonoBehaviour:
     maxTime: 3
     zombieType: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
   winParent: {fileID: 1234568543}
+  currentRewardRate: 0
+  currentdifficultyRate: 0
 --- !u!1 &133023745
 GameObject:
   m_ObjectHideFlags: 0

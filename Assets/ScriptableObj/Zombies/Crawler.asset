@@ -17,8 +17,8 @@ MonoBehaviour:
   zombieName: Crawler
   zombieDescrip: They can latch into the player, and can cause slowness.
   health: 2
-  speed: 1
-  reward: 20
+  speed: 0.5
+  reward: 67
   atkDamage: 1
   atkSpeed: 4
   canLatch: 1

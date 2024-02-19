@@ -57,7 +57,21 @@ public class EnemySpawner : MonoBehaviour
                     enemy.transform.position = enemyEntry[ran].GetComponent<SpawnPoint>().Spawn(); 
                     EnemyMovement enemyMovement = enemy.GetComponent<EnemyMovement>();
                     enemyMovement.enabled = true;
-                    enemyMovement.SetEnemyStats(TypeToStats(type));
+
+                    EnemyStats chooseType = TypeToStats(type);
+                    //EnemyStats enemyStats = new EnemyStats(chooseType.enemyAnimatorController, chooseType.zombieSprite, chooseType.health, chooseType.speed, chooseType.reward, chooseType.atkDamage, chooseType.atkSpeed, chooseType.canLatch);
+                    EnemyStats enemyStats = new EnemyStats();
+                    float percentDifficuly = WaveManager.instance.currentdifficultyRate / 100f;
+
+                    enemyStats.enemyAnimatorController = chooseType.enemyAnimatorController;
+                    enemyStats.zombieSprite = chooseType.zombieSprite;
+                    enemyStats.health = chooseType.health + (chooseType.health * percentDifficuly);
+                    enemyStats.reward = chooseType.reward + (chooseType.reward * (WaveManager.instance.currentRewardRate / 100f));
+                    enemyStats.speed = chooseType.speed + (chooseType.speed * percentDifficuly);
+                    enemyStats.atkDamage = chooseType.atkDamage + (chooseType.atkDamage * percentDifficuly);
+                    enemyStats.atkSpeed = chooseType.atkSpeed + (chooseType.atkSpeed * percentDifficuly);
+                    enemyStats.canLatch = chooseType.canLatch;
+                    enemyMovement.SetEnemyStats(enemyStats);
                 }
                 break;
             }

@@ -23,5 +23,6 @@ public class WeaponStats : ScriptableObject
     public int ammo = 5;
     /*  DIDN'T ADD THIS IN THE EDITOR =========>  */ public float delayShot = 1f;
     public float bulletSpeed = 4f;
+    public float reloadSpeed = 3f;
     public float bulletDestroyTime = 2f;
 }
